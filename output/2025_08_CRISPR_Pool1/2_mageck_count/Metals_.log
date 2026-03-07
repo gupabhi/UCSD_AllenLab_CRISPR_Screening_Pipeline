@@ -1,0 +1,1751 @@
+INFO  @ Mon, 02 Mar 2026 15:58:03: Parameters: /tscc/projects/ps-allenlab/projdata/common/programs/miniconda3/envs/mageckenv/bin/mageck count -l input/2025_08_CRISPR_Pool1/1_sgRNAs/JonScreenAllGuides_mageck_format.csv -n output/2025_08_CRISPR_Pool1/2_mageck_count/Metals_ --sample-label t0_R1,t1_Fe_deplete_R1,t1_Fe_deplete_R2,t1_Fe_deplete_R3,t1_Fe_replete_R1,t1_Fe_replete_R2,t1_Fe_replete_R3,t1_Mn_deplete_R1,t1_Mn_deplete_R2,t1_Mn_deplete_R3 --fastq output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t0_R1_t0_NH4_1_S1_L007_R1_001.fastq.gz,output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t0_R1_t0_NH4_1_S1_L007_R2_001.fastq.gz,output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t0_R1_t0_NH4_2_S2_L007_R1_001.fastq.gz,output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t0_R1_t0_NH4_2_S2_L007_R2_001.fastq.gz output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_deplete_R1_F1_1_S45_L007_R1_001.fastq.gz,output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_deplete_R1_F1_1_S45_L007_R2_001.fastq.gz,output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_deplete_R1_F1_2_S46_L007_R1_001.fastq.gz,output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_deplete_R1_F1_2_S46_L007_R2_001.fastq.gz output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_deplete_R2_F2_1_S47_L007_R1_001.fastq.gz,output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_deplete_R2_F2_1_S47_L007_R2_001.fastq.gz,output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_deplete_R2_F2_2_S48_L007_R1_001.fastq.gz,output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_deplete_R2_F2_2_S48_L007_R2_001.fastq.gz output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_deplete_R3_F3_1_S49_L007_R1_001.fastq.gz,output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_deplete_R3_F3_1_S49_L007_R2_001.fastq.gz,output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_deplete_R3_F3_2_S50_L007_R1_001.fastq.gz,output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_deplete_R3_F3_2_S50_L007_R2_001.fastq.gz output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_replete_R1_R1_1_S39_L007_R1_001.fastq.gz,output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_replete_R1_R1_1_S39_L007_R2_001.fastq.gz,output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_replete_R1_R1_2_S40_L007_R1_001.fastq.gz,output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_replete_R1_R1_2_S40_L007_R2_001.fastq.gz output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_replete_R2_R2_1_S41_L007_R1_001.fastq.gz,output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_replete_R2_R2_1_S41_L007_R2_001.fastq.gz,output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_replete_R2_R2_2_S42_L007_R1_001.fastq.gz,output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_replete_R2_R2_2_S42_L007_R2_001.fastq.gz output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_replete_R3_R3_1_S43_L007_R1_001.fastq.gz,output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_replete_R3_R3_1_S43_L007_R2_001.fastq.gz,output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_replete_R3_R3_2_S44_L007_R1_001.fastq.gz,output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_replete_R3_R3_2_S44_L007_R2_001.fastq.gz output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Mn_deplete_R1_M1_1_S51_L007_R1_001.fastq.gz,output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Mn_deplete_R1_M1_1_S51_L007_R2_001.fastq.gz,output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Mn_deplete_R1_M1_2_S52_L007_R1_001.fastq.gz,output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Mn_deplete_R1_M1_2_S52_L007_R2_001.fastq.gz output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Mn_deplete_R2_M2_1_S53_L007_R1_001.fastq.gz,output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Mn_deplete_R2_M2_1_S53_L007_R2_001.fastq.gz,output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Mn_deplete_R2_M2_2_S54_L007_R1_001.fastq.gz,output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Mn_deplete_R2_M2_2_S54_L007_R2_001.fastq.gz output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Mn_deplete_R3_M3_1_S55_L007_R1_001.fastq.gz,output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Mn_deplete_R3_M3_1_S55_L007_R2_001.fastq.gz,output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Mn_deplete_R3_M3_2_S56_L007_R1_001.fastq.gz,output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Mn_deplete_R3_M3_2_S56_L007_R2_001.fastq.gz 
+INFO  @ Mon, 02 Mar 2026 15:58:03: Welcome to MAGeCK v0.5.9.5. Command: count 
+INFO  @ Mon, 02 Mar 2026 15:58:03: Header line of the library file detected; skip the first line ... 
+INFO  @ Mon, 02 Mar 2026 15:58:03: Loading 90202 predefined sgRNAs. 
+WARNING @ Mon, 02 Mar 2026 15:58:03: There are 3 sgRNAs with duplicated sequences. 
+INFO  @ Mon, 02 Mar 2026 15:58:04: Parsing FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t0_R1_t0_NH4_1_S1_L007_R1_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 15:58:04: Determining the trim-5 length of FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t0_R1_t0_NH4_1_S1_L007_R1_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 15:58:04: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 15:58:04: Processing 0M reads ... 
+INFO  @ Mon, 02 Mar 2026 15:58:04: Read length:20 
+INFO  @ Mon, 02 Mar 2026 15:58:04: Total tested reads: 100001, mapped: 61833(0.6183238167618323) 
+INFO  @ Mon, 02 Mar 2026 15:58:04: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Mon, 02 Mar 2026 15:58:04: 0	61833	1.0 
+INFO  @ Mon, 02 Mar 2026 15:58:04: Auto determination of trim5 results: 0 
+INFO  @ Mon, 02 Mar 2026 15:58:04: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 15:58:04: Processing 0M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:58:06: Processing 1M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:58:08: Processing 2M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:58:10: Processing 3M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:58:12: Processing 4M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:58:14: Processing 5M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:58:16: Processing 6M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:58:18: Processing 7M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:58:20: Processing 8M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:58:22: Processing 9M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:58:24: Processing 10M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:58:26: Processing 11M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:58:28: Processing 12M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:58:30: Processing 13M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:58:32: Processing 14M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:58:34: Processing 15M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:58:36: Processing 16M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:58:38: Processing 17M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:58:40: Processing 18M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:58:42: Processing 19M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:58:44: Processing 20M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:58:46: Processing 21M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:58:48: Processing 22M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:58:50: Processing 23M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:58:52: Processing 24M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:58:54: Processing 25M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:58:56: Processing 26M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:58:58: Processing 27M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:59:00: Processing 28M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:59:02: Processing 29M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:59:05: Processing 30M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:59:07: Processing 31M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:59:09: Processing 32M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:59:11: Processing 33M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:59:13: Processing 34M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:59:15: Processing 35M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:59:17: Processing 36M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:59:19: Processing 37M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:59:21: Processing 38M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:59:23: Processing 39M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:59:25: Total: 39892468. 
+INFO  @ Mon, 02 Mar 2026 15:59:25: Mapped: 24695189. 
+INFO  @ Mon, 02 Mar 2026 15:59:25: Parsing FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t0_R1_t0_NH4_1_S1_L007_R2_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 15:59:25: Determining the trim-5 length of FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t0_R1_t0_NH4_1_S1_L007_R2_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 15:59:25: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 15:59:25: Processing 0M reads ... 
+INFO  @ Mon, 02 Mar 2026 15:59:25: Read length:20 
+INFO  @ Mon, 02 Mar 2026 15:59:25: Total tested reads: 100001, mapped: 61998(0.6199738002619973) 
+INFO  @ Mon, 02 Mar 2026 15:59:25: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Mon, 02 Mar 2026 15:59:25: 0	61998	1.0 
+INFO  @ Mon, 02 Mar 2026 15:59:25: Auto determination of trim5 results: 0 
+INFO  @ Mon, 02 Mar 2026 15:59:25: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 15:59:25: Processing 0M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:59:27: Processing 1M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:59:29: Processing 2M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:59:31: Processing 3M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:59:33: Processing 4M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:59:35: Processing 5M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:59:37: Processing 6M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:59:39: Processing 7M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:59:41: Processing 8M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:59:43: Processing 9M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:59:45: Processing 10M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:59:47: Processing 11M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:59:49: Processing 12M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:59:51: Processing 13M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:59:53: Processing 14M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:59:55: Processing 15M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:59:57: Processing 16M reads .. 
+INFO  @ Mon, 02 Mar 2026 15:59:59: Processing 17M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:00:01: Processing 18M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:00:03: Processing 19M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:00:05: Processing 20M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:00:07: Processing 21M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:00:10: Processing 22M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:00:12: Processing 23M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:00:14: Processing 24M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:00:16: Processing 25M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:00:18: Processing 26M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:00:20: Processing 27M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:00:22: Processing 28M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:00:24: Processing 29M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:00:26: Processing 30M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:00:28: Processing 31M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:00:30: Processing 32M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:00:32: Processing 33M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:00:34: Processing 34M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:00:36: Processing 35M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:00:38: Processing 36M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:00:40: Processing 37M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:00:42: Processing 38M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:00:44: Processing 39M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:00:46: Total: 39516464. 
+INFO  @ Mon, 02 Mar 2026 16:00:46: Mapped: 24473566. 
+INFO  @ Mon, 02 Mar 2026 16:00:46: Parsing FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t0_R1_t0_NH4_2_S2_L007_R1_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:00:46: Determining the trim-5 length of FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t0_R1_t0_NH4_2_S2_L007_R1_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:00:46: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:00:46: Processing 0M reads ... 
+INFO  @ Mon, 02 Mar 2026 16:00:46: Read length:20 
+INFO  @ Mon, 02 Mar 2026 16:00:46: Total tested reads: 100001, mapped: 62515(0.6251437485625144) 
+INFO  @ Mon, 02 Mar 2026 16:00:46: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Mon, 02 Mar 2026 16:00:46: 0	62515	1.0 
+INFO  @ Mon, 02 Mar 2026 16:00:46: Auto determination of trim5 results: 0 
+INFO  @ Mon, 02 Mar 2026 16:00:46: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:00:46: Processing 0M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:00:48: Processing 1M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:00:50: Processing 2M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:00:52: Processing 3M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:00:54: Processing 4M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:00:56: Processing 5M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:00:58: Processing 6M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:01:00: Processing 7M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:01:02: Processing 8M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:01:04: Processing 9M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:01:06: Processing 10M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:01:08: Processing 11M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:01:10: Processing 12M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:01:12: Processing 13M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:01:14: Processing 14M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:01:16: Processing 15M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:01:18: Processing 16M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:01:20: Processing 17M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:01:22: Processing 18M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:01:24: Processing 19M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:01:26: Processing 20M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:01:28: Processing 21M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:01:30: Processing 22M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:01:32: Processing 23M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:01:34: Processing 24M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:01:36: Processing 25M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:01:38: Processing 26M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:01:40: Processing 27M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:01:42: Processing 28M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:01:44: Processing 29M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:01:46: Processing 30M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:01:48: Processing 31M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:01:50: Processing 32M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:01:52: Processing 33M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:01:54: Processing 34M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:01:56: Processing 35M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:01:57: Total: 35347343. 
+INFO  @ Mon, 02 Mar 2026 16:01:57: Mapped: 21939988. 
+INFO  @ Mon, 02 Mar 2026 16:01:57: Parsing FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t0_R1_t0_NH4_2_S2_L007_R2_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:01:57: Determining the trim-5 length of FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t0_R1_t0_NH4_2_S2_L007_R2_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:01:57: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:01:57: Processing 0M reads ... 
+INFO  @ Mon, 02 Mar 2026 16:01:57: Read length:20 
+INFO  @ Mon, 02 Mar 2026 16:01:57: Total tested reads: 100001, mapped: 62727(0.6272637273627264) 
+INFO  @ Mon, 02 Mar 2026 16:01:57: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Mon, 02 Mar 2026 16:01:57: 0	62727	1.0 
+INFO  @ Mon, 02 Mar 2026 16:01:57: Auto determination of trim5 results: 0 
+INFO  @ Mon, 02 Mar 2026 16:01:57: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:01:58: Processing 0M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:01:59: Processing 1M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:02:02: Processing 2M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:02:03: Processing 3M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:02:05: Processing 4M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:02:07: Processing 5M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:02:09: Processing 6M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:02:11: Processing 7M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:02:13: Processing 8M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:02:15: Processing 9M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:02:17: Processing 10M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:02:19: Processing 11M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:02:21: Processing 12M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:02:23: Processing 13M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:02:25: Processing 14M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:02:27: Processing 15M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:02:29: Processing 16M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:02:31: Processing 17M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:02:33: Processing 18M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:02:35: Processing 19M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:02:37: Processing 20M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:02:39: Processing 21M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:02:41: Processing 22M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:02:43: Processing 23M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:02:45: Processing 24M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:02:47: Processing 25M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:02:50: Processing 26M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:02:52: Processing 27M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:02:54: Processing 28M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:02:56: Processing 29M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:02:58: Processing 30M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:03:00: Processing 31M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:03:02: Processing 32M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:03:04: Processing 33M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:03:06: Processing 34M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:03:08: Total: 34801324. 
+INFO  @ Mon, 02 Mar 2026 16:03:08: Mapped: 21609938. 
+INFO  @ Mon, 02 Mar 2026 16:03:08: Parsing FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_deplete_R1_F1_1_S45_L007_R1_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:03:08: Determining the trim-5 length of FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_deplete_R1_F1_1_S45_L007_R1_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:03:08: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:03:08: Processing 0M reads ... 
+INFO  @ Mon, 02 Mar 2026 16:03:08: Read length:20 
+INFO  @ Mon, 02 Mar 2026 16:03:08: Total tested reads: 100001, mapped: 3064(0.03063969360306397) 
+WARNING @ Mon, 02 Mar 2026 16:03:08: Only 3.063969360306397 % of the reads can be identified.  
+INFO  @ Mon, 02 Mar 2026 16:03:08: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Mon, 02 Mar 2026 16:03:08: 0	3064	1.0 
+INFO  @ Mon, 02 Mar 2026 16:03:08: Auto determination of trim5 results: 0 
+INFO  @ Mon, 02 Mar 2026 16:03:08: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:03:08: Processing 0M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:03:10: Processing 1M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:03:12: Processing 2M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:03:13: Processing 3M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:03:15: Processing 4M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:03:17: Processing 5M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:03:19: Processing 6M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:03:20: Processing 7M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:03:22: Processing 8M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:03:24: Processing 9M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:03:26: Processing 10M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:03:27: Processing 11M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:03:29: Processing 12M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:03:31: Processing 13M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:03:33: Processing 14M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:03:35: Processing 15M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:03:36: Processing 16M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:03:38: Processing 17M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:03:40: Processing 18M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:03:42: Processing 19M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:03:43: Processing 20M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:03:45: Processing 21M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:03:47: Processing 22M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:03:47: Total: 22080173. 
+INFO  @ Mon, 02 Mar 2026 16:03:47: Mapped: 657634. 
+INFO  @ Mon, 02 Mar 2026 16:03:47: Parsing FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_deplete_R1_F1_1_S45_L007_R2_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:03:47: Determining the trim-5 length of FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_deplete_R1_F1_1_S45_L007_R2_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:03:47: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:03:47: Processing 0M reads ... 
+INFO  @ Mon, 02 Mar 2026 16:03:47: Read length:20 
+INFO  @ Mon, 02 Mar 2026 16:03:47: Total tested reads: 100001, mapped: 3076(0.03075969240307597) 
+WARNING @ Mon, 02 Mar 2026 16:03:47: Only 3.075969240307597 % of the reads can be identified.  
+INFO  @ Mon, 02 Mar 2026 16:03:47: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Mon, 02 Mar 2026 16:03:47: 0	3076	1.0 
+INFO  @ Mon, 02 Mar 2026 16:03:47: Auto determination of trim5 results: 0 
+INFO  @ Mon, 02 Mar 2026 16:03:47: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:03:47: Processing 0M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:03:49: Processing 1M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:03:51: Processing 2M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:03:53: Processing 3M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:03:54: Processing 4M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:03:56: Processing 5M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:03:58: Processing 6M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:04:00: Processing 7M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:04:02: Processing 8M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:04:03: Processing 9M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:04:05: Processing 10M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:04:07: Processing 11M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:04:09: Processing 12M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:04:10: Processing 13M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:04:12: Processing 14M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:04:14: Processing 15M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:04:16: Processing 16M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:04:18: Processing 17M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:04:19: Processing 18M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:04:21: Processing 19M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:04:23: Processing 20M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:04:25: Processing 21M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:04:26: Total: 21500093. 
+INFO  @ Mon, 02 Mar 2026 16:04:26: Mapped: 643402. 
+INFO  @ Mon, 02 Mar 2026 16:04:26: Parsing FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_deplete_R1_F1_2_S46_L007_R1_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:04:26: Determining the trim-5 length of FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_deplete_R1_F1_2_S46_L007_R1_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:04:26: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:04:26: Processing 0M reads ... 
+INFO  @ Mon, 02 Mar 2026 16:04:26: Read length:20 
+INFO  @ Mon, 02 Mar 2026 16:04:26: Total tested reads: 100001, mapped: 2996(0.02995970040299597) 
+WARNING @ Mon, 02 Mar 2026 16:04:26: Only 2.995970040299597 % of the reads can be identified.  
+INFO  @ Mon, 02 Mar 2026 16:04:26: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Mon, 02 Mar 2026 16:04:26: 0	2996	1.0 
+INFO  @ Mon, 02 Mar 2026 16:04:26: Auto determination of trim5 results: 0 
+INFO  @ Mon, 02 Mar 2026 16:04:26: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:04:26: Processing 0M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:04:28: Processing 1M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:04:29: Processing 2M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:04:31: Processing 3M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:04:33: Processing 4M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:04:35: Processing 5M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:04:36: Processing 6M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:04:38: Processing 7M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:04:40: Processing 8M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:04:42: Processing 9M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:04:43: Processing 10M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:04:45: Processing 11M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:04:47: Processing 12M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:04:49: Processing 13M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:04:50: Processing 14M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:04:52: Processing 15M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:04:54: Processing 16M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:04:56: Processing 17M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:04:57: Total: 17452375. 
+INFO  @ Mon, 02 Mar 2026 16:04:57: Mapped: 531987. 
+INFO  @ Mon, 02 Mar 2026 16:04:57: Parsing FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_deplete_R1_F1_2_S46_L007_R2_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:04:57: Determining the trim-5 length of FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_deplete_R1_F1_2_S46_L007_R2_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:04:57: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:04:57: Processing 0M reads ... 
+INFO  @ Mon, 02 Mar 2026 16:04:57: Read length:20 
+INFO  @ Mon, 02 Mar 2026 16:04:57: Total tested reads: 100001, mapped: 2992(0.02991970080299197) 
+WARNING @ Mon, 02 Mar 2026 16:04:57: Only 2.991970080299197 % of the reads can be identified.  
+INFO  @ Mon, 02 Mar 2026 16:04:57: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Mon, 02 Mar 2026 16:04:57: 0	2992	1.0 
+INFO  @ Mon, 02 Mar 2026 16:04:57: Auto determination of trim5 results: 0 
+INFO  @ Mon, 02 Mar 2026 16:04:57: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:04:57: Processing 0M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:04:59: Processing 1M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:05:00: Processing 2M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:05:02: Processing 3M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:05:04: Processing 4M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:05:06: Processing 5M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:05:07: Processing 6M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:05:09: Processing 7M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:05:11: Processing 8M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:05:13: Processing 9M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:05:15: Processing 10M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:05:16: Processing 11M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:05:18: Processing 12M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:05:20: Processing 13M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:05:22: Processing 14M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:05:23: Processing 15M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:05:25: Processing 16M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:05:27: Total: 16935466. 
+INFO  @ Mon, 02 Mar 2026 16:05:27: Mapped: 518204. 
+INFO  @ Mon, 02 Mar 2026 16:05:27: Parsing FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_deplete_R2_F2_1_S47_L007_R1_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:05:27: Determining the trim-5 length of FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_deplete_R2_F2_1_S47_L007_R1_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:05:27: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:05:27: Processing 0M reads ... 
+INFO  @ Mon, 02 Mar 2026 16:05:27: Read length:20 
+INFO  @ Mon, 02 Mar 2026 16:05:27: Total tested reads: 100001, mapped: 2954(0.02953970460295397) 
+WARNING @ Mon, 02 Mar 2026 16:05:27: Only 2.9539704602953973 % of the reads can be identified.  
+INFO  @ Mon, 02 Mar 2026 16:05:27: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Mon, 02 Mar 2026 16:05:27: 0	2954	1.0 
+INFO  @ Mon, 02 Mar 2026 16:05:27: Auto determination of trim5 results: 0 
+INFO  @ Mon, 02 Mar 2026 16:05:27: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:05:27: Processing 0M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:05:29: Processing 1M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:05:31: Processing 2M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:05:32: Processing 3M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:05:34: Processing 4M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:05:36: Processing 5M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:05:38: Processing 6M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:05:40: Processing 7M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:05:41: Processing 8M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:05:43: Processing 9M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:05:45: Processing 10M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:05:47: Processing 11M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:05:48: Processing 12M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:05:50: Processing 13M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:05:52: Processing 14M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:05:54: Processing 15M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:05:56: Processing 16M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:05:57: Processing 17M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:05:59: Processing 18M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:06:01: Processing 19M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:06:03: Processing 20M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:06:03: Total: 20260923. 
+INFO  @ Mon, 02 Mar 2026 16:06:03: Mapped: 594629. 
+INFO  @ Mon, 02 Mar 2026 16:06:03: Parsing FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_deplete_R2_F2_1_S47_L007_R2_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:06:03: Determining the trim-5 length of FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_deplete_R2_F2_1_S47_L007_R2_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:06:03: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:06:03: Processing 0M reads ... 
+INFO  @ Mon, 02 Mar 2026 16:06:03: Read length:20 
+INFO  @ Mon, 02 Mar 2026 16:06:03: Total tested reads: 100001, mapped: 3003(0.03002969970300297) 
+WARNING @ Mon, 02 Mar 2026 16:06:03: Only 3.0029699703002968 % of the reads can be identified.  
+INFO  @ Mon, 02 Mar 2026 16:06:03: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Mon, 02 Mar 2026 16:06:03: 0	3003	1.0 
+INFO  @ Mon, 02 Mar 2026 16:06:03: Auto determination of trim5 results: 0 
+INFO  @ Mon, 02 Mar 2026 16:06:03: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:06:03: Processing 0M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:06:05: Processing 1M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:06:07: Processing 2M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:06:09: Processing 3M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:06:11: Processing 4M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:06:12: Processing 5M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:06:14: Processing 6M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:06:16: Processing 7M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:06:18: Processing 8M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:06:19: Processing 9M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:06:21: Processing 10M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:06:23: Processing 11M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:06:25: Processing 12M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:06:27: Processing 13M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:06:28: Processing 14M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:06:30: Processing 15M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:06:32: Processing 16M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:06:34: Processing 17M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:06:36: Processing 18M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:06:37: Processing 19M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:06:39: Total: 19846085. 
+INFO  @ Mon, 02 Mar 2026 16:06:39: Mapped: 585382. 
+INFO  @ Mon, 02 Mar 2026 16:06:39: Parsing FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_deplete_R2_F2_2_S48_L007_R1_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:06:39: Determining the trim-5 length of FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_deplete_R2_F2_2_S48_L007_R1_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:06:39: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:06:39: Processing 0M reads ... 
+INFO  @ Mon, 02 Mar 2026 16:06:39: Read length:20 
+INFO  @ Mon, 02 Mar 2026 16:06:39: Total tested reads: 100001, mapped: 2795(0.027949720502794973) 
+WARNING @ Mon, 02 Mar 2026 16:06:39: Only 2.7949720502794975 % of the reads can be identified.  
+INFO  @ Mon, 02 Mar 2026 16:06:39: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Mon, 02 Mar 2026 16:06:39: 0	2795	1.0 
+INFO  @ Mon, 02 Mar 2026 16:06:39: Auto determination of trim5 results: 0 
+INFO  @ Mon, 02 Mar 2026 16:06:39: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:06:39: Processing 0M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:06:41: Processing 1M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:06:43: Processing 2M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:06:44: Processing 3M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:06:46: Processing 4M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:06:48: Processing 5M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:06:50: Processing 6M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:06:52: Processing 7M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:06:53: Processing 8M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:06:55: Processing 9M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:06:57: Processing 10M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:06:59: Processing 11M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:07:00: Processing 12M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:07:02: Processing 13M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:07:04: Processing 14M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:07:06: Processing 15M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:07:08: Processing 16M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:07:09: Processing 17M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:07:11: Processing 18M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:07:13: Processing 19M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:07:15: Processing 20M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:07:15: Total: 20161606. 
+INFO  @ Mon, 02 Mar 2026 16:07:15: Mapped: 562860. 
+INFO  @ Mon, 02 Mar 2026 16:07:15: Parsing FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_deplete_R2_F2_2_S48_L007_R2_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:07:15: Determining the trim-5 length of FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_deplete_R2_F2_2_S48_L007_R2_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:07:15: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:07:15: Processing 0M reads ... 
+INFO  @ Mon, 02 Mar 2026 16:07:15: Read length:20 
+INFO  @ Mon, 02 Mar 2026 16:07:15: Total tested reads: 100001, mapped: 2834(0.02833971660283397) 
+WARNING @ Mon, 02 Mar 2026 16:07:15: Only 2.8339716602833973 % of the reads can be identified.  
+INFO  @ Mon, 02 Mar 2026 16:07:15: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Mon, 02 Mar 2026 16:07:15: 0	2834	1.0 
+INFO  @ Mon, 02 Mar 2026 16:07:15: Auto determination of trim5 results: 0 
+INFO  @ Mon, 02 Mar 2026 16:07:15: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:07:15: Processing 0M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:07:17: Processing 1M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:07:19: Processing 2M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:07:21: Processing 3M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:07:22: Processing 4M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:07:24: Processing 5M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:07:26: Processing 6M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:07:28: Processing 7M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:07:29: Processing 8M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:07:31: Processing 9M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:07:33: Processing 10M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:07:35: Processing 11M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:07:37: Processing 12M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:07:38: Processing 13M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:07:40: Processing 14M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:07:42: Processing 15M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:07:44: Processing 16M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:07:46: Processing 17M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:07:47: Processing 18M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:07:49: Processing 19M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:07:51: Total: 19897914. 
+INFO  @ Mon, 02 Mar 2026 16:07:51: Mapped: 557740. 
+INFO  @ Mon, 02 Mar 2026 16:07:51: Parsing FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_deplete_R3_F3_1_S49_L007_R1_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:07:51: Determining the trim-5 length of FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_deplete_R3_F3_1_S49_L007_R1_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:07:51: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:07:51: Processing 0M reads ... 
+INFO  @ Mon, 02 Mar 2026 16:07:51: Read length:20 
+INFO  @ Mon, 02 Mar 2026 16:07:51: Total tested reads: 100001, mapped: 8071(0.08070919290807092) 
+WARNING @ Mon, 02 Mar 2026 16:07:51: Only 8.070919290807092 % of the reads can be identified.  
+INFO  @ Mon, 02 Mar 2026 16:07:51: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Mon, 02 Mar 2026 16:07:51: 0	8071	1.0 
+INFO  @ Mon, 02 Mar 2026 16:07:51: Auto determination of trim5 results: 0 
+INFO  @ Mon, 02 Mar 2026 16:07:51: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:07:51: Processing 0M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:07:53: Processing 1M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:07:55: Processing 2M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:07:56: Processing 3M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:07:58: Processing 4M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:08:00: Processing 5M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:08:02: Processing 6M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:08:04: Processing 7M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:08:05: Processing 8M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:08:07: Processing 9M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:08:09: Processing 10M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:08:11: Processing 11M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:08:13: Processing 12M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:08:14: Processing 13M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:08:16: Processing 14M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:08:18: Processing 15M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:08:20: Processing 16M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:08:22: Processing 17M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:08:24: Processing 18M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:08:25: Total: 18894420. 
+INFO  @ Mon, 02 Mar 2026 16:08:25: Mapped: 1502750. 
+INFO  @ Mon, 02 Mar 2026 16:08:25: Parsing FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_deplete_R3_F3_1_S49_L007_R2_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:08:25: Determining the trim-5 length of FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_deplete_R3_F3_1_S49_L007_R2_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:08:25: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:08:25: Processing 0M reads ... 
+INFO  @ Mon, 02 Mar 2026 16:08:25: Read length:20 
+INFO  @ Mon, 02 Mar 2026 16:08:25: Total tested reads: 100001, mapped: 8198(0.08197918020819792) 
+WARNING @ Mon, 02 Mar 2026 16:08:25: Only 8.197918020819792 % of the reads can be identified.  
+INFO  @ Mon, 02 Mar 2026 16:08:25: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Mon, 02 Mar 2026 16:08:25: 0	8198	1.0 
+INFO  @ Mon, 02 Mar 2026 16:08:25: Auto determination of trim5 results: 0 
+INFO  @ Mon, 02 Mar 2026 16:08:25: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:08:25: Processing 0M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:08:27: Processing 1M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:08:29: Processing 2M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:08:31: Processing 3M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:08:33: Processing 4M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:08:34: Processing 5M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:08:36: Processing 6M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:08:38: Processing 7M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:08:40: Processing 8M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:08:42: Processing 9M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:08:43: Processing 10M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:08:45: Processing 11M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:08:47: Processing 12M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:08:49: Processing 13M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:08:51: Processing 14M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:08:52: Processing 15M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:08:54: Processing 16M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:08:56: Processing 17M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:08:58: Processing 18M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:08:59: Total: 18501331. 
+INFO  @ Mon, 02 Mar 2026 16:08:59: Mapped: 1477420. 
+INFO  @ Mon, 02 Mar 2026 16:08:59: Parsing FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_deplete_R3_F3_2_S50_L007_R1_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:08:59: Determining the trim-5 length of FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_deplete_R3_F3_2_S50_L007_R1_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:08:59: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:08:59: Processing 0M reads ... 
+INFO  @ Mon, 02 Mar 2026 16:08:59: Read length:20 
+INFO  @ Mon, 02 Mar 2026 16:08:59: Total tested reads: 100001, mapped: 5836(0.05835941640583594) 
+WARNING @ Mon, 02 Mar 2026 16:08:59: Only 5.835941640583594 % of the reads can be identified.  
+INFO  @ Mon, 02 Mar 2026 16:08:59: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Mon, 02 Mar 2026 16:08:59: 0	5836	1.0 
+INFO  @ Mon, 02 Mar 2026 16:08:59: Auto determination of trim5 results: 0 
+INFO  @ Mon, 02 Mar 2026 16:08:59: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:08:59: Processing 0M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:09:01: Processing 1M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:09:03: Processing 2M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:09:04: Processing 3M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:09:06: Processing 4M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:09:08: Processing 5M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:09:10: Processing 6M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:09:11: Processing 7M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:09:13: Processing 8M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:09:15: Processing 9M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:09:17: Processing 10M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:09:19: Processing 11M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:09:20: Processing 12M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:09:22: Processing 13M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:09:24: Processing 14M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:09:26: Processing 15M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:09:28: Processing 16M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:09:29: Processing 17M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:09:31: Processing 18M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:09:33: Processing 19M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:09:35: Processing 20M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:09:37: Processing 21M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:09:38: Processing 22M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:09:40: Processing 23M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:09:41: Total: 23224624. 
+INFO  @ Mon, 02 Mar 2026 16:09:41: Mapped: 1329706. 
+INFO  @ Mon, 02 Mar 2026 16:09:41: Parsing FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_deplete_R3_F3_2_S50_L007_R2_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:09:41: Determining the trim-5 length of FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_deplete_R3_F3_2_S50_L007_R2_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:09:41: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:09:41: Processing 0M reads ... 
+INFO  @ Mon, 02 Mar 2026 16:09:41: Read length:20 
+INFO  @ Mon, 02 Mar 2026 16:09:41: Total tested reads: 100001, mapped: 5878(0.05877941220587794) 
+WARNING @ Mon, 02 Mar 2026 16:09:41: Only 5.877941220587794 % of the reads can be identified.  
+INFO  @ Mon, 02 Mar 2026 16:09:41: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Mon, 02 Mar 2026 16:09:41: 0	5878	1.0 
+INFO  @ Mon, 02 Mar 2026 16:09:41: Auto determination of trim5 results: 0 
+INFO  @ Mon, 02 Mar 2026 16:09:41: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:09:41: Processing 0M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:09:43: Processing 1M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:09:44: Processing 2M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:09:46: Processing 3M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:09:48: Processing 4M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:09:50: Processing 5M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:09:52: Processing 6M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:09:53: Processing 7M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:09:55: Processing 8M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:09:57: Processing 9M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:09:59: Processing 10M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:10:00: Processing 11M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:10:02: Processing 12M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:10:04: Processing 13M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:10:06: Processing 14M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:10:08: Processing 15M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:10:09: Processing 16M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:10:11: Processing 17M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:10:13: Processing 18M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:10:15: Processing 19M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:10:17: Processing 20M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:10:18: Processing 21M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:10:20: Processing 22M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:10:21: Total: 22577487. 
+INFO  @ Mon, 02 Mar 2026 16:10:21: Mapped: 1297510. 
+INFO  @ Mon, 02 Mar 2026 16:10:21: Parsing FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_replete_R1_R1_1_S39_L007_R1_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:10:21: Determining the trim-5 length of FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_replete_R1_R1_1_S39_L007_R1_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:10:21: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:10:21: Processing 0M reads ... 
+INFO  @ Mon, 02 Mar 2026 16:10:22: Read length:20 
+INFO  @ Mon, 02 Mar 2026 16:10:22: Total tested reads: 100001, mapped: 3686(0.03685963140368596) 
+WARNING @ Mon, 02 Mar 2026 16:10:22: Only 3.6859631403685964 % of the reads can be identified.  
+INFO  @ Mon, 02 Mar 2026 16:10:22: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Mon, 02 Mar 2026 16:10:22: 0	3686	1.0 
+INFO  @ Mon, 02 Mar 2026 16:10:22: Auto determination of trim5 results: 0 
+INFO  @ Mon, 02 Mar 2026 16:10:22: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:10:22: Processing 0M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:10:23: Processing 1M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:10:25: Processing 2M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:10:27: Processing 3M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:10:29: Processing 4M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:10:30: Processing 5M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:10:32: Processing 6M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:10:34: Processing 7M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:10:36: Processing 8M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:10:37: Processing 9M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:10:39: Processing 10M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:10:41: Processing 11M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:10:43: Processing 12M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:10:45: Processing 13M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:10:46: Processing 14M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:10:48: Processing 15M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:10:50: Processing 16M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:10:52: Processing 17M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:10:53: Processing 18M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:10:55: Processing 19M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:10:57: Processing 20M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:10:59: Processing 21M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:11:00: Total: 21641792. 
+INFO  @ Mon, 02 Mar 2026 16:11:00: Mapped: 772499. 
+INFO  @ Mon, 02 Mar 2026 16:11:00: Parsing FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_replete_R1_R1_1_S39_L007_R2_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:11:00: Determining the trim-5 length of FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_replete_R1_R1_1_S39_L007_R2_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:11:00: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:11:00: Processing 0M reads ... 
+INFO  @ Mon, 02 Mar 2026 16:11:00: Read length:20 
+INFO  @ Mon, 02 Mar 2026 16:11:00: Total tested reads: 100001, mapped: 3718(0.037179628203717965) 
+WARNING @ Mon, 02 Mar 2026 16:11:00: Only 3.7179628203717967 % of the reads can be identified.  
+INFO  @ Mon, 02 Mar 2026 16:11:00: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Mon, 02 Mar 2026 16:11:00: 0	3718	1.0 
+INFO  @ Mon, 02 Mar 2026 16:11:00: Auto determination of trim5 results: 0 
+INFO  @ Mon, 02 Mar 2026 16:11:00: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:11:00: Processing 0M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:11:02: Processing 1M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:11:04: Processing 2M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:11:06: Processing 3M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:11:07: Processing 4M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:11:09: Processing 5M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:11:11: Processing 6M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:11:13: Processing 7M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:11:14: Processing 8M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:11:16: Processing 9M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:11:18: Processing 10M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:11:20: Processing 11M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:11:22: Processing 12M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:11:23: Processing 13M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:11:25: Processing 14M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:11:27: Processing 15M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:11:29: Processing 16M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:11:30: Processing 17M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:11:32: Processing 18M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:11:34: Processing 19M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:11:36: Processing 20M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:11:38: Processing 21M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:11:38: Total: 21195253. 
+INFO  @ Mon, 02 Mar 2026 16:11:38: Mapped: 759714. 
+INFO  @ Mon, 02 Mar 2026 16:11:38: Parsing FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_replete_R1_R1_2_S40_L007_R1_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:11:38: Determining the trim-5 length of FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_replete_R1_R1_2_S40_L007_R1_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:11:38: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:11:38: Processing 0M reads ... 
+INFO  @ Mon, 02 Mar 2026 16:11:38: Read length:20 
+INFO  @ Mon, 02 Mar 2026 16:11:38: Total tested reads: 100001, mapped: 3498(0.03497965020349796) 
+WARNING @ Mon, 02 Mar 2026 16:11:38: Only 3.4979650203497963 % of the reads can be identified.  
+INFO  @ Mon, 02 Mar 2026 16:11:38: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Mon, 02 Mar 2026 16:11:38: 0	3498	1.0 
+INFO  @ Mon, 02 Mar 2026 16:11:38: Auto determination of trim5 results: 0 
+INFO  @ Mon, 02 Mar 2026 16:11:38: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:11:38: Processing 0M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:11:40: Processing 1M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:11:42: Processing 2M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:11:44: Processing 3M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:11:45: Processing 4M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:11:47: Processing 5M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:11:49: Processing 6M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:11:51: Processing 7M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:11:52: Processing 8M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:11:54: Processing 9M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:11:56: Processing 10M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:11:58: Processing 11M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:12:00: Processing 12M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:12:01: Processing 13M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:12:03: Processing 14M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:12:05: Processing 15M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:12:07: Processing 16M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:12:09: Processing 17M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:12:10: Processing 18M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:12:12: Processing 19M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:12:14: Processing 20M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:12:14: Total: 20107824. 
+INFO  @ Mon, 02 Mar 2026 16:12:14: Mapped: 708665. 
+INFO  @ Mon, 02 Mar 2026 16:12:14: Parsing FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_replete_R1_R1_2_S40_L007_R2_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:12:14: Determining the trim-5 length of FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_replete_R1_R1_2_S40_L007_R2_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:12:14: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:12:14: Processing 0M reads ... 
+INFO  @ Mon, 02 Mar 2026 16:12:14: Read length:20 
+INFO  @ Mon, 02 Mar 2026 16:12:14: Total tested reads: 100001, mapped: 3531(0.035309646903530965) 
+WARNING @ Mon, 02 Mar 2026 16:12:14: Only 3.5309646903530965 % of the reads can be identified.  
+INFO  @ Mon, 02 Mar 2026 16:12:14: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Mon, 02 Mar 2026 16:12:14: 0	3531	1.0 
+INFO  @ Mon, 02 Mar 2026 16:12:14: Auto determination of trim5 results: 0 
+INFO  @ Mon, 02 Mar 2026 16:12:14: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:12:14: Processing 0M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:12:16: Processing 1M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:12:18: Processing 2M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:12:20: Processing 3M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:12:21: Processing 4M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:12:23: Processing 5M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:12:25: Processing 6M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:12:27: Processing 7M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:12:29: Processing 8M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:12:30: Processing 9M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:12:32: Processing 10M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:12:34: Processing 11M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:12:36: Processing 12M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:12:37: Processing 13M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:12:39: Processing 14M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:12:41: Processing 15M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:12:43: Processing 16M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:12:45: Processing 17M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:12:46: Processing 18M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:12:48: Processing 19M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:12:50: Total: 19801595. 
+INFO  @ Mon, 02 Mar 2026 16:12:50: Mapped: 699209. 
+INFO  @ Mon, 02 Mar 2026 16:12:50: Parsing FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_replete_R2_R2_1_S41_L007_R1_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:12:50: Determining the trim-5 length of FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_replete_R2_R2_1_S41_L007_R1_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:12:50: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:12:50: Processing 0M reads ... 
+INFO  @ Mon, 02 Mar 2026 16:12:50: Read length:20 
+INFO  @ Mon, 02 Mar 2026 16:12:50: Total tested reads: 100001, mapped: 3068(0.03067969320306797) 
+WARNING @ Mon, 02 Mar 2026 16:12:50: Only 3.067969320306797 % of the reads can be identified.  
+INFO  @ Mon, 02 Mar 2026 16:12:50: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Mon, 02 Mar 2026 16:12:50: 0	3068	1.0 
+INFO  @ Mon, 02 Mar 2026 16:12:50: Auto determination of trim5 results: 0 
+INFO  @ Mon, 02 Mar 2026 16:12:50: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:12:50: Processing 0M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:12:52: Processing 1M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:12:53: Processing 2M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:12:55: Processing 3M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:12:57: Processing 4M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:12:59: Processing 5M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:13:01: Processing 6M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:13:02: Processing 7M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:13:04: Processing 8M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:13:06: Processing 9M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:13:08: Processing 10M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:13:10: Processing 11M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:13:11: Processing 12M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:13:13: Processing 13M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:13:15: Processing 14M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:13:17: Processing 15M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:13:18: Processing 16M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:13:20: Processing 17M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:13:22: Processing 18M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:13:24: Processing 19M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:13:26: Processing 20M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:13:27: Processing 21M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:13:29: Processing 22M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:13:31: Processing 23M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:13:31: Total: 23034448. 
+INFO  @ Mon, 02 Mar 2026 16:13:31: Mapped: 712994. 
+INFO  @ Mon, 02 Mar 2026 16:13:31: Parsing FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_replete_R2_R2_1_S41_L007_R2_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:13:31: Determining the trim-5 length of FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_replete_R2_R2_1_S41_L007_R2_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:13:31: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:13:31: Processing 0M reads ... 
+INFO  @ Mon, 02 Mar 2026 16:13:31: Read length:20 
+INFO  @ Mon, 02 Mar 2026 16:13:31: Total tested reads: 100001, mapped: 3087(0.03086969130308697) 
+WARNING @ Mon, 02 Mar 2026 16:13:31: Only 3.086969130308697 % of the reads can be identified.  
+INFO  @ Mon, 02 Mar 2026 16:13:31: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Mon, 02 Mar 2026 16:13:31: 0	3087	1.0 
+INFO  @ Mon, 02 Mar 2026 16:13:31: Auto determination of trim5 results: 0 
+INFO  @ Mon, 02 Mar 2026 16:13:31: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:13:31: Processing 0M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:13:33: Processing 1M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:13:35: Processing 2M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:13:37: Processing 3M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:13:38: Processing 4M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:13:40: Processing 5M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:13:42: Processing 6M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:13:44: Processing 7M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:13:46: Processing 8M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:13:47: Processing 9M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:13:49: Processing 10M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:13:51: Processing 11M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:13:53: Processing 12M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:13:54: Processing 13M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:13:56: Processing 14M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:13:58: Processing 15M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:14:00: Processing 16M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:14:02: Processing 17M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:14:03: Processing 18M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:14:05: Processing 19M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:14:07: Processing 20M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:14:09: Processing 21M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:14:11: Processing 22M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:14:12: Total: 22633108. 
+INFO  @ Mon, 02 Mar 2026 16:14:12: Mapped: 701879. 
+INFO  @ Mon, 02 Mar 2026 16:14:12: Parsing FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_replete_R2_R2_2_S42_L007_R1_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:14:12: Determining the trim-5 length of FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_replete_R2_R2_2_S42_L007_R1_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:14:12: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:14:12: Processing 0M reads ... 
+INFO  @ Mon, 02 Mar 2026 16:14:12: Read length:20 
+INFO  @ Mon, 02 Mar 2026 16:14:12: Total tested reads: 100001, mapped: 3092(0.030919690803091968) 
+WARNING @ Mon, 02 Mar 2026 16:14:12: Only 3.091969080309197 % of the reads can be identified.  
+INFO  @ Mon, 02 Mar 2026 16:14:12: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Mon, 02 Mar 2026 16:14:12: 0	3092	1.0 
+INFO  @ Mon, 02 Mar 2026 16:14:12: Auto determination of trim5 results: 0 
+INFO  @ Mon, 02 Mar 2026 16:14:12: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:14:12: Processing 0M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:14:14: Processing 1M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:14:15: Processing 2M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:14:17: Processing 3M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:14:19: Processing 4M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:14:21: Processing 5M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:14:22: Processing 6M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:14:24: Processing 7M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:14:26: Processing 8M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:14:28: Processing 9M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:14:30: Processing 10M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:14:31: Processing 11M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:14:33: Processing 12M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:14:35: Processing 13M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:14:37: Processing 14M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:14:39: Processing 15M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:14:40: Processing 16M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:14:42: Processing 17M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:14:44: Processing 18M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:14:46: Processing 19M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:14:47: Processing 20M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:14:49: Processing 21M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:14:51: Processing 22M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:14:53: Processing 23M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:14:55: Processing 24M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:14:56: Processing 25M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:14:58: Total: 25859257. 
+INFO  @ Mon, 02 Mar 2026 16:14:58: Mapped: 813876. 
+INFO  @ Mon, 02 Mar 2026 16:14:58: Parsing FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_replete_R2_R2_2_S42_L007_R2_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:14:58: Determining the trim-5 length of FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_replete_R2_R2_2_S42_L007_R2_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:14:58: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:14:58: Processing 0M reads ... 
+INFO  @ Mon, 02 Mar 2026 16:14:58: Read length:20 
+INFO  @ Mon, 02 Mar 2026 16:14:58: Total tested reads: 100001, mapped: 3120(0.03119968800311997) 
+WARNING @ Mon, 02 Mar 2026 16:14:58: Only 3.1199688003119967 % of the reads can be identified.  
+INFO  @ Mon, 02 Mar 2026 16:14:58: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Mon, 02 Mar 2026 16:14:58: 0	3120	1.0 
+INFO  @ Mon, 02 Mar 2026 16:14:58: Auto determination of trim5 results: 0 
+INFO  @ Mon, 02 Mar 2026 16:14:58: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:14:58: Processing 0M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:15:00: Processing 1M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:15:02: Processing 2M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:15:04: Processing 3M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:15:05: Processing 4M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:15:07: Processing 5M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:15:09: Processing 6M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:15:11: Processing 7M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:15:12: Processing 8M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:15:14: Processing 9M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:15:16: Processing 10M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:15:18: Processing 11M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:15:19: Processing 12M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:15:21: Processing 13M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:15:23: Processing 14M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:15:25: Processing 15M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:15:27: Processing 16M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:15:28: Processing 17M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:15:30: Processing 18M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:15:32: Processing 19M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:15:34: Processing 20M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:15:36: Processing 21M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:15:37: Processing 22M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:15:39: Processing 23M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:15:41: Processing 24M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:15:43: Processing 25M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:15:43: Total: 25437913. 
+INFO  @ Mon, 02 Mar 2026 16:15:43: Mapped: 802452. 
+INFO  @ Mon, 02 Mar 2026 16:15:44: Parsing FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_replete_R3_R3_1_S43_L007_R1_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:15:44: Determining the trim-5 length of FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_replete_R3_R3_1_S43_L007_R1_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:15:44: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:15:44: Processing 0M reads ... 
+INFO  @ Mon, 02 Mar 2026 16:15:44: Read length:20 
+INFO  @ Mon, 02 Mar 2026 16:15:44: Total tested reads: 100001, mapped: 2670(0.02669973300266997) 
+WARNING @ Mon, 02 Mar 2026 16:15:44: Only 2.669973300266997 % of the reads can be identified.  
+INFO  @ Mon, 02 Mar 2026 16:15:44: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Mon, 02 Mar 2026 16:15:44: 0	2670	1.0 
+INFO  @ Mon, 02 Mar 2026 16:15:44: Auto determination of trim5 results: 0 
+INFO  @ Mon, 02 Mar 2026 16:15:44: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:15:44: Processing 0M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:15:46: Processing 1M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:15:47: Processing 2M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:15:49: Processing 3M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:15:51: Processing 4M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:15:53: Processing 5M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:15:54: Processing 6M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:15:56: Processing 7M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:15:58: Processing 8M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:16:00: Processing 9M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:16:01: Processing 10M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:16:03: Processing 11M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:16:05: Processing 12M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:16:07: Processing 13M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:16:09: Processing 14M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:16:10: Processing 15M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:16:12: Processing 16M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:16:14: Processing 17M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:16:16: Processing 18M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:16:17: Processing 19M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:16:19: Processing 20M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:16:21: Processing 21M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:16:23: Processing 22M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:16:23: Total: 22058860. 
+INFO  @ Mon, 02 Mar 2026 16:16:23: Mapped: 611772. 
+INFO  @ Mon, 02 Mar 2026 16:16:23: Parsing FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_replete_R3_R3_1_S43_L007_R2_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:16:23: Determining the trim-5 length of FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_replete_R3_R3_1_S43_L007_R2_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:16:23: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:16:23: Processing 0M reads ... 
+INFO  @ Mon, 02 Mar 2026 16:16:23: Read length:20 
+INFO  @ Mon, 02 Mar 2026 16:16:23: Total tested reads: 100001, mapped: 2673(0.026729732702672974) 
+WARNING @ Mon, 02 Mar 2026 16:16:23: Only 2.6729732702672973 % of the reads can be identified.  
+INFO  @ Mon, 02 Mar 2026 16:16:23: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Mon, 02 Mar 2026 16:16:23: 0	2673	1.0 
+INFO  @ Mon, 02 Mar 2026 16:16:23: Auto determination of trim5 results: 0 
+INFO  @ Mon, 02 Mar 2026 16:16:23: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:16:23: Processing 0M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:16:25: Processing 1M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:16:27: Processing 2M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:16:28: Processing 3M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:16:30: Processing 4M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:16:32: Processing 5M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:16:34: Processing 6M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:16:36: Processing 7M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:16:37: Processing 8M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:16:39: Processing 9M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:16:41: Processing 10M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:16:43: Processing 11M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:16:45: Processing 12M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:16:46: Processing 13M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:16:48: Processing 14M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:16:50: Processing 15M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:16:52: Processing 16M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:16:54: Processing 17M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:16:55: Processing 18M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:16:57: Processing 19M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:16:59: Processing 20M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:17:01: Processing 21M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:17:02: Total: 21647128. 
+INFO  @ Mon, 02 Mar 2026 16:17:02: Mapped: 601340. 
+INFO  @ Mon, 02 Mar 2026 16:17:02: Parsing FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_replete_R3_R3_2_S44_L007_R1_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:17:02: Determining the trim-5 length of FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_replete_R3_R3_2_S44_L007_R1_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:17:02: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:17:02: Processing 0M reads ... 
+INFO  @ Mon, 02 Mar 2026 16:17:02: Read length:20 
+INFO  @ Mon, 02 Mar 2026 16:17:02: Total tested reads: 100001, mapped: 3207(0.03206967930320697) 
+WARNING @ Mon, 02 Mar 2026 16:17:02: Only 3.206967930320697 % of the reads can be identified.  
+INFO  @ Mon, 02 Mar 2026 16:17:02: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Mon, 02 Mar 2026 16:17:02: 0	3207	1.0 
+INFO  @ Mon, 02 Mar 2026 16:17:02: Auto determination of trim5 results: 0 
+INFO  @ Mon, 02 Mar 2026 16:17:02: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:17:02: Processing 0M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:17:04: Processing 1M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:17:06: Processing 2M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:17:07: Processing 3M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:17:09: Processing 4M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:17:11: Processing 5M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:17:13: Processing 6M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:17:15: Processing 7M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:17:16: Processing 8M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:17:18: Processing 9M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:17:20: Processing 10M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:17:22: Processing 11M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:17:23: Processing 12M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:17:25: Processing 13M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:17:27: Processing 14M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:17:29: Processing 15M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:17:31: Processing 16M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:17:32: Processing 17M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:17:34: Processing 18M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:17:36: Processing 19M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:17:38: Processing 20M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:17:39: Total: 20553143. 
+INFO  @ Mon, 02 Mar 2026 16:17:39: Mapped: 627078. 
+INFO  @ Mon, 02 Mar 2026 16:17:39: Parsing FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_replete_R3_R3_2_S44_L007_R2_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:17:39: Determining the trim-5 length of FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_replete_R3_R3_2_S44_L007_R2_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:17:39: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:17:39: Processing 0M reads ... 
+INFO  @ Mon, 02 Mar 2026 16:17:39: Read length:20 
+INFO  @ Mon, 02 Mar 2026 16:17:39: Total tested reads: 100001, mapped: 3255(0.032549674503254966) 
+WARNING @ Mon, 02 Mar 2026 16:17:39: Only 3.2549674503254966 % of the reads can be identified.  
+INFO  @ Mon, 02 Mar 2026 16:17:39: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Mon, 02 Mar 2026 16:17:39: 0	3255	1.0 
+INFO  @ Mon, 02 Mar 2026 16:17:39: Auto determination of trim5 results: 0 
+INFO  @ Mon, 02 Mar 2026 16:17:39: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:17:39: Processing 0M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:17:41: Processing 1M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:17:43: Processing 2M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:17:44: Processing 3M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:17:46: Processing 4M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:17:48: Processing 5M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:17:50: Processing 6M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:17:51: Processing 7M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:17:53: Processing 8M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:17:55: Processing 9M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:17:57: Processing 10M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:17:59: Processing 11M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:18:00: Processing 12M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:18:02: Processing 13M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:18:04: Processing 14M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:18:06: Processing 15M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:18:08: Processing 16M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:18:09: Processing 17M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:18:11: Processing 18M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:18:13: Processing 19M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:18:15: Processing 20M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:18:15: Total: 20159519. 
+INFO  @ Mon, 02 Mar 2026 16:18:15: Mapped: 617644. 
+INFO  @ Mon, 02 Mar 2026 16:18:15: Parsing FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Mn_deplete_R1_M1_1_S51_L007_R1_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:18:15: Determining the trim-5 length of FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Mn_deplete_R1_M1_1_S51_L007_R1_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:18:15: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:18:15: Processing 0M reads ... 
+INFO  @ Mon, 02 Mar 2026 16:18:15: Read length:20 
+INFO  @ Mon, 02 Mar 2026 16:18:15: Total tested reads: 100001, mapped: 5900(0.05899941000589994) 
+WARNING @ Mon, 02 Mar 2026 16:18:15: Only 5.899941000589994 % of the reads can be identified.  
+INFO  @ Mon, 02 Mar 2026 16:18:15: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Mon, 02 Mar 2026 16:18:15: 0	5900	1.0 
+INFO  @ Mon, 02 Mar 2026 16:18:15: Auto determination of trim5 results: 0 
+INFO  @ Mon, 02 Mar 2026 16:18:15: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:18:15: Processing 0M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:18:17: Processing 1M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:18:19: Processing 2M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:18:21: Processing 3M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:18:22: Processing 4M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:18:24: Processing 5M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:18:26: Processing 6M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:18:28: Processing 7M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:18:30: Processing 8M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:18:31: Processing 9M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:18:33: Processing 10M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:18:35: Processing 11M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:18:37: Processing 12M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:18:39: Processing 13M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:18:40: Processing 14M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:18:42: Processing 15M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:18:44: Processing 16M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:18:46: Processing 17M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:18:48: Processing 18M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:18:49: Processing 19M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:18:51: Processing 20M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:18:53: Processing 21M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:18:55: Processing 22M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:18:56: Total: 22446727. 
+INFO  @ Mon, 02 Mar 2026 16:18:56: Mapped: 1338485. 
+INFO  @ Mon, 02 Mar 2026 16:18:56: Parsing FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Mn_deplete_R1_M1_1_S51_L007_R2_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:18:56: Determining the trim-5 length of FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Mn_deplete_R1_M1_1_S51_L007_R2_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:18:56: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:18:56: Processing 0M reads ... 
+INFO  @ Mon, 02 Mar 2026 16:18:56: Read length:20 
+INFO  @ Mon, 02 Mar 2026 16:18:56: Total tested reads: 100001, mapped: 5983(0.05982940170598294) 
+WARNING @ Mon, 02 Mar 2026 16:18:56: Only 5.982940170598294 % of the reads can be identified.  
+INFO  @ Mon, 02 Mar 2026 16:18:56: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Mon, 02 Mar 2026 16:18:56: 0	5983	1.0 
+INFO  @ Mon, 02 Mar 2026 16:18:56: Auto determination of trim5 results: 0 
+INFO  @ Mon, 02 Mar 2026 16:18:56: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:18:56: Processing 0M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:18:58: Processing 1M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:18:59: Processing 2M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:19:01: Processing 3M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:19:03: Processing 4M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:19:05: Processing 5M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:19:07: Processing 6M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:19:08: Processing 7M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:19:10: Processing 8M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:19:12: Processing 9M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:19:14: Processing 10M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:19:16: Processing 11M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:19:17: Processing 12M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:19:19: Processing 13M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:19:21: Processing 14M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:19:23: Processing 15M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:19:25: Processing 16M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:19:26: Processing 17M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:19:28: Processing 18M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:19:30: Processing 19M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:19:32: Processing 20M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:19:34: Processing 21M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:19:35: Processing 22M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:19:36: Total: 22108187. 
+INFO  @ Mon, 02 Mar 2026 16:19:36: Mapped: 1322104. 
+INFO  @ Mon, 02 Mar 2026 16:19:36: Parsing FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Mn_deplete_R1_M1_2_S52_L007_R1_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:19:36: Determining the trim-5 length of FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Mn_deplete_R1_M1_2_S52_L007_R1_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:19:36: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:19:36: Processing 0M reads ... 
+INFO  @ Mon, 02 Mar 2026 16:19:36: Read length:20 
+INFO  @ Mon, 02 Mar 2026 16:19:36: Total tested reads: 100001, mapped: 3018(0.03017969820301797) 
+WARNING @ Mon, 02 Mar 2026 16:19:36: Only 3.017969820301797 % of the reads can be identified.  
+INFO  @ Mon, 02 Mar 2026 16:19:36: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Mon, 02 Mar 2026 16:19:36: 0	3018	1.0 
+INFO  @ Mon, 02 Mar 2026 16:19:36: Auto determination of trim5 results: 0 
+INFO  @ Mon, 02 Mar 2026 16:19:36: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:19:36: Processing 0M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:19:38: Processing 1M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:19:39: Processing 2M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:19:41: Processing 3M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:19:43: Processing 4M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:19:45: Processing 5M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:19:46: Processing 6M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:19:48: Processing 7M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:19:50: Processing 8M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:19:52: Processing 9M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:19:54: Processing 10M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:19:55: Processing 11M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:19:57: Processing 12M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:19:59: Processing 13M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:20:01: Processing 14M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:20:03: Processing 15M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:20:04: Processing 16M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:20:06: Processing 17M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:20:08: Processing 18M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:20:10: Processing 19M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:20:12: Processing 20M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:20:13: Total: 20733009. 
+INFO  @ Mon, 02 Mar 2026 16:20:13: Mapped: 627203. 
+INFO  @ Mon, 02 Mar 2026 16:20:13: Parsing FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Mn_deplete_R1_M1_2_S52_L007_R2_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:20:13: Determining the trim-5 length of FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Mn_deplete_R1_M1_2_S52_L007_R2_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:20:13: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:20:13: Processing 0M reads ... 
+INFO  @ Mon, 02 Mar 2026 16:20:13: Read length:20 
+INFO  @ Mon, 02 Mar 2026 16:20:13: Total tested reads: 100001, mapped: 3033(0.03032969670303297) 
+WARNING @ Mon, 02 Mar 2026 16:20:13: Only 3.032969670303297 % of the reads can be identified.  
+INFO  @ Mon, 02 Mar 2026 16:20:13: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Mon, 02 Mar 2026 16:20:13: 0	3033	1.0 
+INFO  @ Mon, 02 Mar 2026 16:20:13: Auto determination of trim5 results: 0 
+INFO  @ Mon, 02 Mar 2026 16:20:13: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:20:13: Processing 0M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:20:15: Processing 1M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:20:17: Processing 2M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:20:18: Processing 3M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:20:20: Processing 4M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:20:22: Processing 5M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:20:24: Processing 6M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:20:26: Processing 7M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:20:27: Processing 8M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:20:29: Processing 9M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:20:31: Processing 10M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:20:33: Processing 11M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:20:34: Processing 12M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:20:36: Processing 13M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:20:38: Processing 14M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:20:40: Processing 15M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:20:42: Processing 16M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:20:43: Processing 17M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:20:45: Processing 18M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:20:47: Processing 19M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:20:49: Processing 20M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:20:50: Total: 20430872. 
+INFO  @ Mon, 02 Mar 2026 16:20:50: Mapped: 620252. 
+INFO  @ Mon, 02 Mar 2026 16:20:50: Parsing FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Mn_deplete_R2_M2_1_S53_L007_R1_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:20:50: Determining the trim-5 length of FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Mn_deplete_R2_M2_1_S53_L007_R1_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:20:50: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:20:50: Processing 0M reads ... 
+INFO  @ Mon, 02 Mar 2026 16:20:50: Read length:20 
+INFO  @ Mon, 02 Mar 2026 16:20:50: Total tested reads: 100001, mapped: 3053(0.03052969470305297) 
+WARNING @ Mon, 02 Mar 2026 16:20:50: Only 3.052969470305297 % of the reads can be identified.  
+INFO  @ Mon, 02 Mar 2026 16:20:50: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Mon, 02 Mar 2026 16:20:50: 0	3053	1.0 
+INFO  @ Mon, 02 Mar 2026 16:20:50: Auto determination of trim5 results: 0 
+INFO  @ Mon, 02 Mar 2026 16:20:50: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:20:50: Processing 0M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:20:52: Processing 1M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:20:53: Processing 2M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:20:55: Processing 3M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:20:57: Processing 4M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:20:59: Processing 5M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:21:01: Processing 6M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:21:02: Processing 7M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:21:04: Processing 8M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:21:06: Processing 9M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:21:08: Processing 10M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:21:09: Processing 11M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:21:11: Processing 12M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:21:13: Processing 13M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:21:15: Processing 14M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:21:17: Processing 15M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:21:18: Processing 16M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:21:20: Processing 17M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:21:22: Processing 18M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:21:24: Processing 19M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:21:26: Processing 20M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:21:27: Processing 21M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:21:28: Total: 21433020. 
+INFO  @ Mon, 02 Mar 2026 16:21:28: Mapped: 645729. 
+INFO  @ Mon, 02 Mar 2026 16:21:28: Parsing FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Mn_deplete_R2_M2_1_S53_L007_R2_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:21:28: Determining the trim-5 length of FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Mn_deplete_R2_M2_1_S53_L007_R2_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:21:28: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:21:28: Processing 0M reads ... 
+INFO  @ Mon, 02 Mar 2026 16:21:28: Read length:20 
+INFO  @ Mon, 02 Mar 2026 16:21:28: Total tested reads: 100001, mapped: 3072(0.03071969280307197) 
+WARNING @ Mon, 02 Mar 2026 16:21:28: Only 3.071969280307197 % of the reads can be identified.  
+INFO  @ Mon, 02 Mar 2026 16:21:28: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Mon, 02 Mar 2026 16:21:28: 0	3072	1.0 
+INFO  @ Mon, 02 Mar 2026 16:21:28: Auto determination of trim5 results: 0 
+INFO  @ Mon, 02 Mar 2026 16:21:28: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:21:28: Processing 0M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:21:30: Processing 1M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:21:32: Processing 2M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:21:34: Processing 3M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:21:35: Processing 4M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:21:37: Processing 5M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:21:39: Processing 6M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:21:41: Processing 7M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:21:43: Processing 8M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:21:44: Processing 9M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:21:46: Processing 10M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:21:48: Processing 11M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:21:50: Processing 12M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:21:52: Processing 13M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:21:53: Processing 14M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:21:55: Processing 15M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:21:57: Processing 16M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:21:59: Processing 17M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:22:01: Processing 18M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:22:02: Processing 19M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:22:04: Processing 20M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:22:06: Total: 20953890. 
+INFO  @ Mon, 02 Mar 2026 16:22:06: Mapped: 635329. 
+INFO  @ Mon, 02 Mar 2026 16:22:06: Parsing FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Mn_deplete_R2_M2_2_S54_L007_R1_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:22:06: Determining the trim-5 length of FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Mn_deplete_R2_M2_2_S54_L007_R1_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:22:06: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:22:06: Processing 0M reads ... 
+INFO  @ Mon, 02 Mar 2026 16:22:06: Read length:20 
+INFO  @ Mon, 02 Mar 2026 16:22:06: Total tested reads: 100001, mapped: 7085(0.07084929150708492) 
+WARNING @ Mon, 02 Mar 2026 16:22:06: Only 7.084929150708493 % of the reads can be identified.  
+INFO  @ Mon, 02 Mar 2026 16:22:06: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Mon, 02 Mar 2026 16:22:06: 0	7085	1.0 
+INFO  @ Mon, 02 Mar 2026 16:22:06: Auto determination of trim5 results: 0 
+INFO  @ Mon, 02 Mar 2026 16:22:06: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:22:06: Processing 0M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:22:08: Processing 1M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:22:10: Processing 2M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:22:12: Processing 3M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:22:13: Processing 4M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:22:15: Processing 5M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:22:17: Processing 6M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:22:19: Processing 7M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:22:21: Processing 8M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:22:22: Processing 9M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:22:24: Processing 10M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:22:26: Processing 11M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:22:28: Processing 12M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:22:30: Processing 13M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:22:31: Processing 14M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:22:33: Processing 15M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:22:35: Processing 16M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:22:37: Processing 17M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:22:39: Processing 18M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:22:40: Total: 18814992. 
+INFO  @ Mon, 02 Mar 2026 16:22:40: Mapped: 1336197. 
+INFO  @ Mon, 02 Mar 2026 16:22:40: Parsing FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Mn_deplete_R2_M2_2_S54_L007_R2_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:22:40: Determining the trim-5 length of FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Mn_deplete_R2_M2_2_S54_L007_R2_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:22:40: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:22:40: Processing 0M reads ... 
+INFO  @ Mon, 02 Mar 2026 16:22:40: Read length:20 
+INFO  @ Mon, 02 Mar 2026 16:22:40: Total tested reads: 100001, mapped: 7143(0.07142928570714292) 
+WARNING @ Mon, 02 Mar 2026 16:22:40: Only 7.142928570714292 % of the reads can be identified.  
+INFO  @ Mon, 02 Mar 2026 16:22:40: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Mon, 02 Mar 2026 16:22:40: 0	7143	1.0 
+INFO  @ Mon, 02 Mar 2026 16:22:40: Auto determination of trim5 results: 0 
+INFO  @ Mon, 02 Mar 2026 16:22:40: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:22:40: Processing 0M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:22:42: Processing 1M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:22:44: Processing 2M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:22:46: Processing 3M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:22:48: Processing 4M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:22:49: Processing 5M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:22:51: Processing 6M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:22:53: Processing 7M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:22:55: Processing 8M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:22:57: Processing 9M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:22:58: Processing 10M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:23:00: Processing 11M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:23:02: Processing 12M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:23:04: Processing 13M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:23:06: Processing 14M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:23:07: Processing 15M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:23:09: Processing 16M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:23:11: Processing 17M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:23:13: Processing 18M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:23:14: Total: 18485603. 
+INFO  @ Mon, 02 Mar 2026 16:23:14: Mapped: 1320203. 
+INFO  @ Mon, 02 Mar 2026 16:23:14: Parsing FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Mn_deplete_R3_M3_1_S55_L007_R1_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:23:14: Determining the trim-5 length of FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Mn_deplete_R3_M3_1_S55_L007_R1_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:23:14: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:23:14: Processing 0M reads ... 
+INFO  @ Mon, 02 Mar 2026 16:23:14: Read length:20 
+INFO  @ Mon, 02 Mar 2026 16:23:14: Total tested reads: 100001, mapped: 6960(0.06959930400695993) 
+WARNING @ Mon, 02 Mar 2026 16:23:14: Only 6.959930400695994 % of the reads can be identified.  
+INFO  @ Mon, 02 Mar 2026 16:23:14: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Mon, 02 Mar 2026 16:23:14: 0	6960	1.0 
+INFO  @ Mon, 02 Mar 2026 16:23:14: Auto determination of trim5 results: 0 
+INFO  @ Mon, 02 Mar 2026 16:23:14: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:23:14: Processing 0M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:23:16: Processing 1M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:23:18: Processing 2M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:23:19: Processing 3M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:23:21: Processing 4M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:23:23: Processing 5M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:23:25: Processing 6M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:23:27: Processing 7M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:23:28: Processing 8M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:23:30: Processing 9M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:23:32: Processing 10M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:23:34: Processing 11M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:23:36: Processing 12M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:23:37: Processing 13M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:23:39: Processing 14M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:23:41: Processing 15M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:23:43: Processing 16M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:23:45: Processing 17M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:23:46: Processing 18M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:23:48: Processing 19M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:23:50: Processing 20M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:23:52: Processing 21M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:23:52: Total: 21059896. 
+INFO  @ Mon, 02 Mar 2026 16:23:52: Mapped: 1474086. 
+INFO  @ Mon, 02 Mar 2026 16:23:52: Parsing FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Mn_deplete_R3_M3_1_S55_L007_R2_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:23:52: Determining the trim-5 length of FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Mn_deplete_R3_M3_1_S55_L007_R2_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:23:52: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:23:52: Processing 0M reads ... 
+INFO  @ Mon, 02 Mar 2026 16:23:52: Read length:20 
+INFO  @ Mon, 02 Mar 2026 16:23:52: Total tested reads: 100001, mapped: 7069(0.07068929310706892) 
+WARNING @ Mon, 02 Mar 2026 16:23:52: Only 7.068929310706892 % of the reads can be identified.  
+INFO  @ Mon, 02 Mar 2026 16:23:52: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Mon, 02 Mar 2026 16:23:52: 0	7069	1.0 
+INFO  @ Mon, 02 Mar 2026 16:23:52: Auto determination of trim5 results: 0 
+INFO  @ Mon, 02 Mar 2026 16:23:52: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:23:52: Processing 0M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:23:54: Processing 1M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:23:56: Processing 2M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:23:58: Processing 3M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:23:59: Processing 4M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:24:01: Processing 5M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:24:03: Processing 6M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:24:05: Processing 7M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:24:07: Processing 8M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:24:08: Processing 9M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:24:10: Processing 10M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:24:12: Processing 11M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:24:14: Processing 12M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:24:16: Processing 13M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:24:18: Processing 14M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:24:19: Processing 15M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:24:21: Processing 16M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:24:23: Processing 17M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:24:25: Processing 18M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:24:27: Processing 19M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:24:28: Processing 20M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:24:30: Total: 20723844. 
+INFO  @ Mon, 02 Mar 2026 16:24:30: Mapped: 1457021. 
+INFO  @ Mon, 02 Mar 2026 16:24:30: Parsing FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Mn_deplete_R3_M3_2_S56_L007_R1_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:24:30: Determining the trim-5 length of FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Mn_deplete_R3_M3_2_S56_L007_R1_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:24:30: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:24:30: Processing 0M reads ... 
+INFO  @ Mon, 02 Mar 2026 16:24:30: Read length:20 
+INFO  @ Mon, 02 Mar 2026 16:24:30: Total tested reads: 100001, mapped: 7386(0.07385926140738593) 
+WARNING @ Mon, 02 Mar 2026 16:24:30: Only 7.385926140738593 % of the reads can be identified.  
+INFO  @ Mon, 02 Mar 2026 16:24:30: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Mon, 02 Mar 2026 16:24:30: 0	7386	1.0 
+INFO  @ Mon, 02 Mar 2026 16:24:30: Auto determination of trim5 results: 0 
+INFO  @ Mon, 02 Mar 2026 16:24:30: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:24:30: Processing 0M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:24:32: Processing 1M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:24:34: Processing 2M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:24:35: Processing 3M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:24:37: Processing 4M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:24:39: Processing 5M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:24:41: Processing 6M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:24:42: Processing 7M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:24:44: Processing 8M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:24:46: Processing 9M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:24:48: Processing 10M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:24:50: Processing 11M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:24:51: Processing 12M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:24:53: Processing 13M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:24:55: Processing 14M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:24:57: Processing 15M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:24:59: Processing 16M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:25:00: Processing 17M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:25:02: Processing 18M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:25:04: Processing 19M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:25:06: Processing 20M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:25:08: Processing 21M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:25:09: Total: 21796029. 
+INFO  @ Mon, 02 Mar 2026 16:25:09: Mapped: 1604215. 
+INFO  @ Mon, 02 Mar 2026 16:25:09: Parsing FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Mn_deplete_R3_M3_2_S56_L007_R2_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:25:09: Determining the trim-5 length of FASTQ file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Mn_deplete_R3_M3_2_S56_L007_R2_001.fastq.gz... 
+INFO  @ Mon, 02 Mar 2026 16:25:09: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:25:09: Processing 0M reads ... 
+INFO  @ Mon, 02 Mar 2026 16:25:09: Read length:20 
+INFO  @ Mon, 02 Mar 2026 16:25:09: Total tested reads: 100001, mapped: 7411(0.07410925890741092) 
+WARNING @ Mon, 02 Mar 2026 16:25:09: Only 7.410925890741092 % of the reads can be identified.  
+INFO  @ Mon, 02 Mar 2026 16:25:09: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Mon, 02 Mar 2026 16:25:09: 0	7411	1.0 
+INFO  @ Mon, 02 Mar 2026 16:25:09: Auto determination of trim5 results: 0 
+INFO  @ Mon, 02 Mar 2026 16:25:09: Possible gRNA lengths:20 
+INFO  @ Mon, 02 Mar 2026 16:25:09: Processing 0M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:25:11: Processing 1M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:25:13: Processing 2M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:25:15: Processing 3M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:25:17: Processing 4M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:25:18: Processing 5M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:25:20: Processing 6M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:25:22: Processing 7M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:25:24: Processing 8M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:25:25: Processing 9M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:25:27: Processing 10M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:25:29: Processing 11M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:25:31: Processing 12M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:25:33: Processing 13M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:25:35: Processing 14M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:25:36: Processing 15M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:25:38: Processing 16M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:25:40: Processing 17M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:25:42: Processing 18M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:25:44: Processing 19M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:25:45: Processing 20M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:25:47: Processing 21M reads .. 
+INFO  @ Mon, 02 Mar 2026 16:25:48: Total: 21435795. 
+INFO  @ Mon, 02 Mar 2026 16:25:48: Mapped: 1583137. 
+DEBUG @ Mon, 02 Mar 2026 16:25:49: Initial (total) size factor: 0.1352165352740512 5.332151595741288 5.449464859552528 2.235818757617186 4.264193134420853 4.136016978088883 5.100872882383432 3.2080239628827107 3.1840590553600827 2.0490615038852105 
+WARNING @ Mon, 02 Mar 2026 16:25:50: Sample 1 has zero median count, so median normalization is not possible. Switch to total read count normalization. 
+WARNING @ Mon, 02 Mar 2026 16:25:50: Sample 1 has too many zero-count sgRNAs (0.6083692771685498), and median normalization is unstable. Switch to total read count normalization. 
+WARNING @ Mon, 02 Mar 2026 16:25:50: Sample 2 has zero median count, so median normalization is not possible. Switch to total read count normalization. 
+WARNING @ Mon, 02 Mar 2026 16:25:50: Sample 2 has too many zero-count sgRNAs (0.6023373656957212), and median normalization is unstable. Switch to total read count normalization. 
+WARNING @ Mon, 02 Mar 2026 16:25:50: Sample 3 has zero median count, so median normalization is not possible. Switch to total read count normalization. 
+WARNING @ Mon, 02 Mar 2026 16:25:50: Sample 3 has too many zero-count sgRNAs (0.5290230299267078), and median normalization is unstable. Switch to total read count normalization. 
+WARNING @ Mon, 02 Mar 2026 16:25:50: Sample 4 has zero median count, so median normalization is not possible. Switch to total read count normalization. 
+WARNING @ Mon, 02 Mar 2026 16:25:50: Sample 4 has too many zero-count sgRNAs (0.6091343541752138), and median normalization is unstable. Switch to total read count normalization. 
+WARNING @ Mon, 02 Mar 2026 16:25:50: Sample 5 has zero median count, so median normalization is not possible. Switch to total read count normalization. 
+WARNING @ Mon, 02 Mar 2026 16:25:50: Sample 5 has too many zero-count sgRNAs (0.588776652954417), and median normalization is unstable. Switch to total read count normalization. 
+WARNING @ Mon, 02 Mar 2026 16:25:50: Sample 6 has zero median count, so median normalization is not possible. Switch to total read count normalization. 
+WARNING @ Mon, 02 Mar 2026 16:25:50: Sample 6 has too many zero-count sgRNAs (0.6127823300475679), and median normalization is unstable. Switch to total read count normalization. 
+WARNING @ Mon, 02 Mar 2026 16:25:50: Sample 7 has zero median count, so median normalization is not possible. Switch to total read count normalization. 
+WARNING @ Mon, 02 Mar 2026 16:25:50: Sample 7 has too many zero-count sgRNAs (0.5593710845243771), and median normalization is unstable. Switch to total read count normalization. 
+WARNING @ Mon, 02 Mar 2026 16:25:50: Sample 8 has zero median count, so median normalization is not possible. Switch to total read count normalization. 
+WARNING @ Mon, 02 Mar 2026 16:25:50: Sample 8 has too many zero-count sgRNAs (0.5842748954949161), and median normalization is unstable. Switch to total read count normalization. 
+WARNING @ Mon, 02 Mar 2026 16:25:50: Sample 9 has zero median count, so median normalization is not possible. Switch to total read count normalization. 
+WARNING @ Mon, 02 Mar 2026 16:25:50: Sample 9 has too many zero-count sgRNAs (0.621419938572078), and median normalization is unstable. Switch to total read count normalization. 
+INFO  @ Mon, 02 Mar 2026 16:25:50: Final size factor: 0.1352165352740512 5.332151595741288 5.449464859552528 2.235818757617186 4.264193134420853 4.136016978088883 5.100872882383432 3.2080239628827107 3.1840590553600827 2.0490615038852105 
+WARNING @ Mon, 02 Mar 2026 16:25:50: Some samples have unusually small or large normalization factors (<0.2 or >5). Please double-check with the normalization process. 
+INFO  @ Mon, 02 Mar 2026 16:25:51: Summary of file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t0_R1_t0_NH4_1_S1_L007_R1_001.fastq.gz: 
+INFO  @ Mon, 02 Mar 2026 16:25:51: label	t0_R1 
+INFO  @ Mon, 02 Mar 2026 16:25:51: reads	39892468 
+INFO  @ Mon, 02 Mar 2026 16:25:51: mappedreads	24695189 
+INFO  @ Mon, 02 Mar 2026 16:25:51: totalsgrnas	90202 
+INFO  @ Mon, 02 Mar 2026 16:25:51: zerosgrnas	18 
+INFO  @ Mon, 02 Mar 2026 16:25:51: giniindex	0.04794461820420948 
+INFO  @ Mon, 02 Mar 2026 16:25:51: Summary of file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t0_R1_t0_NH4_1_S1_L007_R2_001.fastq.gz: 
+INFO  @ Mon, 02 Mar 2026 16:25:51: label	t0_R1 
+INFO  @ Mon, 02 Mar 2026 16:25:51: reads	39516464 
+INFO  @ Mon, 02 Mar 2026 16:25:51: mappedreads	24473566 
+INFO  @ Mon, 02 Mar 2026 16:25:51: totalsgrnas	90202 
+INFO  @ Mon, 02 Mar 2026 16:25:51: zerosgrnas	18 
+INFO  @ Mon, 02 Mar 2026 16:25:51: giniindex	0.048012843235508584 
+INFO  @ Mon, 02 Mar 2026 16:25:51: Summary of file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t0_R1_t0_NH4_2_S2_L007_R1_001.fastq.gz: 
+INFO  @ Mon, 02 Mar 2026 16:25:51: label	t0_R1 
+INFO  @ Mon, 02 Mar 2026 16:25:51: reads	35347343 
+INFO  @ Mon, 02 Mar 2026 16:25:51: mappedreads	21939988 
+INFO  @ Mon, 02 Mar 2026 16:25:51: totalsgrnas	90202 
+INFO  @ Mon, 02 Mar 2026 16:25:51: zerosgrnas	19 
+INFO  @ Mon, 02 Mar 2026 16:25:51: giniindex	0.04919955523910535 
+INFO  @ Mon, 02 Mar 2026 16:25:51: Summary of file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t0_R1_t0_NH4_2_S2_L007_R2_001.fastq.gz: 
+INFO  @ Mon, 02 Mar 2026 16:25:51: label	t0_R1 
+INFO  @ Mon, 02 Mar 2026 16:25:51: reads	34801324 
+INFO  @ Mon, 02 Mar 2026 16:25:51: mappedreads	21609938 
+INFO  @ Mon, 02 Mar 2026 16:25:51: totalsgrnas	90202 
+INFO  @ Mon, 02 Mar 2026 16:25:51: zerosgrnas	19 
+INFO  @ Mon, 02 Mar 2026 16:25:51: giniindex	0.04934345758181635 
+INFO  @ Mon, 02 Mar 2026 16:25:51: Summary of file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_deplete_R1_F1_1_S45_L007_R1_001.fastq.gz: 
+INFO  @ Mon, 02 Mar 2026 16:25:51: label	t1_Fe_deplete_R1 
+INFO  @ Mon, 02 Mar 2026 16:25:51: reads	22080173 
+INFO  @ Mon, 02 Mar 2026 16:25:51: mappedreads	657634 
+INFO  @ Mon, 02 Mar 2026 16:25:51: totalsgrnas	90202 
+INFO  @ Mon, 02 Mar 2026 16:25:51: zerosgrnas	60117 
+INFO  @ Mon, 02 Mar 2026 16:25:51: giniindex	0.7719374307655285 
+INFO  @ Mon, 02 Mar 2026 16:25:51: Summary of file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_deplete_R1_F1_1_S45_L007_R2_001.fastq.gz: 
+INFO  @ Mon, 02 Mar 2026 16:25:51: label	t1_Fe_deplete_R1 
+INFO  @ Mon, 02 Mar 2026 16:25:51: reads	21500093 
+INFO  @ Mon, 02 Mar 2026 16:25:51: mappedreads	643402 
+INFO  @ Mon, 02 Mar 2026 16:25:51: totalsgrnas	90202 
+INFO  @ Mon, 02 Mar 2026 16:25:51: zerosgrnas	60557 
+INFO  @ Mon, 02 Mar 2026 16:25:51: giniindex	0.7744325726500345 
+INFO  @ Mon, 02 Mar 2026 16:25:51: Summary of file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_deplete_R1_F1_2_S46_L007_R1_001.fastq.gz: 
+INFO  @ Mon, 02 Mar 2026 16:25:51: label	t1_Fe_deplete_R1 
+INFO  @ Mon, 02 Mar 2026 16:25:51: reads	17452375 
+INFO  @ Mon, 02 Mar 2026 16:25:51: mappedreads	531987 
+INFO  @ Mon, 02 Mar 2026 16:25:51: totalsgrnas	90202 
+INFO  @ Mon, 02 Mar 2026 16:25:51: zerosgrnas	61403 
+INFO  @ Mon, 02 Mar 2026 16:25:51: giniindex	0.7812437548358715 
+INFO  @ Mon, 02 Mar 2026 16:25:51: Summary of file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_deplete_R1_F1_2_S46_L007_R2_001.fastq.gz: 
+INFO  @ Mon, 02 Mar 2026 16:25:51: label	t1_Fe_deplete_R1 
+INFO  @ Mon, 02 Mar 2026 16:25:51: reads	16935466 
+INFO  @ Mon, 02 Mar 2026 16:25:51: mappedreads	518204 
+INFO  @ Mon, 02 Mar 2026 16:25:51: totalsgrnas	90202 
+INFO  @ Mon, 02 Mar 2026 16:25:51: zerosgrnas	61822 
+INFO  @ Mon, 02 Mar 2026 16:25:51: giniindex	0.7839147010678718 
+INFO  @ Mon, 02 Mar 2026 16:25:51: Summary of file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_deplete_R2_F2_1_S47_L007_R1_001.fastq.gz: 
+INFO  @ Mon, 02 Mar 2026 16:25:51: label	t1_Fe_deplete_R2 
+INFO  @ Mon, 02 Mar 2026 16:25:51: reads	20260923 
+INFO  @ Mon, 02 Mar 2026 16:25:51: mappedreads	594629 
+INFO  @ Mon, 02 Mar 2026 16:25:51: totalsgrnas	90202 
+INFO  @ Mon, 02 Mar 2026 16:25:51: zerosgrnas	60548 
+INFO  @ Mon, 02 Mar 2026 16:25:51: giniindex	0.7742632296904903 
+INFO  @ Mon, 02 Mar 2026 16:25:51: Summary of file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_deplete_R2_F2_1_S47_L007_R2_001.fastq.gz: 
+INFO  @ Mon, 02 Mar 2026 16:25:51: label	t1_Fe_deplete_R2 
+INFO  @ Mon, 02 Mar 2026 16:25:51: reads	19846085 
+INFO  @ Mon, 02 Mar 2026 16:25:51: mappedreads	585382 
+INFO  @ Mon, 02 Mar 2026 16:25:51: totalsgrnas	90202 
+INFO  @ Mon, 02 Mar 2026 16:25:51: zerosgrnas	60926 
+INFO  @ Mon, 02 Mar 2026 16:25:51: giniindex	0.776467251133806 
+INFO  @ Mon, 02 Mar 2026 16:25:51: Summary of file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_deplete_R2_F2_2_S48_L007_R1_001.fastq.gz: 
+INFO  @ Mon, 02 Mar 2026 16:25:51: label	t1_Fe_deplete_R2 
+INFO  @ Mon, 02 Mar 2026 16:25:51: reads	20161606 
+INFO  @ Mon, 02 Mar 2026 16:25:51: mappedreads	562860 
+INFO  @ Mon, 02 Mar 2026 16:25:51: totalsgrnas	90202 
+INFO  @ Mon, 02 Mar 2026 16:25:51: zerosgrnas	60482 
+INFO  @ Mon, 02 Mar 2026 16:25:51: giniindex	0.7747164169313482 
+INFO  @ Mon, 02 Mar 2026 16:25:51: Summary of file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_deplete_R2_F2_2_S48_L007_R2_001.fastq.gz: 
+INFO  @ Mon, 02 Mar 2026 16:25:51: label	t1_Fe_deplete_R2 
+INFO  @ Mon, 02 Mar 2026 16:25:51: reads	19897914 
+INFO  @ Mon, 02 Mar 2026 16:25:51: mappedreads	557740 
+INFO  @ Mon, 02 Mar 2026 16:25:51: totalsgrnas	90202 
+INFO  @ Mon, 02 Mar 2026 16:25:51: zerosgrnas	60906 
+INFO  @ Mon, 02 Mar 2026 16:25:51: giniindex	0.7771242660429837 
+INFO  @ Mon, 02 Mar 2026 16:25:51: Summary of file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_deplete_R3_F3_1_S49_L007_R1_001.fastq.gz: 
+INFO  @ Mon, 02 Mar 2026 16:25:51: label	t1_Fe_deplete_R3 
+INFO  @ Mon, 02 Mar 2026 16:25:51: reads	18894420 
+INFO  @ Mon, 02 Mar 2026 16:25:51: mappedreads	1502750 
+INFO  @ Mon, 02 Mar 2026 16:25:51: totalsgrnas	90202 
+INFO  @ Mon, 02 Mar 2026 16:25:51: zerosgrnas	66460 
+INFO  @ Mon, 02 Mar 2026 16:25:51: giniindex	0.8334089893944956 
+INFO  @ Mon, 02 Mar 2026 16:25:51: Summary of file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_deplete_R3_F3_1_S49_L007_R2_001.fastq.gz: 
+INFO  @ Mon, 02 Mar 2026 16:25:51: label	t1_Fe_deplete_R3 
+INFO  @ Mon, 02 Mar 2026 16:25:51: reads	18501331 
+INFO  @ Mon, 02 Mar 2026 16:25:51: mappedreads	1477420 
+INFO  @ Mon, 02 Mar 2026 16:25:51: totalsgrnas	90202 
+INFO  @ Mon, 02 Mar 2026 16:25:51: zerosgrnas	67003 
+INFO  @ Mon, 02 Mar 2026 16:25:51: giniindex	0.836255940374608 
+INFO  @ Mon, 02 Mar 2026 16:25:51: Summary of file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_deplete_R3_F3_2_S50_L007_R1_001.fastq.gz: 
+INFO  @ Mon, 02 Mar 2026 16:25:51: label	t1_Fe_deplete_R3 
+INFO  @ Mon, 02 Mar 2026 16:25:51: reads	23224624 
+INFO  @ Mon, 02 Mar 2026 16:25:51: mappedreads	1329706 
+INFO  @ Mon, 02 Mar 2026 16:25:51: totalsgrnas	90202 
+INFO  @ Mon, 02 Mar 2026 16:25:51: zerosgrnas	56540 
+INFO  @ Mon, 02 Mar 2026 16:25:51: giniindex	0.7344187759457887 
+INFO  @ Mon, 02 Mar 2026 16:25:51: Summary of file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_deplete_R3_F3_2_S50_L007_R2_001.fastq.gz: 
+INFO  @ Mon, 02 Mar 2026 16:25:51: label	t1_Fe_deplete_R3 
+INFO  @ Mon, 02 Mar 2026 16:25:51: reads	22577487 
+INFO  @ Mon, 02 Mar 2026 16:25:51: mappedreads	1297510 
+INFO  @ Mon, 02 Mar 2026 16:25:51: totalsgrnas	90202 
+INFO  @ Mon, 02 Mar 2026 16:25:51: zerosgrnas	56862 
+INFO  @ Mon, 02 Mar 2026 16:25:51: giniindex	0.7361341281295177 
+INFO  @ Mon, 02 Mar 2026 16:25:51: Summary of file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_replete_R1_R1_1_S39_L007_R1_001.fastq.gz: 
+INFO  @ Mon, 02 Mar 2026 16:25:51: label	t1_Fe_replete_R1 
+INFO  @ Mon, 02 Mar 2026 16:25:51: reads	21641792 
+INFO  @ Mon, 02 Mar 2026 16:25:51: mappedreads	772499 
+INFO  @ Mon, 02 Mar 2026 16:25:51: totalsgrnas	90202 
+INFO  @ Mon, 02 Mar 2026 16:25:51: zerosgrnas	60010 
+INFO  @ Mon, 02 Mar 2026 16:25:51: giniindex	0.7695658456389547 
+INFO  @ Mon, 02 Mar 2026 16:25:51: Summary of file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_replete_R1_R1_1_S39_L007_R2_001.fastq.gz: 
+INFO  @ Mon, 02 Mar 2026 16:25:51: label	t1_Fe_replete_R1 
+INFO  @ Mon, 02 Mar 2026 16:25:51: reads	21195253 
+INFO  @ Mon, 02 Mar 2026 16:25:51: mappedreads	759714 
+INFO  @ Mon, 02 Mar 2026 16:25:51: totalsgrnas	90202 
+INFO  @ Mon, 02 Mar 2026 16:25:51: zerosgrnas	60428 
+INFO  @ Mon, 02 Mar 2026 16:25:51: giniindex	0.7718378257579877 
+INFO  @ Mon, 02 Mar 2026 16:25:51: Summary of file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_replete_R1_R1_2_S40_L007_R1_001.fastq.gz: 
+INFO  @ Mon, 02 Mar 2026 16:25:51: label	t1_Fe_replete_R1 
+INFO  @ Mon, 02 Mar 2026 16:25:51: reads	20107824 
+INFO  @ Mon, 02 Mar 2026 16:25:51: mappedreads	708665 
+INFO  @ Mon, 02 Mar 2026 16:25:51: totalsgrnas	90202 
+INFO  @ Mon, 02 Mar 2026 16:25:51: zerosgrnas	60879 
+INFO  @ Mon, 02 Mar 2026 16:25:51: giniindex	0.775012198671977 
+INFO  @ Mon, 02 Mar 2026 16:25:51: Summary of file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_replete_R1_R1_2_S40_L007_R2_001.fastq.gz: 
+INFO  @ Mon, 02 Mar 2026 16:25:51: label	t1_Fe_replete_R1 
+INFO  @ Mon, 02 Mar 2026 16:25:51: reads	19801595 
+INFO  @ Mon, 02 Mar 2026 16:25:51: mappedreads	699209 
+INFO  @ Mon, 02 Mar 2026 16:25:51: totalsgrnas	90202 
+INFO  @ Mon, 02 Mar 2026 16:25:51: zerosgrnas	61266 
+INFO  @ Mon, 02 Mar 2026 16:25:51: giniindex	0.776989652814279 
+INFO  @ Mon, 02 Mar 2026 16:25:51: Summary of file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_replete_R2_R2_1_S41_L007_R1_001.fastq.gz: 
+INFO  @ Mon, 02 Mar 2026 16:25:51: label	t1_Fe_replete_R2 
+INFO  @ Mon, 02 Mar 2026 16:25:51: reads	23034448 
+INFO  @ Mon, 02 Mar 2026 16:25:51: mappedreads	712994 
+INFO  @ Mon, 02 Mar 2026 16:25:51: totalsgrnas	90202 
+INFO  @ Mon, 02 Mar 2026 16:25:51: zerosgrnas	59758 
+INFO  @ Mon, 02 Mar 2026 16:25:51: giniindex	0.7689931971352473 
+INFO  @ Mon, 02 Mar 2026 16:25:51: Summary of file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_replete_R2_R2_1_S41_L007_R2_001.fastq.gz: 
+INFO  @ Mon, 02 Mar 2026 16:25:51: label	t1_Fe_replete_R2 
+INFO  @ Mon, 02 Mar 2026 16:25:51: reads	22633108 
+INFO  @ Mon, 02 Mar 2026 16:25:51: mappedreads	701879 
+INFO  @ Mon, 02 Mar 2026 16:25:51: totalsgrnas	90202 
+INFO  @ Mon, 02 Mar 2026 16:25:51: zerosgrnas	60239 
+INFO  @ Mon, 02 Mar 2026 16:25:51: giniindex	0.7717589476933876 
+INFO  @ Mon, 02 Mar 2026 16:25:51: Summary of file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_replete_R2_R2_2_S42_L007_R1_001.fastq.gz: 
+INFO  @ Mon, 02 Mar 2026 16:25:51: label	t1_Fe_replete_R2 
+INFO  @ Mon, 02 Mar 2026 16:25:51: reads	25859257 
+INFO  @ Mon, 02 Mar 2026 16:25:51: mappedreads	813876 
+INFO  @ Mon, 02 Mar 2026 16:25:51: totalsgrnas	90202 
+INFO  @ Mon, 02 Mar 2026 16:25:51: zerosgrnas	59132 
+INFO  @ Mon, 02 Mar 2026 16:25:51: giniindex	0.7642151822814873 
+INFO  @ Mon, 02 Mar 2026 16:25:51: Summary of file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_replete_R2_R2_2_S42_L007_R2_001.fastq.gz: 
+INFO  @ Mon, 02 Mar 2026 16:25:51: label	t1_Fe_replete_R2 
+INFO  @ Mon, 02 Mar 2026 16:25:51: reads	25437913 
+INFO  @ Mon, 02 Mar 2026 16:25:51: mappedreads	802452 
+INFO  @ Mon, 02 Mar 2026 16:25:51: totalsgrnas	90202 
+INFO  @ Mon, 02 Mar 2026 16:25:51: zerosgrnas	59551 
+INFO  @ Mon, 02 Mar 2026 16:25:51: giniindex	0.76662227876769 
+INFO  @ Mon, 02 Mar 2026 16:25:51: Summary of file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_replete_R3_R3_1_S43_L007_R1_001.fastq.gz: 
+INFO  @ Mon, 02 Mar 2026 16:25:51: label	t1_Fe_replete_R3 
+INFO  @ Mon, 02 Mar 2026 16:25:51: reads	22058860 
+INFO  @ Mon, 02 Mar 2026 16:25:51: mappedreads	611772 
+INFO  @ Mon, 02 Mar 2026 16:25:51: totalsgrnas	90202 
+INFO  @ Mon, 02 Mar 2026 16:25:51: zerosgrnas	61242 
+INFO  @ Mon, 02 Mar 2026 16:25:51: giniindex	0.7803548124088175 
+INFO  @ Mon, 02 Mar 2026 16:25:51: Summary of file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_replete_R3_R3_1_S43_L007_R2_001.fastq.gz: 
+INFO  @ Mon, 02 Mar 2026 16:25:51: label	t1_Fe_replete_R3 
+INFO  @ Mon, 02 Mar 2026 16:25:51: reads	21647128 
+INFO  @ Mon, 02 Mar 2026 16:25:51: mappedreads	601340 
+INFO  @ Mon, 02 Mar 2026 16:25:51: totalsgrnas	90202 
+INFO  @ Mon, 02 Mar 2026 16:25:51: zerosgrnas	61647 
+INFO  @ Mon, 02 Mar 2026 16:25:51: giniindex	0.782660801498541 
+INFO  @ Mon, 02 Mar 2026 16:25:51: Summary of file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_replete_R3_R3_2_S44_L007_R1_001.fastq.gz: 
+INFO  @ Mon, 02 Mar 2026 16:25:51: label	t1_Fe_replete_R3 
+INFO  @ Mon, 02 Mar 2026 16:25:51: reads	20553143 
+INFO  @ Mon, 02 Mar 2026 16:25:51: mappedreads	627078 
+INFO  @ Mon, 02 Mar 2026 16:25:51: totalsgrnas	90202 
+INFO  @ Mon, 02 Mar 2026 16:25:51: zerosgrnas	61177 
+INFO  @ Mon, 02 Mar 2026 16:25:51: giniindex	0.7792743540280597 
+INFO  @ Mon, 02 Mar 2026 16:25:51: Summary of file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Fe_replete_R3_R3_2_S44_L007_R2_001.fastq.gz: 
+INFO  @ Mon, 02 Mar 2026 16:25:51: label	t1_Fe_replete_R3 
+INFO  @ Mon, 02 Mar 2026 16:25:51: reads	20159519 
+INFO  @ Mon, 02 Mar 2026 16:25:51: mappedreads	617644 
+INFO  @ Mon, 02 Mar 2026 16:25:51: totalsgrnas	90202 
+INFO  @ Mon, 02 Mar 2026 16:25:51: zerosgrnas	61538 
+INFO  @ Mon, 02 Mar 2026 16:25:51: giniindex	0.7813976077498671 
+INFO  @ Mon, 02 Mar 2026 16:25:51: Summary of file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Mn_deplete_R1_M1_1_S51_L007_R1_001.fastq.gz: 
+INFO  @ Mon, 02 Mar 2026 16:25:51: label	t1_Mn_deplete_R1 
+INFO  @ Mon, 02 Mar 2026 16:25:51: reads	22446727 
+INFO  @ Mon, 02 Mar 2026 16:25:51: mappedreads	1338485 
+INFO  @ Mon, 02 Mar 2026 16:25:51: totalsgrnas	90202 
+INFO  @ Mon, 02 Mar 2026 16:25:51: zerosgrnas	56366 
+INFO  @ Mon, 02 Mar 2026 16:25:51: giniindex	0.7333312371784316 
+INFO  @ Mon, 02 Mar 2026 16:25:51: Summary of file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Mn_deplete_R1_M1_1_S51_L007_R2_001.fastq.gz: 
+INFO  @ Mon, 02 Mar 2026 16:25:51: label	t1_Mn_deplete_R1 
+INFO  @ Mon, 02 Mar 2026 16:25:51: reads	22108187 
+INFO  @ Mon, 02 Mar 2026 16:25:51: mappedreads	1322104 
+INFO  @ Mon, 02 Mar 2026 16:25:51: totalsgrnas	90202 
+INFO  @ Mon, 02 Mar 2026 16:25:51: zerosgrnas	56687 
+INFO  @ Mon, 02 Mar 2026 16:25:51: giniindex	0.7349804568542587 
+INFO  @ Mon, 02 Mar 2026 16:25:51: Summary of file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Mn_deplete_R1_M1_2_S52_L007_R1_001.fastq.gz: 
+INFO  @ Mon, 02 Mar 2026 16:25:51: label	t1_Mn_deplete_R1 
+INFO  @ Mon, 02 Mar 2026 16:25:51: reads	20733009 
+INFO  @ Mon, 02 Mar 2026 16:25:51: mappedreads	627203 
+INFO  @ Mon, 02 Mar 2026 16:25:51: totalsgrnas	90202 
+INFO  @ Mon, 02 Mar 2026 16:25:51: zerosgrnas	60697 
+INFO  @ Mon, 02 Mar 2026 16:25:51: giniindex	0.7754629689243845 
+INFO  @ Mon, 02 Mar 2026 16:25:51: Summary of file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Mn_deplete_R1_M1_2_S52_L007_R2_001.fastq.gz: 
+INFO  @ Mon, 02 Mar 2026 16:25:51: label	t1_Mn_deplete_R1 
+INFO  @ Mon, 02 Mar 2026 16:25:51: reads	20430872 
+INFO  @ Mon, 02 Mar 2026 16:25:51: mappedreads	620252 
+INFO  @ Mon, 02 Mar 2026 16:25:51: totalsgrnas	90202 
+INFO  @ Mon, 02 Mar 2026 16:25:51: zerosgrnas	61043 
+INFO  @ Mon, 02 Mar 2026 16:25:51: giniindex	0.7774750905935721 
+INFO  @ Mon, 02 Mar 2026 16:25:51: Summary of file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Mn_deplete_R2_M2_1_S53_L007_R1_001.fastq.gz: 
+INFO  @ Mon, 02 Mar 2026 16:25:51: label	t1_Mn_deplete_R2 
+INFO  @ Mon, 02 Mar 2026 16:25:51: reads	21433020 
+INFO  @ Mon, 02 Mar 2026 16:25:51: mappedreads	645729 
+INFO  @ Mon, 02 Mar 2026 16:25:51: totalsgrnas	90202 
+INFO  @ Mon, 02 Mar 2026 16:25:51: zerosgrnas	59832 
+INFO  @ Mon, 02 Mar 2026 16:25:51: giniindex	0.7702239905448054 
+INFO  @ Mon, 02 Mar 2026 16:25:51: Summary of file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Mn_deplete_R2_M2_1_S53_L007_R2_001.fastq.gz: 
+INFO  @ Mon, 02 Mar 2026 16:25:51: label	t1_Mn_deplete_R2 
+INFO  @ Mon, 02 Mar 2026 16:25:51: reads	20953890 
+INFO  @ Mon, 02 Mar 2026 16:25:51: mappedreads	635329 
+INFO  @ Mon, 02 Mar 2026 16:25:51: totalsgrnas	90202 
+INFO  @ Mon, 02 Mar 2026 16:25:51: zerosgrnas	60496 
+INFO  @ Mon, 02 Mar 2026 16:25:51: giniindex	0.7738992171019272 
+INFO  @ Mon, 02 Mar 2026 16:25:51: Summary of file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Mn_deplete_R2_M2_2_S54_L007_R1_001.fastq.gz: 
+INFO  @ Mon, 02 Mar 2026 16:25:51: label	t1_Mn_deplete_R2 
+INFO  @ Mon, 02 Mar 2026 16:25:51: reads	18814992 
+INFO  @ Mon, 02 Mar 2026 16:25:51: mappedreads	1336197 
+INFO  @ Mon, 02 Mar 2026 16:25:51: totalsgrnas	90202 
+INFO  @ Mon, 02 Mar 2026 16:25:51: zerosgrnas	71510 
+INFO  @ Mon, 02 Mar 2026 16:25:51: giniindex	0.8683146164099759 
+INFO  @ Mon, 02 Mar 2026 16:25:51: Summary of file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Mn_deplete_R2_M2_2_S54_L007_R2_001.fastq.gz: 
+INFO  @ Mon, 02 Mar 2026 16:25:51: label	t1_Mn_deplete_R2 
+INFO  @ Mon, 02 Mar 2026 16:25:51: reads	18485603 
+INFO  @ Mon, 02 Mar 2026 16:25:51: mappedreads	1320203 
+INFO  @ Mon, 02 Mar 2026 16:25:51: totalsgrnas	90202 
+INFO  @ Mon, 02 Mar 2026 16:25:51: zerosgrnas	71965 
+INFO  @ Mon, 02 Mar 2026 16:25:51: giniindex	0.8704324857308614 
+INFO  @ Mon, 02 Mar 2026 16:25:51: Summary of file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Mn_deplete_R3_M3_1_S55_L007_R1_001.fastq.gz: 
+INFO  @ Mon, 02 Mar 2026 16:25:51: label	t1_Mn_deplete_R3 
+INFO  @ Mon, 02 Mar 2026 16:25:51: reads	21059896 
+INFO  @ Mon, 02 Mar 2026 16:25:51: mappedreads	1474086 
+INFO  @ Mon, 02 Mar 2026 16:25:51: totalsgrnas	90202 
+INFO  @ Mon, 02 Mar 2026 16:25:51: zerosgrnas	70559 
+INFO  @ Mon, 02 Mar 2026 16:25:51: giniindex	0.8631391982976231 
+INFO  @ Mon, 02 Mar 2026 16:25:51: Summary of file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Mn_deplete_R3_M3_1_S55_L007_R2_001.fastq.gz: 
+INFO  @ Mon, 02 Mar 2026 16:25:51: label	t1_Mn_deplete_R3 
+INFO  @ Mon, 02 Mar 2026 16:25:51: reads	20723844 
+INFO  @ Mon, 02 Mar 2026 16:25:51: mappedreads	1457021 
+INFO  @ Mon, 02 Mar 2026 16:25:51: totalsgrnas	90202 
+INFO  @ Mon, 02 Mar 2026 16:25:51: zerosgrnas	70958 
+INFO  @ Mon, 02 Mar 2026 16:25:51: giniindex	0.8652214423643978 
+INFO  @ Mon, 02 Mar 2026 16:25:51: Summary of file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Mn_deplete_R3_M3_2_S56_L007_R1_001.fastq.gz: 
+INFO  @ Mon, 02 Mar 2026 16:25:51: label	t1_Mn_deplete_R3 
+INFO  @ Mon, 02 Mar 2026 16:25:51: reads	21796029 
+INFO  @ Mon, 02 Mar 2026 16:25:51: mappedreads	1604215 
+INFO  @ Mon, 02 Mar 2026 16:25:51: totalsgrnas	90202 
+INFO  @ Mon, 02 Mar 2026 16:25:51: zerosgrnas	66580 
+INFO  @ Mon, 02 Mar 2026 16:25:51: giniindex	0.8334295901420957 
+INFO  @ Mon, 02 Mar 2026 16:25:51: Summary of file output/2025_08_CRISPR_Pool1/1_preprocess_reads/Metals_t1_Mn_deplete_R3_M3_2_S56_L007_R2_001.fastq.gz: 
+INFO  @ Mon, 02 Mar 2026 16:25:51: label	t1_Mn_deplete_R3 
+INFO  @ Mon, 02 Mar 2026 16:25:51: reads	21435795 
+INFO  @ Mon, 02 Mar 2026 16:25:51: mappedreads	1583137 
+INFO  @ Mon, 02 Mar 2026 16:25:51: totalsgrnas	90202 
+INFO  @ Mon, 02 Mar 2026 16:25:51: zerosgrnas	66977 
+INFO  @ Mon, 02 Mar 2026 16:25:51: giniindex	0.83562781779643 
+INFO  @ Mon, 02 Mar 2026 16:25:51: Loading Rnw template file: /tscc/projects/ps-allenlab/projdata/common/programs/miniconda3/envs/mageckenv/lib/python3.6/site-packages/mageck/count_report.Rmd. 
+DEBUG @ Mon, 02 Mar 2026 16:25:51: Setting up the visualization module... 
+INFO  @ Mon, 02 Mar 2026 16:25:51: Loading Rnw template file: /tscc/projects/ps-allenlab/projdata/common/programs/miniconda3/envs/mageckenv/lib/python3.6/site-packages/mageck/fastq_template.Rnw. 
+DEBUG @ Mon, 02 Mar 2026 16:25:51: Setting up the visualization module... 

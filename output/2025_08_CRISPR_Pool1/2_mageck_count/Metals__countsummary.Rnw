@@ -1,0 +1,280 @@
+% This is a template file for Sweave used in MAGeCK
+% Author: Wei Li, Shirley Liu lab
+% Do not modify lines beginning with "#__".
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amscd}
+\usepackage[tableposition=top]{caption}
+\usepackage{ifthen}
+\usepackage{fullpage}
+\usepackage[utf8]{inputenc}
+% \usepackage{longtable}
+
+\begin{document}
+\setkeys{Gin}{width=0.9\textwidth}
+
+\title{MAGeCK Count Report}
+\author{Wei Li}
+
+\maketitle
+
+
+\tableofcontents
+
+\section{Summary}
+
+%Function definition
+<<label=funcdef,include=FALSE,echo=FALSE>>=
+genreporttable<-function(filelist,labellist,reads,mappedreads){
+  xtb=data.frame(Label=labellist,Reads=reads,MappedReads=mappedreads,MappedPercentage=mappedreads/reads);
+  colnames(xtb)=c("Label","Reads","Mapped","Percentage");
+  return (xtb);
+}
+genreporttable2<-function(filelist,labellist,sgrnas,zerocounts,gini){
+  xtb=data.frame(Label=labellist,TotalsgRNAs=sgrnas,ZeroCounts=zerocounts,GiniIndex=gini);
+  colnames(xtb)=c("Label","TotalsgRNA","ZeroCounts","GiniIndex");
+  return (xtb);
+}
+genreporttable3<-function(filelist,labellist){
+  xtb=data.frame(File=filelist,Label=labellist);
+  colnames(xtb)=c("File","Label");
+  return (xtb);
+}
+
+
+colors=c( "#E41A1C", "#377EB8", "#4DAF4A", "#984EA3", "#FF7F00",  "#A65628", "#F781BF",
+          "#999999", "#66C2A5", "#FC8D62", "#8DA0CB", "#E78AC3", "#A6D854", "#FFD92F", "#E5C494", "#B3B3B3", 
+          "#8DD3C7", "#FFFFB3", "#BEBADA", "#FB8072", "#80B1D3", "#FDB462", "#B3DE69", "#FCCDE5",
+          "#D9D9D9", "#BC80BD", "#CCEBC5", "#FFED6F");
+
+
+
+genboxplot<-function(filename,...){
+  #slmed=read.table(filename,header=T)
+  slmed=read.table(filename,header=T)
+  slmat=as.matrix(slmed[,c(-1,-2)])
+  slmat_log=log2(slmat+1)
+
+  boxplot(slmat_log,pch='.',las=2,ylab='log2(read counts)',cex.axis=0.8,...)
+}
+
+
+genhistplot<-function(filename,isfile=T,...){
+  if(isfile){
+    slmed=read.table(filename,header=T)
+  }else{
+    slmed=filename;
+  }
+  tabsmat=as.matrix(log2(slmed[,c(-1,-2)]+1))
+  colnames(tabsmat)=colnames(slmed)[c(-1,-2)]
+  samplecol=colors[((1:ncol(tabsmat)) %% length(colors)) ]
+  if(ncol(tabsmat)>=1){
+    histlist=lapply(1:ncol(tabsmat),function(X){ return (hist(tabsmat[,X],plot=F,breaks=40)) })
+    xrange=range(unlist(lapply(histlist,function(X){X$mids})))
+    yrange=range(unlist(lapply(histlist,function(X){X$counts})))
+    hst1=histlist[[1]]
+    plot(hst1$mids,hst1$counts,type='b',pch=20,xlim=c(0,xrange[2]*1.2),ylim=c(0,yrange[2]*1.2),xlab='log2(counts)',ylab='Frequency',main='Distribution of read counts',col = samplecol[1], ... )
+  }
+  if(ncol(tabsmat)>=2){ 
+    for(i in 2:ncol(tabsmat)){
+      hstn=histlist[[i]]
+      lines(hstn$mids,hstn$counts,type='b',pch=20,col=samplecol[i])
+    }
+  }
+  legend('topright',colnames(tabsmat),pch=20,lwd=1,col=samplecol)
+}
+
+
+
+genclustering<-function(filename,...){
+  #slmed=read.table(filename,header=T)
+  slmed=read.table(filename,header=T)
+  slmat=as.matrix(slmed[,c(-1,-2)])
+  slmat_log=log2(slmat+1)
+
+  result=tryCatch({
+    library(gplots);
+    heatmap.2(cor(slmat_log),trace = 'none',density.info = 'none',cexRow = 0.8,cexCol = 0.8,offsetRow = -0.2,offsetCol = -0.2)
+  }, error=function(e){
+    heatmap(cor(slmat_log),scale='none',cexRow = 0.8,cexCol = 0.8,cex.axis=0.8,...)
+  });
+}
+
+ctfit_tx=0;
+
+
+panel.plot<-function(x,y,textnames=names(x),...){
+  par(new=TRUE)
+  m<-cbind(x,y)
+  plot(m,pch=20,xlim = range(x)*1.1,ylim=range(y)*1.1,...)
+  text(x,y,textnames,...)
+}
+
+
+genpcaplot<-function(filename,...){
+  #slmed=read.table(filename,header=T)
+  slmed=read.table(filename,header=T)
+  slmat=as.matrix(slmed[,c(-1,-2)])
+  slmat_log=log2(slmat+1)
+  ctfit_tx<<-prcomp(t(slmat_log),center=TRUE)
+  
+  # par(mfrow=c(2,1));
+  samplecol=colors[((1:ncol(slmat)) %% length(colors)) ]
+  # first 2 PCA
+  #plot(ctfit_tx$x[,1],ctfit_tx$x[,2],xlab='PC1',ylab='PC2',main='First 2 PCs',col=samplecol,xlim=1.1*range(ctfit_tx$x[,1]),ylim=1.1*range(ctfit_tx$x[,2]));
+  #text(ctfit_tx$x[,1],ctfit_tx$x[,2],rownames(ctfit_tx$x),col=samplecol);
+  # par(mfrow=c(1,1));
+  if(length(samplecol)>2){
+      #pairs(ctfit_tx$x[,1:3],panel=panel.plot,textnames=rownames(ctfit_tx$x),main='First 3 principle components',col=samplecol)
+  }else{
+    if(length(samplecol)>1){
+      #pairs(ctfit_tx$x[,1:2],panel=panel.plot,textnames=rownames(ctfit_tx$x),main='First 2 principle components',col=samplecol)
+   }
+  }
+  library(ggplot2)
+  if(ncol(slmat)>1){
+    pcareport=data.frame(PC1=ctfit_tx$x[,1],PC2=ctfit_tx$x[,2],PC3=ctfit_tx$x[,3],sample=rownames(ctfit_tx$x))
+    p<-ggplot(pcareport,aes(x=PC1,y=PC2,label=sample)) +
+       geom_point(aes(colour=sample)) +
+       geom_text(vjust='inward',hjust='inward')
+    print(p)
+  if(ncol(slmat)>2){
+    p<-ggplot(pcareport,aes(x=PC1,y=PC3,label=sample)) +
+       geom_point(aes(colour=sample)) +
+       geom_text(vjust='inward',hjust='inward')
+    print(p)
+    p<-ggplot(pcareport,aes(x=PC2,y=PC3,label=sample)) +
+       geom_point(aes(colour=sample)) +
+       geom_text(vjust='inward',hjust='inward')
+    print(p)
+  }
+  }
+
+
+}
+
+genpcavar<-function(){
+  # % variance 
+  varpca=ctfit_tx$sdev^2
+  varpca=varpca/sum(varpca)*100;
+  if(length(varpca)>10){
+    varpca=varpca[1:10];
+  }
+  plot(varpca,type='b',lwd=2,pch=20,xlab='PCs',ylab='% Variance explained');
+}
+
+@
+
+%__FILE_SUMMARY__
+
+The statistics of comparisons are listed in Table 1 and Table 2.
+The corresponding fastq files in each row are listed in Table 3.
+
+<<label=tab1,echo=FALSE,results=tex>>=
+library(xtable)
+filelist=c("output/2025_08_CRISPR_Pool1/1_preprocess_reads/Met als_t0_R1_t0_NH4_1_S1_L007_R1_001.fastq.gz","output/2025_08_CRISPR_Pool1/1_preprocess_reads/Met als_t0_R1_t0_NH4_1_S1_L007_R2_001.fastq.gz","output/2025_08_CRISPR_Pool1/1_preprocess_reads/Met als_t0_R1_t0_NH4_2_S2_L007_R1_001.fastq.gz","output/2025_08_CRISPR_Pool1/1_preprocess_reads/Met als_t0_R1_t0_NH4_2_S2_L007_R2_001.fastq.gz","output/2025_08_CRISPR_Pool1/1_preprocess_reads/Met als_t1_Fe_deplete_R1_F1_1_S45_L007_R1_001.fastq.gz","output/2025_08_CRISPR_Pool1/1_preprocess_reads/Met als_t1_Fe_deplete_R1_F1_1_S45_L007_R2_001.fastq.gz","output/2025_08_CRISPR_Pool1/1_preprocess_reads/Met als_t1_Fe_deplete_R1_F1_2_S46_L007_R1_001.fastq.gz","output/2025_08_CRISPR_Pool1/1_preprocess_reads/Met als_t1_Fe_deplete_R1_F1_2_S46_L007_R2_001.fastq.gz","output/2025_08_CRISPR_Pool1/1_preprocess_reads/Met als_t1_Fe_deplete_R2_F2_1_S47_L007_R1_001.fastq.gz","output/2025_08_CRISPR_Pool1/1_preprocess_reads/Met als_t1_Fe_deplete_R2_F2_1_S47_L007_R2_001.fastq.gz","output/2025_08_CRISPR_Pool1/1_preprocess_reads/Met als_t1_Fe_deplete_R2_F2_2_S48_L007_R1_001.fastq.gz","output/2025_08_CRISPR_Pool1/1_preprocess_reads/Met als_t1_Fe_deplete_R2_F2_2_S48_L007_R2_001.fastq.gz","output/2025_08_CRISPR_Pool1/1_preprocess_reads/Met als_t1_Fe_deplete_R3_F3_1_S49_L007_R1_001.fastq.gz","output/2025_08_CRISPR_Pool1/1_preprocess_reads/Met als_t1_Fe_deplete_R3_F3_1_S49_L007_R2_001.fastq.gz","output/2025_08_CRISPR_Pool1/1_preprocess_reads/Met als_t1_Fe_deplete_R3_F3_2_S50_L007_R1_001.fastq.gz","output/2025_08_CRISPR_Pool1/1_preprocess_reads/Met als_t1_Fe_deplete_R3_F3_2_S50_L007_R2_001.fastq.gz","output/2025_08_CRISPR_Pool1/1_preprocess_reads/Met als_t1_Fe_replete_R1_R1_1_S39_L007_R1_001.fastq.gz","output/2025_08_CRISPR_Pool1/1_preprocess_reads/Met als_t1_Fe_replete_R1_R1_1_S39_L007_R2_001.fastq.gz","output/2025_08_CRISPR_Pool1/1_preprocess_reads/Met als_t1_Fe_replete_R1_R1_2_S40_L007_R1_001.fastq.gz","output/2025_08_CRISPR_Pool1/1_preprocess_reads/Met als_t1_Fe_replete_R1_R1_2_S40_L007_R2_001.fastq.gz","output/2025_08_CRISPR_Pool1/1_preprocess_reads/Met als_t1_Fe_replete_R2_R2_1_S41_L007_R1_001.fastq.gz","output/2025_08_CRISPR_Pool1/1_preprocess_reads/Met als_t1_Fe_replete_R2_R2_1_S41_L007_R2_001.fastq.gz","output/2025_08_CRISPR_Pool1/1_preprocess_reads/Met als_t1_Fe_replete_R2_R2_2_S42_L007_R1_001.fastq.gz","output/2025_08_CRISPR_Pool1/1_preprocess_reads/Met als_t1_Fe_replete_R2_R2_2_S42_L007_R2_001.fastq.gz","output/2025_08_CRISPR_Pool1/1_preprocess_reads/Met als_t1_Fe_replete_R3_R3_1_S43_L007_R1_001.fastq.gz","output/2025_08_CRISPR_Pool1/1_preprocess_reads/Met als_t1_Fe_replete_R3_R3_1_S43_L007_R2_001.fastq.gz","output/2025_08_CRISPR_Pool1/1_preprocess_reads/Met als_t1_Fe_replete_R3_R3_2_S44_L007_R1_001.fastq.gz","output/2025_08_CRISPR_Pool1/1_preprocess_reads/Met als_t1_Fe_replete_R3_R3_2_S44_L007_R2_001.fastq.gz","output/2025_08_CRISPR_Pool1/1_preprocess_reads/Met als_t1_Mn_deplete_R1_M1_1_S51_L007_R1_001.fastq.gz","output/2025_08_CRISPR_Pool1/1_preprocess_reads/Met als_t1_Mn_deplete_R1_M1_1_S51_L007_R2_001.fastq.gz","output/2025_08_CRISPR_Pool1/1_preprocess_reads/Met als_t1_Mn_deplete_R1_M1_2_S52_L007_R1_001.fastq.gz","output/2025_08_CRISPR_Pool1/1_preprocess_reads/Met als_t1_Mn_deplete_R1_M1_2_S52_L007_R2_001.fastq.gz","output/2025_08_CRISPR_Pool1/1_preprocess_reads/Met als_t1_Mn_deplete_R2_M2_1_S53_L007_R1_001.fastq.gz","output/2025_08_CRISPR_Pool1/1_preprocess_reads/Met als_t1_Mn_deplete_R2_M2_1_S53_L007_R2_001.fastq.gz","output/2025_08_CRISPR_Pool1/1_preprocess_reads/Met als_t1_Mn_deplete_R2_M2_2_S54_L007_R1_001.fastq.gz","output/2025_08_CRISPR_Pool1/1_preprocess_reads/Met als_t1_Mn_deplete_R2_M2_2_S54_L007_R2_001.fastq.gz","output/2025_08_CRISPR_Pool1/1_preprocess_reads/Met als_t1_Mn_deplete_R3_M3_1_S55_L007_R1_001.fastq.gz","output/2025_08_CRISPR_Pool1/1_preprocess_reads/Met als_t1_Mn_deplete_R3_M3_1_S55_L007_R2_001.fastq.gz","output/2025_08_CRISPR_Pool1/1_preprocess_reads/Met als_t1_Mn_deplete_R3_M3_2_S56_L007_R1_001.fastq.gz","output/2025_08_CRISPR_Pool1/1_preprocess_reads/Met als_t1_Mn_deplete_R3_M3_2_S56_L007_R2_001.fastq.gz");
+labellist=c("t0_R1","t0_R1","t0_R1","t0_R1","t1_Fe_deplete_R1","t1_Fe_deplete_R1","t1_Fe_deplete_R1","t1_Fe_deplete_R1","t1_Fe_deplete_R2","t1_Fe_deplete_R2","t1_Fe_deplete_R2","t1_Fe_deplete_R2","t1_Fe_deplete_R3","t1_Fe_deplete_R3","t1_Fe_deplete_R3","t1_Fe_deplete_R3","t1_Fe_replete_R1","t1_Fe_replete_R1","t1_Fe_replete_R1","t1_Fe_replete_R1","t1_Fe_replete_R2","t1_Fe_replete_R2","t1_Fe_replete_R2","t1_Fe_replete_R2","t1_Fe_replete_R3","t1_Fe_replete_R3","t1_Fe_replete_R3","t1_Fe_replete_R3","t1_Mn_deplete_R1","t1_Mn_deplete_R1","t1_Mn_deplete_R1","t1_Mn_deplete_R1","t1_Mn_deplete_R2","t1_Mn_deplete_R2","t1_Mn_deplete_R2","t1_Mn_deplete_R2","t1_Mn_deplete_R3","t1_Mn_deplete_R3","t1_Mn_deplete_R3","t1_Mn_deplete_R3");
+reads=c(39892468,39516464,35347343,34801324,22080173,21500093,17452375,16935466,20260923,19846085,20161606,19897914,18894420,18501331,23224624,22577487,21641792,21195253,20107824,19801595,23034448,22633108,25859257,25437913,22058860,21647128,20553143,20159519,22446727,22108187,20733009,20430872,21433020,20953890,18814992,18485603,21059896,20723844,21796029,21435795);
+mappedreads=c(24695189,24473566,21939988,21609938,657634,643402,531987,518204,594629,585382,562860,557740,1502750,1477420,1329706,1297510,772499,759714,708665,699209,712994,701879,813876,802452,611772,601340,627078,617644,1338485,1322104,627203,620252,645729,635329,1336197,1320203,1474086,1457021,1604215,1583137);
+totalsgrnas=c(90202,90202,90202,90202,90202,90202,90202,90202,90202,90202,90202,90202,90202,90202,90202,90202,90202,90202,90202,90202,90202,90202,90202,90202,90202,90202,90202,90202,90202,90202,90202,90202,90202,90202,90202,90202,90202,90202,90202,90202);
+zerocounts=c(18,18,19,19,60117,60557,61403,61822,60548,60926,60482,60906,66460,67003,56540,56862,60010,60428,60879,61266,59758,60239,59132,59551,61242,61647,61177,61538,56366,56687,60697,61043,59832,60496,71510,71965,70559,70958,66580,66977);
+giniindex=c(0.04794461820420948,0.048012843235508584,0.04919955523910535,0.04934345758181635,0.7719374307655285,0.7744325726500345,0.7812437548358715,0.7839147010678718,0.7742632296904903,0.776467251133806,0.7747164169313482,0.7771242660429837,0.8334089893944956,0.836255940374608,0.7344187759457887,0.7361341281295177,0.7695658456389547,0.7718378257579877,0.775012198671977,0.776989652814279,0.7689931971352473,0.7717589476933876,0.7642151822814873,0.76662227876769,0.7803548124088175,0.782660801498541,0.7792743540280597,0.7813976077498671,0.7333312371784316,0.7349804568542587,0.7754629689243845,0.7774750905935721,0.7702239905448054,0.7738992171019272,0.8683146164099759,0.8704324857308614,0.8631391982976231,0.8652214423643978,0.8334295901420957,0.83562781779643);
+
+cptable=genreporttable(filelist,labellist,reads,mappedreads);
+print(xtable(cptable, caption = "Summary of comparisons", label = "tab:one",
+    digits = c(0, 0, 0, 0,2),
+    align=c('c',  'c','c',  'c', 'c'),
+    table.placement = "tbp",
+    caption.placement = "top"))
+@
+
+<<label=tab2,echo=FALSE,results=tex>>=
+library(xtable)
+cptable=genreporttable2(filelist,labellist,totalsgrnas,zerocounts,giniindex);
+print(xtable(cptable, caption = "Summary of comparisons", label = "tab:two",
+    digits = c(0, 0,0, 0,2),
+    align=c('c',  'c','c',  'c', 'c'),
+    table.placement = "tbp",
+    caption.placement = "top"))
+@
+
+
+
+
+
+<<label=tab3,echo=FALSE,results=tex>>=
+library(xtable)
+cptable=genreporttable3(filelist,labellist);
+print(xtable(cptable, caption = "Summary of samples", label = "tab:three",
+    digits = c(0,0, 0),
+    align=c('c', 'p{9cm}', 'c'),
+    table.placement = "tbp",
+    caption.placement = "top"))
+@
+
+
+
+
+The meanings of the columns are as follows.
+
+\begin{itemize}
+\item \textbf{Row}: The row number in the table;
+\item \textbf{File}: The filename of fastq file;
+\item \textbf{Label}: Assigned label;
+\item \textbf{Reads}: The total read count in the fastq file;
+\item \textbf{Mapped}: Reads that can be mapped to gRNA library;
+\item \textbf{Percentage}: The percentage of mapped reads;
+\item \textbf{TotalsgRNAs}: The number of sgRNAs in the library; 
+\item \textbf{ZeroCounts}: The number of sgRNA with 0 read counts;
+\item \textbf{GiniIndex}: The Gini Index of the read count distribution. Gini index can be used to measure the evenness of the read counts, and a smaller value means a more even distribution of the read counts.
+\end{itemize}
+
+
+
+\newpage\section{Normalized read count distribution of all samples}
+The following figure shows the distribution of median-normalized read counts in all samples.
+
+
+<<fig=TRUE,echo=FALSE,width=12.100000000000001,height=4.5>>=
+genboxplot("Metals_.count_normalized.txt");
+@
+
+The following figure shows the histogram of median-normalized read counts in all samples.
+
+
+<<fig=TRUE,echo=FALSE,width=12.100000000000001,height=12.100000000000001>>=
+genhistplot("Metals_.count_normalized.txt");
+@
+
+
+\newpage\section{Principle Component Analysis}
+The following figure shows the first 2 principle components (PCs) from the Principle Component Analysis (PCA), and the percentage of variances explained by the top PCs.
+
+
+
+<<fig=TRUE,echo=FALSE,width=14.100000000000001,height=12.100000000000001>>=
+genpcaplot("Metals_.count_normalized.txt");
+@
+
+<<fig=TRUE,echo=FALSE,width=12.100000000000001,height=12.100000000000001>>=
+genpcavar();
+@
+
+
+\newpage\section{Sample clustering}
+The following figure shows the sample clustering result.
+
+
+<<fig=TRUE,echo=FALSE,width=12.100000000000001,height=12.100000000000001>>=
+genclustering("Metals_.count_normalized.txt");
+@
+
+%__INDIVIDUAL_PAGE__
+
+
+
+
+
+\end{document}
+

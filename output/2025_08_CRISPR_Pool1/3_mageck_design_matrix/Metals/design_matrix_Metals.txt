@@ -1,0 +1,11 @@
+Samples	baseline	t1_Fe_deplete	t1_Mn_deplete	t1_Fe_replete
+t1_Fe_deplete_R1	1	1	0	0
+t1_Fe_deplete_R2	1	1	0	0
+t1_Fe_deplete_R3	1	1	0	0
+t1_Mn_deplete_R1	1	0	1	0
+t1_Mn_deplete_R2	1	0	1	0
+t1_Mn_deplete_R3	1	0	1	0
+t1_Fe_replete_R1	1	0	0	1
+t1_Fe_replete_R2	1	0	0	1
+t1_Fe_replete_R3	1	0	0	1
+t0_R1	1	0	0	0

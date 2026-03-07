@@ -1,0 +1,22 @@
+# Ignore folders
+input/2025_08_CRISPR_Pool1/2_sequencing
+logs
+output/2025_08_CRISPR_Pool1/1_preprocess_reads
+
+
+# Ignore any specific large file types globally
+*.fastq
+*.fastq.gz
+*.fq.gz
+*.bam
+*.sam
+*.fasta
+*.fna
+*.tar.gz
+
+# Ignore python's temporary cache
+__pycache__/
+*.pyc
+
+# Ignore OS-specific hidden files
+.DS_Store
