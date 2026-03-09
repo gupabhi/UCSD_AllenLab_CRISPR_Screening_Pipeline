@@ -14,10 +14,10 @@ STEP_6_DESIGN_TEMPLATE = False
 STEP_7_MLE = False
 STEP_8_MLE_QC = False
 STEP_9_QUANTILE_NORM = False
-STEP_10_VISUALIZE_HITS = False
+STEP_10_VISUALIZE_HITS = True
 STEP_11_PREPARE_DB = False
 STEP_12_ANNOTATE_HITS = False
-STEP_13_PLOT_COG = True
+STEP_13_PLOT_COG = False
 
 # Number of CPU cores assigned in your .sh file
 N_CORES = 32
@@ -57,6 +57,7 @@ DESIGN_BASE_DIR = os.path.join(EXP_OUTPUT_DIR, "3_mageck_design_matrix")
 MLE_DIR = os.path.join(EXP_OUTPUT_DIR, "4_mageck_mle")
 NORM_DIR = os.path.join(EXP_OUTPUT_DIR, "5_mageck_mle_norm")
 COG_PLOT_DIR = os.path.join(EXP_OUTPUT_DIR, "6_Plots_top_hits", "COG_distribution")
+BETA_PLOT_DIR = os.path.join(EXP_OUTPUT_DIR, "6_Plots_top_hits", "BETA_TopHits_Description")
 
 
 # Output Data Files

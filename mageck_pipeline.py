@@ -138,5 +138,7 @@ def main():
             cog_mapping=config.COG_MAP
         )
 
+        utils.plot_top_hits_by_beta( norm_dir=config.NORM_DIR, plot_dir=config.BETA_PLOT_DIR, cog_mapping=config.COG_MAP)
+
 if __name__ == "__main__":
     main()
