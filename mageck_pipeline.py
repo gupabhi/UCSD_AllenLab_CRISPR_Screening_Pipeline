@@ -114,7 +114,6 @@ def main():
             hard_fdr=config.HARD_FDR_CUTOFF,
             len_db=config.LENIENT_DB_CUTOFF,
             len_fdr=config.LENIENT_FDR_CUTOFF,
-            top_n=config.TOP_HIT_COUNT,
             genes_dict = config.GENES_DICT
         )
 
@@ -138,7 +137,20 @@ def main():
             cog_mapping=config.COG_MAP
         )
 
-        utils.plot_top_hits_by_beta( norm_dir=config.NORM_DIR, plot_dir=config.BETA_PLOT_DIR, cog_mapping=config.COG_MAP)
+        utils.plot_top_hits_by_beta(
+            norm_dir=config.NORM_DIR, 
+            plot_dir=config.BETA_PLOT_DIR, 
+            cog_mapping=config.COG_MAP
+        )
+
+        utils.plot_cog_specific_hits(
+            norm_dir=config.NORM_DIR, 
+            plot_dir=config.COG_SPECIFIC_PLOT_DIR, 
+            cog_mapping=config.COG_MAP,
+            target_cogs=config.COG_interests,
+            top_n=20  # Show top 20 genes instead of 10
+        )
+
 
 if __name__ == "__main__":
     main()

@@ -888,10 +888,10 @@ def plot_gene_of_interest_volcano(file_path, genes_dict, out_dir, hard_db, hard_
         plt.savefig(os.path.join(out_dir, save_name), dpi=300, bbox_inches='tight')
         plt.close()
 
-def generate_hit_reports_and_plots(norm_dir, hard_db, hard_fdr, len_db, len_fdr, top_n, genes_dict):
+def generate_hit_reports_and_plots(norm_dir, hard_db, hard_fdr, len_db, len_fdr, genes_dict):
     """
     Generates Tiered CSVs and High-Vis Volcano Plots.
-    Summary and Legend are placed horizontally outside/on top of the graph.
+    Includes Tier 3 (Effect Only: Beta < -0.5) in Master Summaries and Plots.
     """
     subfolder_master_data = {}
 
@@ -913,36 +913,55 @@ def generate_hit_reports_and_plots(norm_dir, hard_db, hard_fdr, len_db, len_fdr,
                 prefix = db_col.replace('_delta_beta', '')
                 fdr_col = f"{prefix}_fdr"
                 
+                # --- 1. Updated Tier Assignment ---
                 def get_significance_label(row):
+                    # Check Tier 1
                     if row[db_col] <= hard_db and row[fdr_col] <= hard_fdr:
                         return "Tier 1 (Hard)"
+                    # Check Tier 2
                     elif row[db_col] <= len_db and row[fdr_col] <= len_fdr:
                         return "Tier 2 (Lenient)"
+                    # Check Tier 3: Strong Effect Size only (Beta < -0.5)
+                    elif row[db_col] < -0.5:
+                        return "Tier 3 (Effect Only)"
                     return "None"
 
                 df['Significance_Tier'] = df.apply(get_significance_label, axis=1)
                 
                 n_hard = len(df[df['Significance_Tier'] == "Tier 1 (Hard)"])
                 n_lenient = len(df[df['Significance_Tier'] == "Tier 2 (Lenient)"])
+                n_tier3 = len(df[df['Significance_Tier'] == "Tier 3 (Effect Only)"])
                 
-                # --- Master Data Storage Logic ---
+                # --- 2. Master Data Storage (Captures Tier 1, 2, AND 3) ---
                 current_hits = df[df['Significance_Tier'] != "None"].copy()
                 if not current_hits.empty:
                     master_entry = current_hits.copy()
                     master_entry['Comparison'] = prefix
                     master_entry = master_entry.rename(columns={'Gene': 'Gene_ID', db_col: 'Delta_Beta', fdr_col: 'FDR'})
+                    
                     if root not in subfolder_master_data:
                         subfolder_master_data[root] = []
+                    
+                    # Store all hits (Tier 1, 2, and 3)
                     subfolder_master_data[root].append(master_entry[['Gene_ID', 'Comparison', 'Delta_Beta', 'FDR', 'Significance_Tier']])
 
-                # --- High-Vis Plotting ---
+                # --- 3. High-Vis Plotting ---
                 fig, ax = plt.subplots(figsize=(20, 14))
                 df['neg_log_fdr'] = -np.log10(df[fdr_col] + 1e-12)
                 
+                # Background
                 sns.scatterplot(data=df[df['Significance_Tier'] == "None"], 
                                 x=db_col, y='neg_log_fdr', color='lightgray', alpha=0.3, s=80, label='Not Significant')
+                
+                # Tier 3 (Effect Only) - NEW
+                sns.scatterplot(data=df[df['Significance_Tier'] == "Tier 3 (Effect Only)"],
+                                x=db_col, y='neg_log_fdr', color='skyblue', alpha=0.6, s=150, label='Tier 3 (Beta < -0.5)')
+                
+                # Tier 2 (Lenient)
                 sns.scatterplot(data=df[df['Significance_Tier'] == "Tier 2 (Lenient)"], 
                                 x=db_col, y='neg_log_fdr', color='orange', alpha=0.7, s=250, label=f'Lenient (FDR < {len_fdr})')
+                
+                # Tier 1 (Hard)
                 sns.scatterplot(data=df[df['Significance_Tier'] == "Tier 1 (Hard)"], 
                                 x=db_col, y='neg_log_fdr', color='red', alpha=0.9, s=450, 
                                 label=f'Hard (FDR < {hard_fdr})', edgecolor='black')
@@ -950,15 +969,21 @@ def generate_hit_reports_and_plots(norm_dir, hard_db, hard_fdr, len_db, len_fdr,
                 plt.axvline(len_db, color='black', linestyle='--', alpha=0.5, lw=3)
                 plt.axhline(-np.log10(len_fdr), color='black', linestyle='--', alpha=0.5, lw=3)
 
-                # 1. HORIZONTAL SELECTION SUMMARY (Top Left)
-                stats_text = f"[Hard:{n_hard}] | [Lenient:{n_lenient}]"
-                ax.text(0.0, 1.05, stats_text, transform=ax.transAxes, fontsize=22,
-                        verticalalignment='top', fontweight='bold', color='darkred')
+                # Summary Text (Top Left)
+                stats_text = (
+                    f"Tier 1 (Hard): {n_hard}\n"
+                    f"Tier 2 (Lenient): {n_lenient}\n"
+                    f"Tier 3 (Effect): {n_tier3}"
+                )
 
-                # 2. HORIZONTAL LEGEND (Top Right)
-                # loc='lower right' relative to the bbox anchor makes it sit on top
+                ax.text(0.95, 0.95, stats_text, transform=ax.transAxes, 
+                        fontsize=20, verticalalignment='top', horizontalalignment='right',
+                        fontweight='bold', color='darkred',
+                        bbox=dict(boxstyle='round,pad=0.5', facecolor='white', alpha=0.8, edgecolor='gray'))
+
+                # Legend (Top Right) - ncol=4 to fit the new tier
                 plt.legend(bbox_to_anchor=(1.0, 1.0), loc='lower right', 
-                           ncol=3, fontsize=18, frameon=False, title_fontsize=20)
+                           ncol=4, fontsize=16, frameon=False)
 
                 plt.xlabel(f"$\Delta$Beta ({prefix}, {perm_tag})", fontsize=30, fontweight='bold', labelpad=20)
                 plt.ylabel("-log10(FDR)", fontsize=30, fontweight='bold', labelpad=20)
@@ -971,7 +996,9 @@ def generate_hit_reports_and_plots(norm_dir, hard_db, hard_fdr, len_db, len_fdr,
     # --- Save Master Summaries ---
     for folder_path, hits_list in subfolder_master_data.items():
         master_df = pd.concat(hits_list, ignore_index=True)
+        # Sorting by Tier then by Beta ensures the most important hits are at the top
         master_df = master_df.sort_values(by=['Significance_Tier', 'Delta_Beta'])
+        
         exp_name = os.path.basename(os.path.dirname(folder_path))
         master_path = os.path.join(folder_path, f"Master_Hits_{exp_name}_Summary.csv")
         master_df.to_csv(master_path, index=False)
@@ -1299,3 +1326,109 @@ def plot_top_hits_by_beta(norm_dir, plot_dir, cog_mapping):
 
             print(f"   ✅ Consistent Top 20 plots saved for: {exp_name}")
 
+def plot_cog_specific_hits(norm_dir, plot_dir, cog_mapping, target_cogs, top_n=10):
+    """
+    Step 14: Extracts the top_n hits specifically from categories of interest.
+    Displays Description inside the bar (left) and FDR value at the tip (right/inside).
+    """
+    print(f"\n🎯 Generating COG-specific reports for: {target_cogs}")
+    
+    # 1. Setup Color Consistency
+    all_cog_names = sorted(list(set(cog_mapping.values())) + ['Unclassified / No COG'])
+    colors = sns.color_palette("Set2", len(all_cog_names))
+    cog_color_dict = dict(zip(all_cog_names, colors))
+
+    for root, _, files in os.walk(norm_dir):
+        for file in [f for f in files if f.endswith("_ANNOTATED.csv")]:
+            csv_path = os.path.join(root, file)
+            df = pd.read_csv(csv_path)
+            
+            exp_name = file.replace("_ANNOTATED.csv", "")
+            
+            # Save in: COG_specific/Experiment_Name
+            exp_output_dir = os.path.join(plot_dir, "COG_specific", exp_name)
+            os.makedirs(exp_output_dir, exist_ok=True)
+
+            for comp in df['Comparison'].unique():
+                comp_df = df[df['Comparison'] == comp].copy()
+                
+                # Map COG names
+                comp_df['COG_Full'] = comp_df['COG_category'].astype(str).str[0].str.upper().map(cog_mapping)
+                comp_df['COG_Full'] = comp_df['COG_Full'].fillna('Unclassified / No COG')
+
+                # Filter for your categories of interest
+                spec_df = comp_df[
+                    comp_df['COG_Full'].isin(target_cogs) | 
+                    comp_df['COG_category'].isin(target_cogs)
+                ].copy()
+                
+                if spec_df.empty:
+                    continue
+
+                # Get Top N hits across the selected categories
+                top_hits = spec_df.sort_values('Delta_Beta', ascending=True).head(top_n).copy()
+                top_hits['Description'] = top_hits['Description'].fillna('-')
+
+                # Save the specific CSV
+                csv_filename = f"{comp}_COG_Focused_Hits.csv"
+                top_hits.to_csv(os.path.join(exp_output_dir, csv_filename), index=False)
+
+                # 2. Setup Plot
+                plt.figure(figsize=(20, max(8, len(top_hits) * 0.9)))
+                
+                ax = sns.barplot(
+                    data=top_hits,
+                    x='Delta_Beta',
+                    y='Gene_ID',
+                    hue='COG_Full',
+                    dodge=False,
+                    palette=cog_color_dict
+                )
+
+                # Styling
+                plt.xlabel(f"Delta Beta ({comp})", fontsize=24, fontweight='bold', labelpad=20)
+                plt.ylabel("Gene ID", fontsize=22)
+                plt.xticks(fontsize=18)
+                plt.yticks(fontsize=18)
+                
+                # Horizontal legend on top
+                plt.legend(title="Functional Category", title_fontsize='20', fontsize='16', 
+                           loc='lower center', bbox_to_anchor=(0.5, 1.05), ncol=3, 
+                           frameon=False, labelspacing=1.5)
+
+                # 3. Labeling Loop
+                for i in range(len(top_hits)):
+                    # 1. Description (Left side of the 0-line, right-aligned)
+                    desc = str(top_hits.iloc[i]['Description'])
+                    display_text = (desc[:65] + '...') if len(desc) > 65 else desc
+                    
+                    # We always place the description here
+                    ax.text(-0.02, i, f"{display_text}  ", 
+                            color='black', va='center', ha='right', 
+                            fontsize=14, fontweight='bold')
+                    
+                    # 2. FDR Value (Conditional Placement)
+                    fdr_val = top_hits.iloc[i]['FDR']
+                    beta_val = top_hits.iloc[i]['Delta_Beta']
+                    fdr_text = f"FDR: {fdr_val:.2e}"
+                    
+                    # LOGIC: If the bar is shorter than -1.2, there is usually room for both.
+                    # If it's longer (closer to 0), we move FDR to the right of the Y-axis.
+                    # Adjust this threshold (-1.2) if your descriptions are very long.
+                    if beta_val > -1.2: 
+                        # Bar is too short: Place FDR on the OUTSIDE (right of Y-axis)
+                        ax.text(0.02, i, f" {fdr_text}", 
+                                color='black', va='center', ha='left', 
+                                fontsize=12, fontweight='normal', style='italic')
+                    else:
+                        # Bar is long: Place FDR INSIDE the tip
+                        ax.text(beta_val + 0.02, i, f"{fdr_text} ", 
+                                color='black', va='center', ha='left', 
+                                fontsize=12, fontweight='normal', style='italic')
+
+                # Save Plot
+                plot_filename = f"{comp}_COG_Focused_Hits.png"
+                plt.savefig(os.path.join(exp_output_dir, plot_filename), bbox_inches='tight', dpi=300)
+                plt.close()
+
+    print(f"   ✅ Targeted COG analysis saved in: {plot_dir}/COG_specific")

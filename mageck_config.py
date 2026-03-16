@@ -14,10 +14,10 @@ STEP_6_DESIGN_TEMPLATE = False
 STEP_7_MLE = False
 STEP_8_MLE_QC = False
 STEP_9_QUANTILE_NORM = False
-STEP_10_VISUALIZE_HITS = True
+STEP_10_VISUALIZE_HITS = False
 STEP_11_PREPARE_DB = False
 STEP_12_ANNOTATE_HITS = False
-STEP_13_PLOT_COG = False
+STEP_13_PLOT_COG = True
 
 # Number of CPU cores assigned in your .sh file
 N_CORES = 32
@@ -58,7 +58,7 @@ MLE_DIR = os.path.join(EXP_OUTPUT_DIR, "4_mageck_mle")
 NORM_DIR = os.path.join(EXP_OUTPUT_DIR, "5_mageck_mle_norm")
 COG_PLOT_DIR = os.path.join(EXP_OUTPUT_DIR, "6_Plots_top_hits", "COG_distribution")
 BETA_PLOT_DIR = os.path.join(EXP_OUTPUT_DIR, "6_Plots_top_hits", "BETA_TopHits_Description")
-
+COG_SPECIFIC_PLOT_DIR = os.path.join(EXP_OUTPUT_DIR, "6_Plots_top_hits", "COG_Specific_Hits")
 
 # Output Data Files
 PREPROCESS_SUMMARY_CSV =  os.path.join(PREPROCESS_DIR, "extraction_summary.csv")
@@ -134,3 +134,5 @@ COG_MAP = {
     'R': '[R] General function prediction only',
     'S': '[S] Function unknown'
 }
+
+COG_interests  = ['A', 'K']
