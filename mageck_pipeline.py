@@ -115,7 +115,6 @@ def main():
             summary_csv    = config.PREPROCESS_SUMMARY_CSV,
             neg_path       = config.NEG_CONTROL_TXT,
             pos_path       = config.POS_CONTROL_CSV,
-            genes_dict     = config.GENES_DICT,
         )
         print()
 
@@ -164,9 +163,10 @@ def main():
     if config.STEP_8_MLE_QC:
         print(f"--- [Step 8] MLE QC plots ---")
         utils.run_mle_qc_plots(
-            mle_dir       = config.MLE_DIR,
-            essential_txt = config.ESSENTIAL_GENES_TXT,
+            mle_dir         = config.MLE_DIR,
+            essential_txt   = config.ESSENTIAL_GENES_TXT,
             pos_control_csv = config.POS_CONTROL_CSV,
+            count_dir       = config.COUNT_DIR,
         )
         print()
 
@@ -195,6 +195,7 @@ def main():
             len_fdr  = config.LENIENT_FDR_CUTOFF,
             genes_dict = config.GENES_DICT,
         )
+        utils.plot_condition_scatter(norm_dir = config.NORM_DIR)
         print()
 
     # -----------------------------------------------------------------------
@@ -228,13 +229,7 @@ def main():
             norm_dir    = config.NORM_DIR,
             plot_dir    = config.BETA_PLOT_DIR,
             cog_mapping = config.COG_MAP,
-        )
-        utils.plot_cog_specific_hits(
-            norm_dir    = config.NORM_DIR,
-            plot_dir    = config.COG_SPECIFIC_PLOT_DIR,
-            cog_mapping = config.COG_MAP,
-            target_cogs = config.COG_interests,
-            top_n       = 20,
+            top_n       = config.TOP_HIT_COUNT,
         )
         print()
 

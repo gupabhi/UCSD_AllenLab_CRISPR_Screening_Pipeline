@@ -613,60 +613,57 @@ def _generate_control_qc_plots(exp, count_dir, neg_path, pos_path):
         print(f"        This may indicate a problem with the screen or normalization.")
 
 
-def _plot_specific_gene_trajectories(exp, count_dir, genes_dict):
-    """Mean trajectory plots (±SD) for genes of interest."""
-    raw_file  = os.path.join(count_dir, f"{exp}_.count.txt")
-    norm_file = os.path.join(count_dir, f"{exp}_.count_normalized.txt")
 
-    if not (os.path.exists(raw_file) and os.path.exists(norm_file)):
-        print(f"  ⚠️  Gene trajectory plots skipped — files not found for {exp}.")
+def _plot_replicate_correlation(exp, count_dir):
+    """
+    Scatter of log2(count+1) for bio_rep 1 vs bio_rep 2 per condition.
+    Pearson r printed on each panel. Skipped if a condition has only one rep.
+    """
+    count_file = os.path.join(count_dir, f"{exp}_.count_normalized.txt")
+    if not os.path.exists(count_file):
+        print(f"  ⚠️  Replicate correlation skipped — normalized count file not found for {exp}.")
         return
 
-    gene_out_dir = os.path.join(count_dir, f"{exp}_gene_profiles")
-    os.makedirs(gene_out_dir, exist_ok=True)
+    df = pd.read_table(count_file)
+    sample_cols = [c for c in df.columns if c not in ["sgRNA", "Gene"]]
 
-    raw_df  = pd.read_table(raw_file)
-    norm_df = pd.read_table(norm_file)
-    sample_cols = [c for c in raw_df.columns if c not in ["sgRNA", "Gene"]]
+    # Group sample columns by condition (strip trailing _R1 / _R2)
+    cond_map = {}
+    for col in sample_cols:
+        cond = re.sub(r"_R\d+$", "", col)
+        cond_map.setdefault(cond, []).append(col)
 
-    found, not_found = [], []
-    for gene_id, common_name in genes_dict.items():
-        raw_gene  = raw_df[raw_df["Gene"] == gene_id]
-        norm_gene = norm_df[norm_df["Gene"] == gene_id]
-        if raw_gene.empty or norm_gene.empty:
-            not_found.append(f"{gene_id} ({common_name})")
-            continue
-        found.append(common_name)
+    # Keep only conditions that have exactly 2 reps
+    paired = {c: v for c, v in cond_map.items() if len(v) == 2}
+    if not paired:
+        print(f"  ℹ️  Replicate correlation: no conditions with exactly 2 bio-reps found for {exp}.")
+        return
 
-        fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(20, 8))
+    n_conds = len(paired)
+    fig, axes = plt.subplots(1, n_conds, figsize=(6 * n_conds, 6), squeeze=False)
+    fig.suptitle(f"Biological Replicate Correlation: {exp}", fontsize=16, y=1.02)
 
-        def _plot_traj(data_df, ax, title, ylabel):
-            melted = data_df.melt(id_vars=["sgRNA"], value_vars=sample_cols,
-                                  var_name="Sample", value_name="Count")
-            melted["Log10_Count"] = np.log10(melted["Count"] + 1)
-            sns.lineplot(data=melted, x="Sample", y="Log10_Count", ax=ax,
-                         color="royalblue", marker="o", ci="sd", linewidth=3)
-            ax.set_title(title, fontsize=18, fontweight="bold")
-            ax.set_ylabel(ylabel, fontsize=14)
-            ax.tick_params(axis="x", rotation=45)
-            ax.grid(True, alpha=0.3)
+    for ax, (cond, (col1, col2)) in zip(axes[0], paired.items()):
+        x = np.log2(df[col1] + 1)
+        y = np.log2(df[col2] + 1)
+        r = np.corrcoef(x, y)[0, 1]
+        ax.scatter(x, y, alpha=0.2, s=10, color="steelblue", rasterized=True)
+        lims = [min(x.min(), y.min()), max(x.max(), y.max())]
+        ax.plot(lims, lims, "r--", lw=1.5, alpha=0.7)
+        ax.set_xlabel(f"{col1}\nlog2(count+1)", fontsize=11)
+        ax.set_ylabel(f"{col2}\nlog2(count+1)", fontsize=11)
+        ax.set_title(f"{cond}\nr = {r:.3f}", fontsize=13, fontweight="bold")
+        ax.grid(True, alpha=0.3)
 
-        _plot_traj(raw_gene,  ax1, f"RAW: {common_name}",  "Log10(Raw Count + 1)")
-        _plot_traj(norm_gene, ax2, f"NORM: {common_name}", "Log10(Norm Count + 1)")
-        fig.suptitle(f"Mean Trajectory (±SD): {common_name} ({gene_id}) | {exp}",
-                     fontsize=20, y=1.02, fontweight="bold")
-
-        save_path = os.path.join(gene_out_dir, f"{common_name}_Mean_Trajectory.png")
-        plt.savefig(save_path, dpi=300, bbox_inches="tight")
-        plt.close()
-
-    print(f"  ✅ Gene trajectory profiles: {len(found)} plotted, {len(not_found)} not found.")
-    if not_found:
-        print(f"     Not found: {not_found}")
+    plt.tight_layout()
+    save_path = os.path.join(count_dir, f"{exp}_Replicate_Correlation.png")
+    plt.savefig(save_path, dpi=300, bbox_inches="tight")
+    plt.close()
+    print(f"  ✅ Replicate correlation plot saved: {save_path}")
 
 
 def run_mageck_count(preprocess_dir, count_dir, library_csv, summary_csv,
-                     neg_path, pos_path, genes_dict):
+                     neg_path, pos_path):
     """
     Run `mageck count` per experiment, grouping technical replicates with commas.
     """
@@ -736,7 +733,6 @@ def run_mageck_count(preprocess_dir, count_dir, library_csv, summary_csv,
         print(f"  🎨 Generating QC plots for {exp}...")
         _generate_count_plots(exp, count_dir)
         _generate_control_qc_plots(exp, count_dir, neg_path, pos_path)
-        _plot_specific_gene_trajectories(exp, count_dir, genes_dict)
 
 
 # ---------------------------------------------------------------------------
@@ -869,8 +865,15 @@ def run_all_mageck_mle(count_dir, mle_dir, design_base_dir, n_cores,
 # Step 8 — MLE QC plots
 # ---------------------------------------------------------------------------
 
-def run_mle_qc_plots(mle_dir, essential_txt, pos_control_csv):
-    """Distribution and essential-gene tracking plots for each MLE output."""
+def run_mle_qc_plots(mle_dir, essential_txt, pos_control_csv, count_dir=None):
+    """Distribution and essential-gene tracking plots for each MLE output.
+    If count_dir is provided, also generates replicate correlation plots."""
+    if count_dir is not None:
+        import re as _re
+        count_files = [f for f in os.listdir(count_dir) if f.endswith("_.count_normalized.txt")]
+        exps = list(set(_re.sub(r"_\.count_normalized\.txt$", "", f) for f in count_files))
+        for exp in exps:
+            _plot_replicate_correlation(exp, count_dir)
     eg_ids = set(pd.read_table(essential_txt, sep="\t", header=None).iloc[:, 0].astype(str))
     gold_std_ids = set(pd.read_csv(pos_control_csv).iloc[:, 0].astype(str))
 
@@ -956,6 +959,46 @@ def run_mle_qc_plots(mle_dir, essential_txt, pos_control_csv):
                 track_name = f"QC_Essential_Tracking_{exp_tag}.png"
                 plt.savefig(os.path.join(root, track_name), dpi=300, bbox_inches="tight")
                 plt.close()
+
+            # --- Beta score histogram: significant hits in red, rest in gray ---
+            sig_cols = [c for c in df.columns if c.endswith("|wald.p.twosided")]
+            # Fall back: use FDR columns if available from a prior norm step
+            fdr_like = [c for c in df.columns if c.endswith("|fdr")]
+            cols_per_row2 = 4
+            n_rows2 = math.ceil(len(beta_cols) / cols_per_row2)
+            fig2, axes2 = plt.subplots(n_rows2, cols_per_row2,
+                                       figsize=(24, 5 * n_rows2), squeeze=False)
+            fig2.suptitle(f"Beta Score Histograms: {exp_tag}", fontsize=24, y=1.02)
+            for i, col in enumerate(beta_cols):
+                ax2 = axes2[divmod(i, cols_per_row2)]
+                cond_label = col.split("|")[0]
+                # Try to find a matching p-value/fdr column for colouring
+                p_col = f"{cond_label}|wald.p.twosided"
+                f_col = f"{cond_label}|fdr"
+                if p_col in df.columns:
+                    sig_mask = df[p_col] < 0.05
+                elif f_col in df.columns:
+                    sig_mask = df[f_col] < 0.05
+                else:
+                    sig_mask = pd.Series([False] * len(df), index=df.index)
+                ax2.hist(df.loc[~sig_mask, col].dropna(), bins=60,
+                         color="lightgray", edgecolor="none", alpha=0.8,
+                         label="Not significant")
+                ax2.hist(df.loc[sig_mask, col].dropna(), bins=60,
+                         color="red", edgecolor="none", alpha=0.8,
+                         label=f"Sig. (n={sig_mask.sum()})")
+                ax2.axvline(0, color="black", linestyle="--", lw=2)
+                ax2.set_title(cond_label, fontsize=16, fontweight="bold")
+                ax2.set_xlabel("Beta Score", fontsize=13)
+                ax2.set_ylabel("Gene Count", fontsize=13)
+                ax2.legend(fontsize=10)
+                ax2.grid(True, alpha=0.3)
+            for j in range(i + 1, n_rows2 * cols_per_row2):
+                fig2.delaxes(axes2.flatten()[j])
+            plt.tight_layout()
+            hist_name = f"QC_BetaHistogram_{exp_tag}.png"
+            plt.savefig(os.path.join(root, hist_name), dpi=300, bbox_inches="tight")
+            plt.close()
 
             print(f"  ✅ MLE QC plots saved for {exp_tag}")
 
@@ -1059,59 +1102,22 @@ def run_mle_quantile_norm(mle_dir, norm_dir, selector_csv):
         print(f"  ✅ Saved: {exp_out_dir}/{out_name}")
 
 
-def plot_gene_of_interest_volcano(file_path, genes_dict, out_dir,
-                                   hard_db, hard_fdr, len_db, len_fdr):
-    df = pd.read_csv(file_path)
-    os.makedirs(out_dir, exist_ok=True)
-    db_cols  = [c for c in df.columns if "_delta_beta" in c]
-    markers  = ["o", "s", "D", "^", "v", "p", "*", "h"]
-    colors   = sns.color_palette("husl", len(genes_dict))
-
-    for db_col in db_cols:
-        prefix  = db_col.replace("_delta_beta", "")
-        fdr_col = f"{prefix}_fdr"
-        df["neg_log_fdr"] = -np.log10(df[fdr_col] + 1e-12)
-
-        plt.figure(figsize=(20, 14))
-        sns.scatterplot(data=df, x=db_col, y="neg_log_fdr",
-                        color="lightgray", alpha=0.3, s=80, label="Other", zorder=1)
-        plt.axvline(hard_db, color="red",    linestyle="--", alpha=0.8, lw=3)
-        plt.axhline(-np.log10(hard_fdr), color="red",    linestyle="--", alpha=0.8, lw=3)
-        plt.axvline(len_db,  color="orange", linestyle=":",  alpha=0.8, lw=3)
-        plt.axhline(-np.log10(len_fdr),  color="orange", linestyle=":",  alpha=0.8, lw=3)
-
-        for i, (gene_id, common_name) in enumerate(genes_dict.items()):
-            gene_row = df[df["Gene"] == gene_id]
-            if not gene_row.empty:
-                x = gene_row[db_col].values[0]
-                y = gene_row["neg_log_fdr"].values[0]
-                plt.scatter(x, y, color=colors[i], edgecolor="black", s=600,
-                            marker=markers[i % len(markers)], zorder=10,
-                            label=common_name, alpha=0.9)
-
-        plt.xlabel(f"ΔBeta ({prefix})", fontsize=36, fontweight="bold", labelpad=20)
-        plt.ylabel("-log10(FDR)", fontsize=36, fontweight="bold", labelpad=20)
-        plt.grid(linestyle=":", alpha=0.4)
-        plt.tick_params(labelsize=28, length=12, width=4)
-        plt.legend(bbox_to_anchor=(0.5, 1.02), loc="lower center",
-                   ncol=6, fontsize=24, frameon=False)
-        save_name = f"Volcano_Targets_{prefix}.png"
-        plt.savefig(os.path.join(out_dir, save_name), dpi=300, bbox_inches="tight")
-        plt.close()
-
-
 def generate_hit_reports_and_plots(norm_dir, hard_db, hard_fdr, len_db, len_fdr, genes_dict):
+    """
+    For each normalized hits CSV:
+      - Classify genes into tiers (Hard / Lenient / Effect Only)
+      - Generate a volcano plot with tier colouring and genes_dict highlighted + labelled
+      - Accumulate a master hit list CSV per experiment
+    """
     subfolder_master_data = {}
+    markers = ["o", "s", "D", "^", "v", "p", "*", "h"]
+    goi_colors = sns.color_palette("husl", max(len(genes_dict), 1))
 
     for root, _, files in os.walk(norm_dir):
         for file in files:
             if not file.endswith("_normalized_hits.csv"):
                 continue
             file_path = os.path.join(root, file)
-            target_profile_dir = os.path.join(root, "__genes_profile")
-            plot_gene_of_interest_volcano(file_path, genes_dict, target_profile_dir,
-                                          hard_db, hard_fdr, len_db, len_fdr)
-
             df       = pd.read_csv(file_path)
             parts    = os.path.normpath(file_path).split(os.sep)
             perm_tag = parts[-2]
@@ -1121,12 +1127,12 @@ def generate_hit_reports_and_plots(norm_dir, hard_db, hard_fdr, len_db, len_fdr,
                 prefix  = db_col.replace("_delta_beta", "")
                 fdr_col = f"{prefix}_fdr"
 
-                def get_tier(row):
-                    if row[db_col] <= hard_db and row[fdr_col] <= hard_fdr:
+                def get_tier(row, _db=db_col, _fdr=fdr_col):
+                    if row[_db] <= hard_db and row[_fdr] <= hard_fdr:
                         return "Tier 1 (Hard)"
-                    if row[db_col] <= len_db and row[fdr_col] <= len_fdr:
+                    if row[_db] <= len_db and row[_fdr] <= len_fdr:
                         return "Tier 2 (Lenient)"
-                    if row[db_col] < -0.5:
+                    if row[_db] < -0.5:
                         return "Tier 3 (Effect Only)"
                     return "None"
 
@@ -1145,37 +1151,53 @@ def generate_hit_reports_and_plots(norm_dir, hard_db, hard_fdr, len_db, len_fdr,
                         entry[["Gene_ID", "Comparison", "Delta_Beta", "FDR", "Significance_Tier"]]
                     )
 
-                # Volcano plot
+                # --- Volcano plot with genes of interest highlighted ---
                 fig, ax = plt.subplots(figsize=(20, 14))
                 df["neg_log_fdr"] = -np.log10(df[fdr_col] + 1e-12)
                 sns.scatterplot(data=df[df["Significance_Tier"] == "None"],
                                 x=db_col, y="neg_log_fdr", color="lightgray",
-                                alpha=0.3, s=80, label="Not Significant")
+                                alpha=0.3, s=80, label="Not Significant", ax=ax)
                 sns.scatterplot(data=df[df["Significance_Tier"] == "Tier 3 (Effect Only)"],
                                 x=db_col, y="neg_log_fdr", color="skyblue",
-                                alpha=0.6, s=150, label="Tier 3 (Beta < -0.5)")
+                                alpha=0.6, s=150, label="Tier 3 (Beta < -0.5)", ax=ax)
                 sns.scatterplot(data=df[df["Significance_Tier"] == "Tier 2 (Lenient)"],
                                 x=db_col, y="neg_log_fdr", color="orange",
-                                alpha=0.7, s=250, label=f"Lenient (FDR < {len_fdr})")
+                                alpha=0.7, s=250, label="Tier 2 (Lenient)", ax=ax)
                 sns.scatterplot(data=df[df["Significance_Tier"] == "Tier 1 (Hard)"],
                                 x=db_col, y="neg_log_fdr", color="red",
-                                alpha=0.9, s=450, label=f"Hard (FDR < {hard_fdr})",
-                                edgecolor="black")
-                plt.axvline(len_db, color="black", linestyle="--", alpha=0.5, lw=3)
-                plt.axhline(-np.log10(len_fdr), color="black", linestyle="--", alpha=0.5, lw=3)
+                                alpha=0.9, s=450, label="Tier 1 (Hard)",
+                                edgecolor="black", ax=ax)
+
+                # Highlight genes of interest
+                for i, (gene_id, common_name) in enumerate(genes_dict.items()):
+                    gene_row = df[df["Gene"] == gene_id]
+                    if not gene_row.empty:
+                        x = gene_row[db_col].values[0]
+                        y = gene_row["neg_log_fdr"].values[0]
+                        ax.scatter(x, y, color=goi_colors[i], edgecolor="black",
+                                   s=500, marker=markers[i % len(markers)],
+                                   zorder=10, label=common_name)
+                        ax.annotate(common_name, (x, y),
+                                    textcoords="offset points", xytext=(8, 4),
+                                    fontsize=13, fontweight="bold",
+                                    color=goi_colors[i])
+
+                ax.axvline(len_db, color="black", linestyle="--", alpha=0.5, lw=3)
+                ax.axhline(-np.log10(len_fdr), color="black", linestyle="--", alpha=0.5, lw=3)
                 ax.text(0.95, 0.95,
                         f"Tier 1: {n1}\nTier 2: {n2}\nTier 3: {n3}",
                         transform=ax.transAxes, fontsize=20, va="top", ha="right",
                         fontweight="bold", color="darkred",
                         bbox=dict(boxstyle="round,pad=0.5", facecolor="white",
                                   alpha=0.8, edgecolor="gray"))
-                plt.legend(bbox_to_anchor=(1.0, 1.0), loc="lower right",
-                           ncol=4, fontsize=16, frameon=False)
-                plt.xlabel(f"ΔBeta ({prefix}, {perm_tag})", fontsize=30, fontweight="bold",
-                           labelpad=20)
-                plt.ylabel("-log10(FDR)", fontsize=30, fontweight="bold", labelpad=20)
+                ax.legend(bbox_to_anchor=(1.0, 1.0), loc="lower right",
+                          ncol=2, fontsize=14, frameon=False)
+                ax.set_xlabel(f"ΔBeta ({prefix}, {perm_tag})", fontsize=30,
+                              fontweight="bold", labelpad=20)
+                ax.set_ylabel("-log10(FDR)", fontsize=30, fontweight="bold", labelpad=20)
                 ax.tick_params(labelsize=28, length=12, width=4)
-                plt.grid(linestyle=":", alpha=0.4, lw=2)
+                ax.grid(linestyle=":", alpha=0.4, lw=2)
+                plt.tight_layout()
                 plt.savefig(os.path.join(root, f"Volcano_{prefix}.png"),
                             dpi=300, bbox_inches="tight")
                 plt.close()
@@ -1189,6 +1211,62 @@ def generate_hit_reports_and_plots(norm_dir, hard_db, hard_fdr, len_db, len_fdr,
         master_path = os.path.join(folder_path, f"Master_Hits_{exp_name}_Summary.csv")
         master_df.to_csv(master_path, index=False)
         print(f"  ✅ Master hit list: {master_path}")
+
+
+def plot_condition_scatter(norm_dir):
+    """
+    For each normalized hits file, scatter beta scores of every pair of conditions.
+    Genes in the bottom-left are depleted in both; on one axis = condition-specific.
+    One PNG per condition pair per experiment.
+    """
+    for root, _, files in os.walk(norm_dir):
+        for file in [f for f in files if f.endswith("_normalized_hits.csv")]:
+            file_path = os.path.join(root, file)
+            df = pd.read_csv(file_path)
+            beta_cols = [c for c in df.columns if "|beta" in c]
+            if len(beta_cols) < 2:
+                continue
+
+            pairs = list(itertools.combinations(beta_cols, 2))
+            for col_a, col_b in pairs:
+                label_a = col_a.split("|")[0]
+                label_b = col_b.split("|")[0]
+
+                # Skip t0 vs t0 (only one t0 anyway) and self-pairs
+                if label_a == label_b:
+                    continue
+
+                fig, ax = plt.subplots(figsize=(10, 10))
+                x = df[col_a]
+                y = df[col_b]
+
+                # Colour by depletion: both depleted (blue), A only (green), B only (orange), neither (gray)
+                both   = (x < -0.5) & (y < -0.5)
+                a_only = (x < -0.5) & ~(y < -0.5)
+                b_only = ~(x < -0.5) & (y < -0.5)
+                neither = ~both & ~a_only & ~b_only
+
+                ax.scatter(x[neither], y[neither], s=15, alpha=0.2, color="lightgray", label="Neither")
+                ax.scatter(x[a_only],  y[a_only],  s=30, alpha=0.6, color="#2ca02c",  label=f"{label_a} only")
+                ax.scatter(x[b_only],  y[b_only],  s=30, alpha=0.6, color="#ff7f0e",  label=f"{label_b} only")
+                ax.scatter(x[both],    y[both],    s=50, alpha=0.8, color="#1f77b4",  label="Both depleted")
+
+                ax.axvline(-0.5, color="black", linestyle="--", lw=1.5, alpha=0.5)
+                ax.axhline(-0.5, color="black", linestyle="--", lw=1.5, alpha=0.5)
+                ax.axvline(0, color="gray", linestyle=":", lw=1, alpha=0.4)
+                ax.axhline(0, color="gray", linestyle=":", lw=1, alpha=0.4)
+                ax.set_xlabel(f"Beta score: {label_a}", fontsize=14, fontweight="bold")
+                ax.set_ylabel(f"Beta score: {label_b}", fontsize=14, fontweight="bold")
+                ax.set_title(f"Condition comparison\n{label_a}  vs  {label_b}",
+                             fontsize=15, fontweight="bold")
+                ax.legend(fontsize=11, frameon=True)
+                ax.grid(True, alpha=0.25)
+
+                save_name = f"ConditionScatter_{label_a}_vs_{label_b}.png"
+                plt.tight_layout()
+                plt.savefig(os.path.join(root, save_name), dpi=300, bbox_inches="tight")
+                plt.close()
+            print(f"  ✅ Condition scatter plots saved for {os.path.basename(file)}")
 
 
 def prepare_koala_database(koala_paths, output_path):
@@ -1283,8 +1361,14 @@ def run_functional_plotting(norm_dir, plot_dir, cog_mapping):
                 comp_df  = df[df["Comparison"] == comp].copy()
                 target_tiers = ["Tier 1 (Hard)", "Tier 2 (Lenient)"]
                 plot_df  = comp_df[comp_df["Significance_Tier"].isin(target_tiers)].copy()
+                # Fall back to Tier 3 (effect only) if no statistically significant hits
                 if plot_df.empty:
-                    continue
+                    plot_df = comp_df[comp_df["Significance_Tier"] == "Tier 3 (Effect Only)"].copy()
+                    if plot_df.empty:
+                        print(f"  ℹ️  {comp}: no hits in any tier — skipping COG plot.")
+                        continue
+                    print(f"  ℹ️  {comp}: no Tier 1/2 hits — COG plot shows Tier 3 (effect only).")
+                    target_tiers = ["Tier 3 (Effect Only)"]
                 plot_df["COG_Full"] = (
                     plot_df["COG_category"].astype(str).str[0].str.upper()
                     .map(cog_mapping).fillna("Unclassified / No COG")
@@ -1300,13 +1384,20 @@ def run_functional_plotting(norm_dir, plot_dir, cog_mapping):
                 counts = counts.set_index(["Category", "Significance_Tier"]).reindex(
                     mux, fill_value=0
                 ).reset_index()
-                sort_order = counts[counts["Significance_Tier"] == "Tier 1 (Hard)"].sort_values(
+                sort_tier = target_tiers[0]
+                sort_order = counts[counts["Significance_Tier"] == sort_tier].sort_values(
                     "Count", ascending=False
                 )["Category"]
                 plt.figure(figsize=(20, max(10, len(all_cats) * 1.2)))
+                tier_palette = {
+                    "Tier 1 (Hard)":       "#2c7fb8",
+                    "Tier 2 (Lenient)":    "#7fcdbb",
+                    "Tier 3 (Effect Only)":"#fdae6b",
+                }
                 ax = sns.barplot(data=counts, x="Count", y="Category", hue="Significance_Tier",
                                  order=sort_order,
-                                 palette={"Tier 1 (Hard)": "#2c7fb8", "Tier 2 (Lenient)": "#7fcdbb"})
+                                 palette={k: v for k, v in tier_palette.items()
+                                          if k in target_tiers})
                 plt.title(f"Functional Enrichment: {comp}\nExperiment: {exp_name}",
                           fontsize=26, pad=40, fontweight="bold")
                 plt.xlabel("Number of Genes", fontsize=22, labelpad=20)
@@ -1330,7 +1421,7 @@ def run_functional_plotting(norm_dir, plot_dir, cog_mapping):
             print(f"  ✅ COG plots for {exp_name}")
 
 
-def plot_top_hits_by_beta(norm_dir, plot_dir, cog_mapping):
+def plot_top_hits_by_beta(norm_dir, plot_dir, cog_mapping, top_n=10):
     print("\n  🏆 Generating Top 20 Hit plots...")
     all_cog_names = sorted(list(set(cog_mapping.values())) + ["Unclassified / No COG"])
     cog_color_dict = dict(zip(all_cog_names, sns.color_palette("Set2", len(all_cog_names))))
@@ -1349,7 +1440,7 @@ def plot_top_hits_by_beta(norm_dir, plot_dir, cog_mapping):
                 if hits_df.empty:
                     hits_df = comp_df.copy()
                     print(f"  ℹ️  {comp}: no significant hits — showing top genes by effect size only.")
-                top_20 = hits_df.sort_values("Delta_Beta", ascending=True).head(10).copy()
+                top_20 = hits_df.sort_values("Delta_Beta", ascending=True).head(top_n).copy()
                 if top_20.empty:
                     continue
                 top_20["COG_Full"] = (
@@ -1379,59 +1470,3 @@ def plot_top_hits_by_beta(norm_dir, plot_dir, cog_mapping):
             print(f"  ✅ Top 20 plots for {exp_name}")
 
 
-def plot_cog_specific_hits(norm_dir, plot_dir, cog_mapping, target_cogs, top_n=10):
-    print(f"\n  🎯 Generating COG-specific plots for: {target_cogs}")
-    all_cog_names = sorted(list(set(cog_mapping.values())) + ["Unclassified / No COG"])
-    cog_color_dict = dict(zip(all_cog_names, sns.color_palette("Set2", len(all_cog_names))))
-
-    for root, _, files in os.walk(norm_dir):
-        for file in [f for f in files if f.endswith("_ANNOTATED.csv")]:
-            csv_path = os.path.join(root, file)
-            df = pd.read_csv(csv_path)
-            exp_name = file.replace("_ANNOTATED.csv", "")
-            exp_output_dir = os.path.join(plot_dir, "COG_specific", exp_name)
-            os.makedirs(exp_output_dir, exist_ok=True)
-            for comp in df["Comparison"].unique():
-                comp_df = df[df["Comparison"] == comp].copy()
-                comp_df["COG_Full"] = (
-                    comp_df["COG_category"].astype(str).str[0].str.upper()
-                    .map(cog_mapping).fillna("Unclassified / No COG")
-                )
-                spec_df = comp_df[
-                    comp_df["COG_Full"].isin(target_cogs) |
-                    comp_df["COG_category"].isin(target_cogs)
-                ].copy()
-                if spec_df.empty:
-                    continue
-                top_hits = spec_df.sort_values("Delta_Beta", ascending=True).head(top_n).copy()
-                top_hits["Description"] = top_hits["Description"].fillna("-")
-                top_hits.to_csv(os.path.join(exp_output_dir, f"{comp}_COG_Focused_Hits.csv"),
-                                index=False)
-                plt.figure(figsize=(20, max(8, len(top_hits) * 0.9)))
-                ax = sns.barplot(data=top_hits, x="Delta_Beta", y="Gene_ID",
-                                 hue="COG_Full", dodge=False, palette=cog_color_dict)
-                plt.xlabel(f"Delta Beta ({comp})", fontsize=24, fontweight="bold", labelpad=20)
-                plt.ylabel("Gene ID", fontsize=22)
-                plt.xticks(fontsize=18)
-                plt.yticks(fontsize=18)
-                plt.legend(title="Functional Category", title_fontsize=18, fontsize=15,
-                           loc="lower center", bbox_to_anchor=(0.5, 1.05), ncol=3,
-                           frameon=False)
-                for i in range(len(top_hits)):
-                    desc     = str(top_hits.iloc[i]["Description"])
-                    display  = (desc[:65] + "...") if len(desc) > 65 else desc
-                    fdr_val  = top_hits.iloc[i]["FDR"]
-                    beta_val = top_hits.iloc[i]["Delta_Beta"]
-                    ax.text(-0.02, i, f"{display}  ", color="black", va="center",
-                            ha="right", fontsize=13, fontweight="bold")
-                    fdr_txt = f"FDR: {fdr_val:.2e}"
-                    if beta_val > -1.2:
-                        ax.text(0.02, i, f" {fdr_txt}", color="black", va="center",
-                                ha="left", fontsize=12, style="italic")
-                    else:
-                        ax.text(beta_val + 0.02, i, f"{fdr_txt} ", color="black",
-                                va="center", ha="left", fontsize=12, style="italic")
-                plt.savefig(os.path.join(exp_output_dir, f"{comp}_COG_Focused_Hits.png"),
-                            bbox_inches="tight", dpi=300)
-                plt.close()
-    print(f"  ✅ COG-specific plots saved in {plot_dir}/COG_specific")

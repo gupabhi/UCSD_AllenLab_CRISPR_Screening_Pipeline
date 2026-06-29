@@ -20,10 +20,10 @@ STEP_4_EXTRACT_GUIDES     = False
 STEP_5_COUNT              = False
 STEP_6_DESIGN_TEMPLATE    = False
 STEP_7_MLE                = False
-STEP_8_MLE_QC             = False
+STEP_8_MLE_QC             = True
 STEP_9_QUANTILE_NORM      = True
 STEP_10_VISUALIZE_HITS    = True
-STEP_11_PREPARE_DB        = True
+STEP_11_PREPARE_DB        = False
 STEP_12_ANNOTATE_HITS     = True
 STEP_13_PLOT_COG          = True
 
@@ -77,7 +77,6 @@ MLE_DIR           = os.path.join(EXP_OUTPUT_DIR, "4_mageck_mle")
 NORM_DIR          = os.path.join(EXP_OUTPUT_DIR, "5_mageck_mle_norm")
 COG_PLOT_DIR      = os.path.join(EXP_OUTPUT_DIR, "6_Plots_top_hits", "COG_distribution")
 BETA_PLOT_DIR     = os.path.join(EXP_OUTPUT_DIR, "6_Plots_top_hits", "BETA_TopHits_Description")
-COG_SPECIFIC_PLOT_DIR = os.path.join(EXP_OUTPUT_DIR, "6_Plots_top_hits", "COG_Specific_Hits")
 
 # --- 8. OUTPUT FILES ---
 PREPROCESS_SUMMARY_CSV = os.path.join(PREPROCESS_DIR, "extraction_summary.csv")
@@ -87,7 +86,7 @@ CONTROL_SGRNA_FILE     = NEG_CONTROL_TXT
 
 # --- 9. PREPROCESSING CONSTANTS ---
 FWD_ANCHOR = "CAAAAAACACCTTCAAAGTC"   # U6 promoter sequence (upstream of guide)
-REV_ANCHOR = "GCTATTTCTAGCTCTAAAAC"   # Scaffold sequence (only used if SINGLE_END=False)
+REV_ANCHOR = "GCTATTTCTAGCTCTAAAAC"   # sgRNA scaffold; searched in ALL modes (SE inserts appear in both orientations ~50/50)
 GUIDE_LEN  = 20
 AUTO_PARSE_METADATA = True   # Auto-detect condition/bio_rep/tech_rep from filenames
 
@@ -145,7 +144,6 @@ COG_MAP = {
     "R": "[R] General function prediction only",
     "S": "[S] Function unknown",
 }
-COG_interests = ["A", "K"]
 
 # --- 13. OPTIONAL: PCR CYCLE COMPARISON ---
 # When True, the pipeline runs a separate MLE for PCR_Cycle_Compare experiment,
