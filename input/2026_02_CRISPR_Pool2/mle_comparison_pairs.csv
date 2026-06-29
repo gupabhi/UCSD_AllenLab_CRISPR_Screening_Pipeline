@@ -1,0 +1,15 @@
+Experiment,Treatment_Col,Control_Col,Analyze_Flag
+Nitrogen,NFREE|beta,NH4NO3|beta,0
+Nitrogen,NFREE|beta,NH4|beta,0
+Nitrogen,NFREE|beta,NO3|beta,0
+Nitrogen,NFREE|beta,UREA|beta,0
+Nitrogen,NH4NO3|beta,NH4|beta,0
+Nitrogen,NH4NO3|beta,NO3|beta,0
+Nitrogen,NH4NO3|beta,UREA|beta,0
+Nitrogen,NH4|beta,NO3|beta,0
+Nitrogen,NH4|beta,UREA|beta,0
+Nitrogen,NO3|beta,UREA|beta,0
+Nitrogen,NH4|beta,NH4NO3|beta,1
+Nitrogen,NFREE|beta,NH4NO3|beta,1
+Nitrogen,NO3|beta,NH4NO3|beta,1
+Nitrogen,UREA|beta,NH4NO3|beta,1

@@ -11,25 +11,25 @@ EXP_NAME = "2026_02_CRISPR_Pool2"
 # --- 2. PIPELINE STEP CONTROL ---
 # Set each step True/False to run or skip.
 # Typical first run: Steps 0-5, then 6 (pause to fill design matrix), then 7-13.
-STEP_0_CHECK_ENV          = True
-STEP_1_INITIALIZE         = True
-STEP_1b_PREFLIGHT_CHECK   = True   # Sanity-check anchor presence in raw reads (fast)
-STEP_2_METADATA_TEMPLATE  = True  # Pre-filled CSV is provided; keep False
-STEP_3_VALIDATE_AND_SUMMARY = True
-STEP_4_EXTRACT_GUIDES     = True
+STEP_0_CHECK_ENV          = False
+STEP_1_INITIALIZE         = False
+STEP_1b_PREFLIGHT_CHECK   = False   # Sanity-check anchor presence in raw reads (fast)
+STEP_2_METADATA_TEMPLATE  = False  # Pre-filled CSV is provided; keep False
+STEP_3_VALIDATE_AND_SUMMARY = False
+STEP_4_EXTRACT_GUIDES     = False
 STEP_5_COUNT              = False
 STEP_6_DESIGN_TEMPLATE    = False
 STEP_7_MLE                = False
 STEP_8_MLE_QC             = False
-STEP_9_QUANTILE_NORM      = False
-STEP_10_VISUALIZE_HITS    = False
-STEP_11_PREPARE_DB        = False
-STEP_12_ANNOTATE_HITS     = False
-STEP_13_PLOT_COG          = False
+STEP_9_QUANTILE_NORM      = True
+STEP_10_VISUALIZE_HITS    = True
+STEP_11_PREPARE_DB        = True
+STEP_12_ANNOTATE_HITS     = True
+STEP_13_PLOT_COG          = True
 
 # --- 3. SEQUENCING MODE ---
-# SE150 from AVITI — reads come from one direction only; disable reverse-complement search.
-SINGLE_END = True
+SINGLE_END = True    # True = SE run: both insert orientations in one file, search FWD + REV anchors
+                     # False = PE run: R1+R2 files per sample, use FWD anchor only to avoid double-counting
 
 # Set True when running under SLURM (sbatch) to skip interactive y/n prompts.
 # Set False when running interactively to allow manual inspection at Step 3.
@@ -43,8 +43,8 @@ EXP_INPUT_DIR  = f"input/{EXP_NAME}"
 EXP_OUTPUT_DIR = f"output/{EXP_NAME}"
 
 # Input sub-directories (relative to pipeline root)
-LIB_DIR = os.path.join(EXP_INPUT_DIR, "common/library")
-ANN_DIR = os.path.join(EXP_INPUT_DIR, "common/PT_protein_anno")
+LIB_DIR = os.path.join("input/common/library")
+ANN_DIR = os.path.join("input/common/PT_protein_anno")
 GLOBAL_DB_DIR = os.path.join(ANN_DIR, "processed")
 
 # Raw sequencing data — absolute TSCC path, no file copying needed.
@@ -89,6 +89,7 @@ CONTROL_SGRNA_FILE     = NEG_CONTROL_TXT
 FWD_ANCHOR = "CAAAAAACACCTTCAAAGTC"   # U6 promoter sequence (upstream of guide)
 REV_ANCHOR = "GCTATTTCTAGCTCTAAAAC"   # Scaffold sequence (only used if SINGLE_END=False)
 GUIDE_LEN  = 20
+AUTO_PARSE_METADATA = True   # Auto-detect condition/bio_rep/tech_rep from filenames
 
 # Preflight check: sample this many reads from the first FASTQ to verify anchor presence.
 PREFLIGHT_N_READS    = 10_000
@@ -151,3 +152,5 @@ COG_interests = ["A", "K"]
 # comparing 12-cycle vs 24-cycle library prep for matched samples.
 # Relevant 12c files: T0_NHNOA12C1/2, T1_NO3B2_12C1/2, T1_NFRB_12C1/2
 ENABLE_PCR_CYCLE_COMPARISON = False
+
+

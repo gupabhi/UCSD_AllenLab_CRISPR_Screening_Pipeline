@@ -1,0 +1,7 @@
+Samples	baseline	t0_12c	Nfree_12c	NO3_12c	t0_24c	NO3_24c	Nfree_24c
+t0_12c_R1	1						
+Nfree_12c_R1	1						
+NO3_12c_R1	1						
+t0_24c_R1	1						
+NO3_24c_R1	1						
+Nfree_24c_R1	1						

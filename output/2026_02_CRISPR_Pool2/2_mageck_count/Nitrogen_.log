@@ -1,0 +1,1985 @@
+INFO  @ Wed, 03 Jun 2026 22:51:52: Parameters: /tscc/projects/ps-allenlab/projdata/common/programs/miniconda3/envs/mageckenv/bin/mageck count -l input/common/library/JonScreenAllGuides_mageck_format.csv -n output/2026_02_CRISPR_Pool2/2_mageck_count/Nitrogen_ --sample-label NFREE_R1,NFREE_R2,NH4_R1,NH4_R2,NH4NO3_R1,NH4NO3_R2,NO3_R1,NO3_R2,UREA_R1,UREA_R2,t0_R1 --fastq output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NFREE_R1_T1_NFREE_1_1_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NFREE_R1_T1_NFREE_1_2_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NFREE_R1_T1_NFREE_1_3_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NFREE_R1_T1_NFREE_1_4_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NFREE_R1_T1_NFREE_1_5_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NFREE_R1_T1_NFREE_1_6_R1.fastq.gz output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NFREE_R2_T1_NFREE_2_1_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NFREE_R2_T1_NFREE_2_2_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NFREE_R2_T1_NFREE_2_3_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NFREE_R2_T1_NFREE_2_4_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NFREE_R2_T1_NFREE_2_5_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NFREE_R2_T1_NFREE_2_6_R1.fastq.gz output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4_R1_T1_NH4_1_1_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4_R1_T1_NH4_1_2_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4_R1_T1_NH4_1_3_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4_R1_T1_NH4_1_4_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4_R1_T1_NH4_1_5_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4_R1_T1_NH4_1_6_R1.fastq.gz output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4_R2_T1_NH4_2_1_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4_R2_T1_NH4_2_2_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4_R2_T1_NH4_2_3_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4_R2_T1_NH4_2_4_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4_R2_T1_NH4_2_5_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4_R2_T1_NH4_2_6_R1.fastq.gz output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4NO3_R1_T1_NH4NO3A1_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4NO3_R1_T1_NH4NO3A2_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4NO3_R1_T1_NH4NO3A3_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4NO3_R1_T1_NH4NO3A4_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4NO3_R1_T1_NH4NO3A5_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4NO3_R1_T1_NH4NO3A6_R1.fastq.gz output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4NO3_R2_T1_NH4NO3B1_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4NO3_R2_T1_NH4NO3B2_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4NO3_R2_T1_NH4NO3B3_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4NO3_R2_T1_NH4NO3B4_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4NO3_R2_T1_NH4NO3B5_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4NO3_R2_T1_NH4NO3B6_R1.fastq.gz output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NO3_R1_T1_NO3_1_1_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NO3_R1_T1_NO3_1_2_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NO3_R1_T1_NO3_1_3_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NO3_R1_T1_NO3_1_4_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NO3_R1_T1_NO3_1_5_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NO3_R1_T1_NO3_1_6_R1.fastq.gz output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NO3_R2_T1_NO3_2_1_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NO3_R2_T1_NO3_2_2_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NO3_R2_T1_NO3_2_3_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NO3_R2_T1_NO3_2_4_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NO3_R2_T1_NO3_2_5_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NO3_R2_T1_NO3_2_6_R1.fastq.gz output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_UREA_R1_T1_UREA_1_1_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_UREA_R1_T1_UREA_1_2_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_UREA_R1_T1_UREA_1_3_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_UREA_R1_T1_UREA_1_4_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_UREA_R1_T1_UREA_1_5_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_UREA_R1_T1_UREA_1_6_R1.fastq.gz output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_UREA_R2_T1_UREA_2_1_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_UREA_R2_T1_UREA_2_2_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_UREA_R2_T1_UREA_2_3_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_UREA_R2_T1_UREA_2_4_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_UREA_R2_T1_UREA_2_5_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_UREA_R2_T1_UREA_2_6_R1.fastq.gz output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_t0_R1_T0_NH4NO3A1_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_t0_R1_T0_NH4NO3A2_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_t0_R1_T0_NH4NO3A3_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_t0_R1_T0_NH4NO3A4_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_t0_R1_T0_NH4NO3A5_R1.fastq.gz,output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_t0_R1_T0_NH4NO3A6_R1.fastq.gz 
+INFO  @ Wed, 03 Jun 2026 22:51:52: Welcome to MAGeCK v0.5.9.5. Command: count 
+INFO  @ Wed, 03 Jun 2026 22:51:52: Header line of the library file detected; skip the first line ... 
+INFO  @ Wed, 03 Jun 2026 22:51:52: Loading 90202 predefined sgRNAs. 
+WARNING @ Wed, 03 Jun 2026 22:51:52: There are 3 sgRNAs with duplicated sequences. 
+INFO  @ Wed, 03 Jun 2026 22:51:52: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NFREE_R1_T1_NFREE_1_1_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 22:51:52: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NFREE_R1_T1_NFREE_1_1_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 22:51:52: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 22:51:52: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 22:51:52: Read length:20 
+INFO  @ Wed, 03 Jun 2026 22:51:52: Total tested reads: 100001, mapped: 67349(0.6734832651673484) 
+INFO  @ Wed, 03 Jun 2026 22:51:52: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 22:51:52: 0	67349	1.0 
+INFO  @ Wed, 03 Jun 2026 22:51:52: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 22:51:52: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 22:51:52: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:51:54: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:51:56: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:51:59: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:52:01: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:52:03: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:52:05: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:52:07: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:52:09: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:52:12: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:52:13: Total: 9752670. 
+INFO  @ Wed, 03 Jun 2026 22:52:13: Mapped: 6615743. 
+INFO  @ Wed, 03 Jun 2026 22:52:13: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NFREE_R1_T1_NFREE_1_2_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 22:52:13: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NFREE_R1_T1_NFREE_1_2_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 22:52:13: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 22:52:13: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 22:52:14: Read length:20 
+INFO  @ Wed, 03 Jun 2026 22:52:14: Total tested reads: 100001, mapped: 67942(0.6794132058679413) 
+INFO  @ Wed, 03 Jun 2026 22:52:14: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 22:52:14: 0	67942	1.0 
+INFO  @ Wed, 03 Jun 2026 22:52:14: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 22:52:14: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 22:52:14: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:52:16: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:52:18: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:52:20: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:52:22: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:52:24: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:52:27: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:52:29: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:52:31: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:52:33: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:52:35: Total: 9743757. 
+INFO  @ Wed, 03 Jun 2026 22:52:35: Mapped: 6651512. 
+INFO  @ Wed, 03 Jun 2026 22:52:35: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NFREE_R1_T1_NFREE_1_3_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 22:52:35: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NFREE_R1_T1_NFREE_1_3_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 22:52:35: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 22:52:35: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 22:52:35: Read length:20 
+INFO  @ Wed, 03 Jun 2026 22:52:35: Total tested reads: 100001, mapped: 67354(0.6735332646673533) 
+INFO  @ Wed, 03 Jun 2026 22:52:35: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 22:52:35: 0	67354	1.0 
+INFO  @ Wed, 03 Jun 2026 22:52:35: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 22:52:35: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 22:52:35: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:52:37: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:52:40: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:52:42: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:52:44: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:52:46: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:52:48: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:52:50: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:52:53: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:52:55: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:52:57: Processing 10M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:52:59: Processing 11M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:52:59: Total: 11055438. 
+INFO  @ Wed, 03 Jun 2026 22:52:59: Mapped: 7520323. 
+INFO  @ Wed, 03 Jun 2026 22:53:00: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NFREE_R1_T1_NFREE_1_4_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 22:53:00: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NFREE_R1_T1_NFREE_1_4_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 22:53:00: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 22:53:00: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 22:53:00: Read length:20 
+INFO  @ Wed, 03 Jun 2026 22:53:00: Total tested reads: 100001, mapped: 67557(0.6755632443675563) 
+INFO  @ Wed, 03 Jun 2026 22:53:00: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 22:53:00: 0	67557	1.0 
+INFO  @ Wed, 03 Jun 2026 22:53:00: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 22:53:00: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 22:53:00: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:53:02: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:53:04: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:53:06: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:53:09: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:53:11: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:53:13: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:53:15: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:53:17: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:53:19: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:53:22: Processing 10M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:53:24: Processing 11M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:53:26: Processing 12M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:53:28: Processing 13M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:53:30: Processing 14M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:53:31: Total: 14277417. 
+INFO  @ Wed, 03 Jun 2026 22:53:31: Mapped: 9701795. 
+INFO  @ Wed, 03 Jun 2026 22:53:31: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NFREE_R1_T1_NFREE_1_5_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 22:53:31: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NFREE_R1_T1_NFREE_1_5_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 22:53:31: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 22:53:31: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 22:53:31: Read length:20 
+INFO  @ Wed, 03 Jun 2026 22:53:31: Total tested reads: 100001, mapped: 67693(0.6769232307676923) 
+INFO  @ Wed, 03 Jun 2026 22:53:31: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 22:53:31: 0	67693	1.0 
+INFO  @ Wed, 03 Jun 2026 22:53:31: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 22:53:31: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 22:53:31: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:53:34: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:53:36: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:53:38: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:53:40: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:53:42: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:53:45: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:53:47: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:53:49: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:53:51: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:53:53: Processing 10M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:53:56: Processing 11M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:53:58: Total: 11906765. 
+INFO  @ Wed, 03 Jun 2026 22:53:58: Mapped: 8082728. 
+INFO  @ Wed, 03 Jun 2026 22:53:58: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NFREE_R1_T1_NFREE_1_6_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 22:53:58: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NFREE_R1_T1_NFREE_1_6_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 22:53:58: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 22:53:58: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 22:53:58: Read length:20 
+INFO  @ Wed, 03 Jun 2026 22:53:58: Total tested reads: 100001, mapped: 67256(0.6725532744672553) 
+INFO  @ Wed, 03 Jun 2026 22:53:58: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 22:53:58: 0	67256	1.0 
+INFO  @ Wed, 03 Jun 2026 22:53:58: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 22:53:58: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 22:53:58: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:54:00: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:54:02: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:54:05: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:54:07: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:54:09: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:54:11: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:54:13: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:54:16: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:54:18: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:54:20: Processing 10M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:54:22: Total: 10885134. 
+INFO  @ Wed, 03 Jun 2026 22:54:22: Mapped: 7401454. 
+INFO  @ Wed, 03 Jun 2026 22:54:22: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NFREE_R2_T1_NFREE_2_1_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 22:54:22: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NFREE_R2_T1_NFREE_2_1_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 22:54:22: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 22:54:22: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 22:54:22: Read length:20 
+INFO  @ Wed, 03 Jun 2026 22:54:22: Total tested reads: 100001, mapped: 68432(0.6843131568684313) 
+INFO  @ Wed, 03 Jun 2026 22:54:22: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 22:54:22: 0	68432	1.0 
+INFO  @ Wed, 03 Jun 2026 22:54:22: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 22:54:22: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 22:54:22: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:54:25: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:54:27: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:54:29: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:54:31: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:54:33: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:54:35: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:54:38: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:54:40: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:54:42: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:54:44: Processing 10M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:54:44: Total: 10039667. 
+INFO  @ Wed, 03 Jun 2026 22:54:44: Mapped: 6910709. 
+INFO  @ Wed, 03 Jun 2026 22:54:44: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NFREE_R2_T1_NFREE_2_2_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 22:54:44: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NFREE_R2_T1_NFREE_2_2_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 22:54:44: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 22:54:44: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 22:54:45: Read length:20 
+INFO  @ Wed, 03 Jun 2026 22:54:45: Total tested reads: 100001, mapped: 68386(0.6838531614683853) 
+INFO  @ Wed, 03 Jun 2026 22:54:45: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 22:54:45: 0	68386	1.0 
+INFO  @ Wed, 03 Jun 2026 22:54:45: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 22:54:45: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 22:54:45: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:54:47: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:54:49: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:54:51: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:54:53: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:54:56: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:54:58: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:55:00: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:55:02: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:55:04: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:55:07: Processing 10M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:55:08: Total: 10409954. 
+INFO  @ Wed, 03 Jun 2026 22:55:08: Mapped: 7158579. 
+INFO  @ Wed, 03 Jun 2026 22:55:08: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NFREE_R2_T1_NFREE_2_3_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 22:55:08: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NFREE_R2_T1_NFREE_2_3_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 22:55:08: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 22:55:08: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 22:55:08: Read length:20 
+INFO  @ Wed, 03 Jun 2026 22:55:08: Total tested reads: 100001, mapped: 67679(0.6767832321676783) 
+INFO  @ Wed, 03 Jun 2026 22:55:08: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 22:55:08: 0	67679	1.0 
+INFO  @ Wed, 03 Jun 2026 22:55:08: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 22:55:08: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 22:55:08: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:55:10: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:55:12: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:55:15: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:55:17: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:55:19: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:55:21: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:55:23: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:55:26: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:55:28: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:55:30: Total: 9881956. 
+INFO  @ Wed, 03 Jun 2026 22:55:30: Mapped: 6761383. 
+INFO  @ Wed, 03 Jun 2026 22:55:30: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NFREE_R2_T1_NFREE_2_4_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 22:55:30: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NFREE_R2_T1_NFREE_2_4_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 22:55:30: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 22:55:30: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 22:55:30: Read length:20 
+INFO  @ Wed, 03 Jun 2026 22:55:30: Total tested reads: 100001, mapped: 67769(0.6776832231677683) 
+INFO  @ Wed, 03 Jun 2026 22:55:30: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 22:55:30: 0	67769	1.0 
+INFO  @ Wed, 03 Jun 2026 22:55:30: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 22:55:30: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 22:55:30: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:55:32: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:55:34: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:55:37: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:55:39: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:55:41: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:55:43: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:55:45: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:55:48: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:55:50: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:55:52: Processing 10M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:55:53: Total: 10532964. 
+INFO  @ Wed, 03 Jun 2026 22:55:53: Mapped: 7203310. 
+INFO  @ Wed, 03 Jun 2026 22:55:53: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NFREE_R2_T1_NFREE_2_5_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 22:55:53: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NFREE_R2_T1_NFREE_2_5_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 22:55:53: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 22:55:53: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 22:55:53: Read length:20 
+INFO  @ Wed, 03 Jun 2026 22:55:53: Total tested reads: 100001, mapped: 67908(0.6790732092679074) 
+INFO  @ Wed, 03 Jun 2026 22:55:53: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 22:55:53: 0	67908	1.0 
+INFO  @ Wed, 03 Jun 2026 22:55:53: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 22:55:54: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 22:55:54: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:55:56: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:55:58: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:56:00: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:56:02: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:56:04: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:56:07: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:56:09: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:56:11: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:56:13: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:56:15: Processing 10M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:56:18: Total: 10991763. 
+INFO  @ Wed, 03 Jun 2026 22:56:18: Mapped: 7509473. 
+INFO  @ Wed, 03 Jun 2026 22:56:18: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NFREE_R2_T1_NFREE_2_6_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 22:56:18: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NFREE_R2_T1_NFREE_2_6_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 22:56:18: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 22:56:18: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 22:56:18: Read length:20 
+INFO  @ Wed, 03 Jun 2026 22:56:18: Total tested reads: 100001, mapped: 68457(0.6845631543684563) 
+INFO  @ Wed, 03 Jun 2026 22:56:18: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 22:56:18: 0	68457	1.0 
+INFO  @ Wed, 03 Jun 2026 22:56:18: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 22:56:18: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 22:56:18: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:56:20: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:56:22: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:56:24: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:56:27: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:56:29: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:56:31: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:56:33: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:56:35: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:56:38: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:56:40: Processing 10M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:56:42: Total: 10816537. 
+INFO  @ Wed, 03 Jun 2026 22:56:42: Mapped: 7435496. 
+INFO  @ Wed, 03 Jun 2026 22:56:42: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4_R1_T1_NH4_1_1_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 22:56:42: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4_R1_T1_NH4_1_1_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 22:56:42: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 22:56:42: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 22:56:42: Read length:20 
+INFO  @ Wed, 03 Jun 2026 22:56:42: Total tested reads: 100001, mapped: 66486(0.6648533514664854) 
+INFO  @ Wed, 03 Jun 2026 22:56:42: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 22:56:42: 0	66486	1.0 
+INFO  @ Wed, 03 Jun 2026 22:56:42: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 22:56:42: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 22:56:42: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:56:44: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:56:46: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:56:49: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:56:51: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:56:53: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:56:55: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:56:57: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:57:00: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:57:02: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:57:04: Total: 9999077. 
+INFO  @ Wed, 03 Jun 2026 22:57:04: Mapped: 6671144. 
+INFO  @ Wed, 03 Jun 2026 22:57:04: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4_R1_T1_NH4_1_2_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 22:57:04: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4_R1_T1_NH4_1_2_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 22:57:04: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 22:57:04: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 22:57:04: Read length:20 
+INFO  @ Wed, 03 Jun 2026 22:57:04: Total tested reads: 100001, mapped: 66382(0.6638133618663813) 
+INFO  @ Wed, 03 Jun 2026 22:57:04: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 22:57:04: 0	66382	1.0 
+INFO  @ Wed, 03 Jun 2026 22:57:04: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 22:57:04: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 22:57:04: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:57:06: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:57:09: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:57:11: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:57:13: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:57:15: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:57:17: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:57:19: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:57:22: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:57:24: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:57:26: Processing 10M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:57:27: Total: 10249334. 
+INFO  @ Wed, 03 Jun 2026 22:57:27: Mapped: 6863573. 
+INFO  @ Wed, 03 Jun 2026 22:57:27: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4_R1_T1_NH4_1_3_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 22:57:27: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4_R1_T1_NH4_1_3_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 22:57:27: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 22:57:27: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 22:57:27: Read length:20 
+INFO  @ Wed, 03 Jun 2026 22:57:27: Total tested reads: 100001, mapped: 66332(0.6633133668663314) 
+INFO  @ Wed, 03 Jun 2026 22:57:27: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 22:57:27: 0	66332	1.0 
+INFO  @ Wed, 03 Jun 2026 22:57:27: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 22:57:27: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 22:57:27: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:57:29: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:57:31: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:57:33: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:57:36: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:57:38: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:57:40: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:57:42: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:57:44: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:57:47: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:57:49: Processing 10M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:57:50: Total: 10555412. 
+INFO  @ Wed, 03 Jun 2026 22:57:50: Mapped: 7062210. 
+INFO  @ Wed, 03 Jun 2026 22:57:50: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4_R1_T1_NH4_1_4_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 22:57:50: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4_R1_T1_NH4_1_4_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 22:57:50: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 22:57:50: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 22:57:50: Read length:20 
+INFO  @ Wed, 03 Jun 2026 22:57:50: Total tested reads: 100001, mapped: 66578(0.6657733422665774) 
+INFO  @ Wed, 03 Jun 2026 22:57:50: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 22:57:50: 0	66578	1.0 
+INFO  @ Wed, 03 Jun 2026 22:57:50: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 22:57:50: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 22:57:50: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:57:52: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:57:55: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:57:57: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:57:59: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:58:01: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:58:03: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:58:06: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:58:08: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:58:10: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:58:12: Processing 10M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:58:14: Total: 10673295. 
+INFO  @ Wed, 03 Jun 2026 22:58:14: Mapped: 7139887. 
+INFO  @ Wed, 03 Jun 2026 22:58:14: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4_R1_T1_NH4_1_5_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 22:58:14: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4_R1_T1_NH4_1_5_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 22:58:14: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 22:58:14: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 22:58:14: Read length:20 
+INFO  @ Wed, 03 Jun 2026 22:58:14: Total tested reads: 100001, mapped: 67101(0.6710032899671003) 
+INFO  @ Wed, 03 Jun 2026 22:58:14: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 22:58:14: 0	67101	1.0 
+INFO  @ Wed, 03 Jun 2026 22:58:14: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 22:58:14: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 22:58:14: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:58:16: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:58:18: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:58:20: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:58:23: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:58:25: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:58:27: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:58:29: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:58:31: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:58:34: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:58:36: Processing 10M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:58:38: Processing 11M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:58:39: Total: 11550235. 
+INFO  @ Wed, 03 Jun 2026 22:58:39: Mapped: 7762099. 
+INFO  @ Wed, 03 Jun 2026 22:58:39: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4_R1_T1_NH4_1_6_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 22:58:39: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4_R1_T1_NH4_1_6_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 22:58:39: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 22:58:39: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 22:58:39: Read length:20 
+INFO  @ Wed, 03 Jun 2026 22:58:39: Total tested reads: 100001, mapped: 65932(0.6593134068659313) 
+INFO  @ Wed, 03 Jun 2026 22:58:39: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 22:58:39: 0	65932	1.0 
+INFO  @ Wed, 03 Jun 2026 22:58:39: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 22:58:39: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 22:58:39: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:58:42: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:58:44: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:58:46: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:58:48: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:58:50: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:58:53: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:58:55: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:58:57: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:58:59: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:59:01: Processing 10M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:59:01: Total: 10002322. 
+INFO  @ Wed, 03 Jun 2026 22:59:01: Mapped: 6665874. 
+INFO  @ Wed, 03 Jun 2026 22:59:02: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4_R2_T1_NH4_2_1_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 22:59:02: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4_R2_T1_NH4_2_1_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 22:59:02: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 22:59:02: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 22:59:02: Read length:20 
+INFO  @ Wed, 03 Jun 2026 22:59:02: Total tested reads: 100001, mapped: 66758(0.6675733242667573) 
+INFO  @ Wed, 03 Jun 2026 22:59:02: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 22:59:02: 0	66758	1.0 
+INFO  @ Wed, 03 Jun 2026 22:59:02: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 22:59:02: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 22:59:02: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:59:04: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:59:06: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:59:08: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:59:10: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:59:13: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:59:15: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:59:17: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:59:19: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:59:21: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:59:23: Total: 9913210. 
+INFO  @ Wed, 03 Jun 2026 22:59:23: Mapped: 6638686. 
+INFO  @ Wed, 03 Jun 2026 22:59:23: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4_R2_T1_NH4_2_2_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 22:59:23: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4_R2_T1_NH4_2_2_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 22:59:23: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 22:59:23: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 22:59:24: Read length:20 
+INFO  @ Wed, 03 Jun 2026 22:59:24: Total tested reads: 100001, mapped: 66386(0.6638533614663853) 
+INFO  @ Wed, 03 Jun 2026 22:59:24: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 22:59:24: 0	66386	1.0 
+INFO  @ Wed, 03 Jun 2026 22:59:24: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 22:59:24: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 22:59:24: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:59:26: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:59:28: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:59:30: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:59:32: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:59:34: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:59:37: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:59:39: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:59:41: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:59:43: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:59:45: Total: 9815004. 
+INFO  @ Wed, 03 Jun 2026 22:59:45: Mapped: 6578569. 
+INFO  @ Wed, 03 Jun 2026 22:59:45: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4_R2_T1_NH4_2_3_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 22:59:45: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4_R2_T1_NH4_2_3_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 22:59:45: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 22:59:45: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 22:59:45: Read length:20 
+INFO  @ Wed, 03 Jun 2026 22:59:45: Total tested reads: 100001, mapped: 66636(0.6663533364666353) 
+INFO  @ Wed, 03 Jun 2026 22:59:45: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 22:59:45: 0	66636	1.0 
+INFO  @ Wed, 03 Jun 2026 22:59:45: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 22:59:45: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 22:59:45: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:59:47: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:59:50: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:59:52: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:59:54: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:59:56: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 22:59:58: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:00:00: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:00:03: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:00:05: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:00:07: Processing 10M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:00:09: Processing 11M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:00:11: Processing 12M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:00:12: Total: 12434677. 
+INFO  @ Wed, 03 Jun 2026 23:00:12: Mapped: 8357499. 
+INFO  @ Wed, 03 Jun 2026 23:00:12: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4_R2_T1_NH4_2_4_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:00:12: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4_R2_T1_NH4_2_4_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:00:12: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:00:12: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 23:00:13: Read length:20 
+INFO  @ Wed, 03 Jun 2026 23:00:13: Total tested reads: 100001, mapped: 66737(0.6673633263667363) 
+INFO  @ Wed, 03 Jun 2026 23:00:13: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 23:00:13: 0	66737	1.0 
+INFO  @ Wed, 03 Jun 2026 23:00:13: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 23:00:13: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:00:13: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:00:15: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:00:17: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:00:19: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:00:21: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:00:24: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:00:26: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:00:28: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:00:30: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:00:32: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:00:34: Processing 10M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:00:34: Total: 10009165. 
+INFO  @ Wed, 03 Jun 2026 23:00:34: Mapped: 6722609. 
+INFO  @ Wed, 03 Jun 2026 23:00:35: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4_R2_T1_NH4_2_5_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:00:35: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4_R2_T1_NH4_2_5_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:00:35: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:00:35: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 23:00:35: Read length:20 
+INFO  @ Wed, 03 Jun 2026 23:00:35: Total tested reads: 100001, mapped: 66794(0.6679333206667933) 
+INFO  @ Wed, 03 Jun 2026 23:00:35: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 23:00:35: 0	66794	1.0 
+INFO  @ Wed, 03 Jun 2026 23:00:35: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 23:00:35: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:00:35: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:00:37: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:00:39: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:00:41: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:00:43: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:00:46: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:00:48: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:00:50: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:00:52: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:00:54: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:00:57: Total: 9995633. 
+INFO  @ Wed, 03 Jun 2026 23:00:57: Mapped: 6698836. 
+INFO  @ Wed, 03 Jun 2026 23:00:57: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4_R2_T1_NH4_2_6_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:00:57: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4_R2_T1_NH4_2_6_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:00:57: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:00:57: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 23:00:57: Read length:20 
+INFO  @ Wed, 03 Jun 2026 23:00:57: Total tested reads: 100001, mapped: 66515(0.6651433485665144) 
+INFO  @ Wed, 03 Jun 2026 23:00:57: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 23:00:57: 0	66515	1.0 
+INFO  @ Wed, 03 Jun 2026 23:00:57: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 23:00:57: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:00:57: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:00:59: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:01:01: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:01:03: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:01:06: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:01:08: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:01:10: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:01:12: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:01:14: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:01:17: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:01:19: Processing 10M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:01:20: Total: 10565317. 
+INFO  @ Wed, 03 Jun 2026 23:01:20: Mapped: 7067004. 
+INFO  @ Wed, 03 Jun 2026 23:01:20: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4NO3_R1_T1_NH4NO3A1_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:01:20: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4NO3_R1_T1_NH4NO3A1_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:01:20: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:01:20: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 23:01:20: Read length:20 
+INFO  @ Wed, 03 Jun 2026 23:01:20: Total tested reads: 100001, mapped: 63980(0.6397936020639794) 
+INFO  @ Wed, 03 Jun 2026 23:01:20: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 23:01:20: 0	63980	1.0 
+INFO  @ Wed, 03 Jun 2026 23:01:20: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 23:01:20: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:01:20: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:01:23: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:01:25: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:01:27: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:01:29: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:01:31: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:01:33: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:01:36: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:01:38: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:01:40: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:01:40: Total: 9048520. 
+INFO  @ Wed, 03 Jun 2026 23:01:40: Mapped: 5834929. 
+INFO  @ Wed, 03 Jun 2026 23:01:40: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4NO3_R1_T1_NH4NO3A2_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:01:40: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4NO3_R1_T1_NH4NO3A2_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:01:40: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:01:40: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 23:01:40: Read length:20 
+INFO  @ Wed, 03 Jun 2026 23:01:40: Total tested reads: 100001, mapped: 63907(0.6390636093639064) 
+INFO  @ Wed, 03 Jun 2026 23:01:40: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 23:01:40: 0	63907	1.0 
+INFO  @ Wed, 03 Jun 2026 23:01:40: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 23:01:40: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:01:40: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:01:43: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:01:45: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:01:47: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:01:49: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:01:51: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:01:54: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:01:56: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:01:58: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:02:00: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:02:01: Total: 9614706. 
+INFO  @ Wed, 03 Jun 2026 23:02:01: Mapped: 6186239. 
+INFO  @ Wed, 03 Jun 2026 23:02:02: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4NO3_R1_T1_NH4NO3A3_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:02:02: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4NO3_R1_T1_NH4NO3A3_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:02:02: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:02:02: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 23:02:02: Read length:20 
+INFO  @ Wed, 03 Jun 2026 23:02:02: Total tested reads: 100001, mapped: 64073(0.6407235927640723) 
+INFO  @ Wed, 03 Jun 2026 23:02:02: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 23:02:02: 0	64073	1.0 
+INFO  @ Wed, 03 Jun 2026 23:02:02: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 23:02:02: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:02:02: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:02:04: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:02:06: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:02:08: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:02:10: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:02:13: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:02:15: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:02:17: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:02:19: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:02:21: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:02:24: Processing 10M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:02:24: Total: 10372633. 
+INFO  @ Wed, 03 Jun 2026 23:02:24: Mapped: 6706297. 
+INFO  @ Wed, 03 Jun 2026 23:02:25: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4NO3_R1_T1_NH4NO3A4_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:02:25: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4NO3_R1_T1_NH4NO3A4_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:02:25: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:02:25: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 23:02:25: Read length:20 
+INFO  @ Wed, 03 Jun 2026 23:02:25: Total tested reads: 100001, mapped: 64060(0.6405935940640594) 
+INFO  @ Wed, 03 Jun 2026 23:02:25: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 23:02:25: 0	64060	1.0 
+INFO  @ Wed, 03 Jun 2026 23:02:25: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 23:02:25: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:02:25: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:02:27: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:02:29: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:02:31: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:02:33: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:02:36: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:02:38: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:02:40: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:02:42: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:02:44: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:02:46: Total: 9898009. 
+INFO  @ Wed, 03 Jun 2026 23:02:46: Mapped: 6394699. 
+INFO  @ Wed, 03 Jun 2026 23:02:46: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4NO3_R1_T1_NH4NO3A5_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:02:46: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4NO3_R1_T1_NH4NO3A5_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:02:46: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:02:46: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 23:02:47: Read length:20 
+INFO  @ Wed, 03 Jun 2026 23:02:47: Total tested reads: 100001, mapped: 63989(0.6398836011639883) 
+INFO  @ Wed, 03 Jun 2026 23:02:47: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 23:02:47: 0	63989	1.0 
+INFO  @ Wed, 03 Jun 2026 23:02:47: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 23:02:47: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:02:47: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:02:49: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:02:51: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:02:53: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:02:55: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:02:58: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:03:00: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:03:02: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:03:04: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:03:06: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:03:08: Processing 10M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:03:11: Total: 10970128. 
+INFO  @ Wed, 03 Jun 2026 23:03:11: Mapped: 7049937. 
+INFO  @ Wed, 03 Jun 2026 23:03:11: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4NO3_R1_T1_NH4NO3A6_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:03:11: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4NO3_R1_T1_NH4NO3A6_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:03:11: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:03:11: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 23:03:11: Read length:20 
+INFO  @ Wed, 03 Jun 2026 23:03:11: Total tested reads: 100001, mapped: 64267(0.6426635733642664) 
+INFO  @ Wed, 03 Jun 2026 23:03:11: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 23:03:11: 0	64267	1.0 
+INFO  @ Wed, 03 Jun 2026 23:03:11: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 23:03:11: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:03:11: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:03:13: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:03:15: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:03:17: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:03:20: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:03:22: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:03:24: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:03:26: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:03:28: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:03:31: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:03:32: Total: 9688829. 
+INFO  @ Wed, 03 Jun 2026 23:03:32: Mapped: 6270845. 
+INFO  @ Wed, 03 Jun 2026 23:03:32: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4NO3_R2_T1_NH4NO3B1_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:03:32: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4NO3_R2_T1_NH4NO3B1_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:03:32: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:03:32: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 23:03:32: Read length:20 
+INFO  @ Wed, 03 Jun 2026 23:03:32: Total tested reads: 100001, mapped: 64189(0.6418835811641883) 
+INFO  @ Wed, 03 Jun 2026 23:03:32: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 23:03:32: 0	64189	1.0 
+INFO  @ Wed, 03 Jun 2026 23:03:32: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 23:03:32: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:03:32: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:03:35: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:03:37: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:03:39: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:03:41: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:03:43: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:03:46: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:03:48: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:03:50: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:03:52: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:03:54: Processing 10M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:03:54: Total: 10017058. 
+INFO  @ Wed, 03 Jun 2026 23:03:54: Mapped: 6452805. 
+INFO  @ Wed, 03 Jun 2026 23:03:54: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4NO3_R2_T1_NH4NO3B2_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:03:54: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4NO3_R2_T1_NH4NO3B2_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:03:54: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:03:54: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 23:03:55: Read length:20 
+INFO  @ Wed, 03 Jun 2026 23:03:55: Total tested reads: 100001, mapped: 64460(0.6445935540644594) 
+INFO  @ Wed, 03 Jun 2026 23:03:55: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 23:03:55: 0	64460	1.0 
+INFO  @ Wed, 03 Jun 2026 23:03:55: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 23:03:55: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:03:55: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:03:57: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:03:59: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:04:01: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:04:03: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:04:06: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:04:08: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:04:10: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:04:12: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:04:14: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:04:17: Processing 10M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:04:18: Total: 10485125. 
+INFO  @ Wed, 03 Jun 2026 23:04:18: Mapped: 6781217. 
+INFO  @ Wed, 03 Jun 2026 23:04:18: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4NO3_R2_T1_NH4NO3B3_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:04:18: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4NO3_R2_T1_NH4NO3B3_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:04:18: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:04:18: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 23:04:18: Read length:20 
+INFO  @ Wed, 03 Jun 2026 23:04:18: Total tested reads: 100001, mapped: 64073(0.6407235927640723) 
+INFO  @ Wed, 03 Jun 2026 23:04:18: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 23:04:18: 0	64073	1.0 
+INFO  @ Wed, 03 Jun 2026 23:04:18: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 23:04:18: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:04:18: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:04:20: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:04:22: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:04:24: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:04:27: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:04:29: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:04:31: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:04:33: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:04:35: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:04:37: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:04:40: Processing 10M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:04:41: Total: 10807196. 
+INFO  @ Wed, 03 Jun 2026 23:04:41: Mapped: 6988458. 
+INFO  @ Wed, 03 Jun 2026 23:04:42: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4NO3_R2_T1_NH4NO3B4_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:04:42: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4NO3_R2_T1_NH4NO3B4_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:04:42: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:04:42: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 23:04:42: Read length:20 
+INFO  @ Wed, 03 Jun 2026 23:04:42: Total tested reads: 100001, mapped: 63906(0.6390536094639053) 
+INFO  @ Wed, 03 Jun 2026 23:04:42: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 23:04:42: 0	63906	1.0 
+INFO  @ Wed, 03 Jun 2026 23:04:42: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 23:04:42: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:04:42: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:04:44: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:04:46: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:04:48: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:04:50: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:04:53: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:04:55: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:04:57: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:04:59: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:05:01: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:05:02: Total: 9251037. 
+INFO  @ Wed, 03 Jun 2026 23:05:02: Mapped: 5968032. 
+INFO  @ Wed, 03 Jun 2026 23:05:02: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4NO3_R2_T1_NH4NO3B5_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:05:02: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4NO3_R2_T1_NH4NO3B5_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:05:02: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:05:02: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 23:05:02: Read length:20 
+INFO  @ Wed, 03 Jun 2026 23:05:02: Total tested reads: 100001, mapped: 64441(0.6444035559644403) 
+INFO  @ Wed, 03 Jun 2026 23:05:02: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 23:05:02: 0	64441	1.0 
+INFO  @ Wed, 03 Jun 2026 23:05:02: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 23:05:02: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:05:02: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:05:04: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:05:07: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:05:09: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:05:11: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:05:13: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:05:15: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:05:17: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:05:20: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:05:22: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:05:24: Processing 10M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:05:25: Total: 10379547. 
+INFO  @ Wed, 03 Jun 2026 23:05:25: Mapped: 6743433. 
+INFO  @ Wed, 03 Jun 2026 23:05:25: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4NO3_R2_T1_NH4NO3B6_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:05:25: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4NO3_R2_T1_NH4NO3B6_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:05:25: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:05:25: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 23:05:25: Read length:20 
+INFO  @ Wed, 03 Jun 2026 23:05:25: Total tested reads: 100001, mapped: 64311(0.6431035689643103) 
+INFO  @ Wed, 03 Jun 2026 23:05:25: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 23:05:25: 0	64311	1.0 
+INFO  @ Wed, 03 Jun 2026 23:05:25: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 23:05:25: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:05:25: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:05:27: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:05:30: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:05:32: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:05:34: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:05:36: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:05:38: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:05:40: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:05:43: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:05:45: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:05:47: Total: 9855621. 
+INFO  @ Wed, 03 Jun 2026 23:05:47: Mapped: 6386755. 
+INFO  @ Wed, 03 Jun 2026 23:05:47: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NO3_R1_T1_NO3_1_1_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:05:47: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NO3_R1_T1_NO3_1_1_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:05:47: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:05:47: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 23:05:47: Read length:20 
+INFO  @ Wed, 03 Jun 2026 23:05:47: Total tested reads: 100001, mapped: 65649(0.6564834351656483) 
+INFO  @ Wed, 03 Jun 2026 23:05:47: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 23:05:47: 0	65649	1.0 
+INFO  @ Wed, 03 Jun 2026 23:05:47: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 23:05:47: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:05:47: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:05:49: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:05:51: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:05:54: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:05:56: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:05:58: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:06:00: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:06:02: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:06:05: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:06:07: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:06:08: Total: 9781227. 
+INFO  @ Wed, 03 Jun 2026 23:06:08: Mapped: 6480094. 
+INFO  @ Wed, 03 Jun 2026 23:06:08: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NO3_R1_T1_NO3_1_2_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:06:08: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NO3_R1_T1_NO3_1_2_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:06:08: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:06:08: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 23:06:09: Read length:20 
+INFO  @ Wed, 03 Jun 2026 23:06:09: Total tested reads: 100001, mapped: 65362(0.6536134638653613) 
+INFO  @ Wed, 03 Jun 2026 23:06:09: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 23:06:09: 0	65362	1.0 
+INFO  @ Wed, 03 Jun 2026 23:06:09: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 23:06:09: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:06:09: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:06:11: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:06:13: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:06:15: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:06:17: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:06:20: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:06:22: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:06:24: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:06:26: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:06:28: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:06:30: Processing 10M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:06:31: Total: 10450962. 
+INFO  @ Wed, 03 Jun 2026 23:06:31: Mapped: 6879749. 
+INFO  @ Wed, 03 Jun 2026 23:06:32: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NO3_R1_T1_NO3_1_3_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:06:32: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NO3_R1_T1_NO3_1_3_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:06:32: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:06:32: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 23:06:32: Read length:20 
+INFO  @ Wed, 03 Jun 2026 23:06:32: Total tested reads: 100001, mapped: 65327(0.6532634673653264) 
+INFO  @ Wed, 03 Jun 2026 23:06:32: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 23:06:32: 0	65327	1.0 
+INFO  @ Wed, 03 Jun 2026 23:06:32: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 23:06:32: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:06:32: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:06:34: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:06:36: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:06:38: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:06:41: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:06:43: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:06:45: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:06:47: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:06:49: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:06:51: Total: 8810692. 
+INFO  @ Wed, 03 Jun 2026 23:06:51: Mapped: 5786343. 
+INFO  @ Wed, 03 Jun 2026 23:06:51: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NO3_R1_T1_NO3_1_4_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:06:51: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NO3_R1_T1_NO3_1_4_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:06:51: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:06:51: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 23:06:51: Read length:20 
+INFO  @ Wed, 03 Jun 2026 23:06:51: Total tested reads: 100001, mapped: 65530(0.6552934470655294) 
+INFO  @ Wed, 03 Jun 2026 23:06:51: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 23:06:51: 0	65530	1.0 
+INFO  @ Wed, 03 Jun 2026 23:06:51: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 23:06:51: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:06:51: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:06:54: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:06:56: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:06:58: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:07:00: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:07:02: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:07:04: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:07:07: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:07:09: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:07:11: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:07:13: Processing 10M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:07:15: Total: 10697858. 
+INFO  @ Wed, 03 Jun 2026 23:07:15: Mapped: 7070483. 
+INFO  @ Wed, 03 Jun 2026 23:07:15: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NO3_R1_T1_NO3_1_5_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:07:15: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NO3_R1_T1_NO3_1_5_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:07:15: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:07:15: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 23:07:15: Read length:20 
+INFO  @ Wed, 03 Jun 2026 23:07:15: Total tested reads: 100001, mapped: 65409(0.6540834591654083) 
+INFO  @ Wed, 03 Jun 2026 23:07:15: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 23:07:15: 0	65409	1.0 
+INFO  @ Wed, 03 Jun 2026 23:07:15: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 23:07:15: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:07:15: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:07:17: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:07:19: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:07:22: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:07:24: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:07:26: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:07:28: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:07:30: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:07:32: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:07:35: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:07:37: Processing 10M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:07:38: Total: 10326619. 
+INFO  @ Wed, 03 Jun 2026 23:07:38: Mapped: 6784167. 
+INFO  @ Wed, 03 Jun 2026 23:07:38: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NO3_R1_T1_NO3_1_6_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:07:38: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NO3_R1_T1_NO3_1_6_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:07:38: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:07:38: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 23:07:38: Read length:20 
+INFO  @ Wed, 03 Jun 2026 23:07:38: Total tested reads: 100001, mapped: 65103(0.6510234897651024) 
+INFO  @ Wed, 03 Jun 2026 23:07:38: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 23:07:38: 0	65103	1.0 
+INFO  @ Wed, 03 Jun 2026 23:07:38: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 23:07:38: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:07:38: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:07:40: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:07:42: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:07:44: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:07:47: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:07:49: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:07:51: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:07:53: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:07:55: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:07:58: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:08:00: Processing 10M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:08:01: Total: 10383265. 
+INFO  @ Wed, 03 Jun 2026 23:08:01: Mapped: 6810544. 
+INFO  @ Wed, 03 Jun 2026 23:08:01: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NO3_R2_T1_NO3_2_1_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:08:01: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NO3_R2_T1_NO3_2_1_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:08:01: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:08:01: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 23:08:01: Read length:20 
+INFO  @ Wed, 03 Jun 2026 23:08:01: Total tested reads: 100001, mapped: 67693(0.6769232307676923) 
+INFO  @ Wed, 03 Jun 2026 23:08:01: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 23:08:01: 0	67693	1.0 
+INFO  @ Wed, 03 Jun 2026 23:08:01: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 23:08:01: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:08:01: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:08:03: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:08:05: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:08:08: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:08:10: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:08:12: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:08:14: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:08:16: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:08:19: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:08:21: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:08:23: Processing 10M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:08:25: Processing 11M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:08:27: Total: 11699135. 
+INFO  @ Wed, 03 Jun 2026 23:08:27: Mapped: 7952126. 
+INFO  @ Wed, 03 Jun 2026 23:08:27: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NO3_R2_T1_NO3_2_2_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:08:27: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NO3_R2_T1_NO3_2_2_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:08:27: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:08:27: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 23:08:27: Read length:20 
+INFO  @ Wed, 03 Jun 2026 23:08:27: Total tested reads: 100001, mapped: 66899(0.6689833101668984) 
+INFO  @ Wed, 03 Jun 2026 23:08:27: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 23:08:27: 0	66899	1.0 
+INFO  @ Wed, 03 Jun 2026 23:08:27: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 23:08:27: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:08:27: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:08:29: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:08:31: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:08:34: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:08:36: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:08:38: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:08:40: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:08:42: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:08:45: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:08:47: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:08:49: Processing 10M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:08:51: Processing 11M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:08:52: Total: 11599162. 
+INFO  @ Wed, 03 Jun 2026 23:08:52: Mapped: 7855223. 
+INFO  @ Wed, 03 Jun 2026 23:08:53: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NO3_R2_T1_NO3_2_3_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:08:53: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NO3_R2_T1_NO3_2_3_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:08:53: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:08:53: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 23:08:53: Read length:20 
+INFO  @ Wed, 03 Jun 2026 23:08:53: Total tested reads: 100001, mapped: 68008(0.6800731992680074) 
+INFO  @ Wed, 03 Jun 2026 23:08:53: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 23:08:53: 0	68008	1.0 
+INFO  @ Wed, 03 Jun 2026 23:08:53: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 23:08:53: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:08:53: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:08:55: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:08:57: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:08:59: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:09:01: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:09:04: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:09:06: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:09:08: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:09:10: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:09:12: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:09:15: Processing 10M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:09:17: Processing 11M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:09:17: Total: 11101396. 
+INFO  @ Wed, 03 Jun 2026 23:09:17: Mapped: 7594712. 
+INFO  @ Wed, 03 Jun 2026 23:09:17: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NO3_R2_T1_NO3_2_4_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:09:17: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NO3_R2_T1_NO3_2_4_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:09:17: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:09:17: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 23:09:17: Read length:20 
+INFO  @ Wed, 03 Jun 2026 23:09:17: Total tested reads: 100001, mapped: 68041(0.6804031959680403) 
+INFO  @ Wed, 03 Jun 2026 23:09:17: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 23:09:17: 0	68041	1.0 
+INFO  @ Wed, 03 Jun 2026 23:09:17: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 23:09:17: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:09:17: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:09:19: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:09:22: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:09:24: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:09:26: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:09:28: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:09:30: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:09:32: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:09:35: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:09:37: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:09:38: Total: 9730299. 
+INFO  @ Wed, 03 Jun 2026 23:09:38: Mapped: 6655295. 
+INFO  @ Wed, 03 Jun 2026 23:09:38: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NO3_R2_T1_NO3_2_5_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:09:38: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NO3_R2_T1_NO3_2_5_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:09:38: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:09:38: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 23:09:39: Read length:20 
+INFO  @ Wed, 03 Jun 2026 23:09:39: Total tested reads: 100001, mapped: 67650(0.6764932350676494) 
+INFO  @ Wed, 03 Jun 2026 23:09:39: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 23:09:39: 0	67650	1.0 
+INFO  @ Wed, 03 Jun 2026 23:09:39: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 23:09:39: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:09:39: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:09:41: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:09:43: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:09:45: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:09:47: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:09:49: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:09:52: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:09:54: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:09:56: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:09:58: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:10:00: Total: 9851240. 
+INFO  @ Wed, 03 Jun 2026 23:10:00: Mapped: 6703119. 
+INFO  @ Wed, 03 Jun 2026 23:10:00: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NO3_R2_T1_NO3_2_6_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:10:00: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NO3_R2_T1_NO3_2_6_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:10:00: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:10:00: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 23:10:00: Read length:20 
+INFO  @ Wed, 03 Jun 2026 23:10:00: Total tested reads: 100001, mapped: 67629(0.6762832371676283) 
+INFO  @ Wed, 03 Jun 2026 23:10:00: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 23:10:00: 0	67629	1.0 
+INFO  @ Wed, 03 Jun 2026 23:10:00: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 23:10:00: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:10:00: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:10:03: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:10:05: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:10:07: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:10:09: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:10:11: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:10:13: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:10:15: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:10:18: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:10:20: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:10:22: Processing 10M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:10:24: Total: 10691611. 
+INFO  @ Wed, 03 Jun 2026 23:10:24: Mapped: 7254012. 
+INFO  @ Wed, 03 Jun 2026 23:10:24: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_UREA_R1_T1_UREA_1_1_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:10:24: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_UREA_R1_T1_UREA_1_1_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:10:24: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:10:24: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 23:10:24: Read length:20 
+INFO  @ Wed, 03 Jun 2026 23:10:24: Total tested reads: 100001, mapped: 67162(0.6716132838671613) 
+INFO  @ Wed, 03 Jun 2026 23:10:24: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 23:10:24: 0	67162	1.0 
+INFO  @ Wed, 03 Jun 2026 23:10:24: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 23:10:24: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:10:24: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:10:26: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:10:28: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:10:31: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:10:33: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:10:35: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:10:37: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:10:39: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:10:42: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:10:44: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:10:46: Processing 10M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:10:48: Processing 11M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:10:50: Total: 11700740. 
+INFO  @ Wed, 03 Jun 2026 23:10:50: Mapped: 7916057. 
+INFO  @ Wed, 03 Jun 2026 23:10:50: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_UREA_R1_T1_UREA_1_2_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:10:50: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_UREA_R1_T1_UREA_1_2_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:10:50: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:10:50: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 23:10:50: Read length:20 
+INFO  @ Wed, 03 Jun 2026 23:10:50: Total tested reads: 100001, mapped: 65811(0.6581034189658104) 
+INFO  @ Wed, 03 Jun 2026 23:10:50: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 23:10:50: 0	65811	1.0 
+INFO  @ Wed, 03 Jun 2026 23:10:50: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 23:10:50: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:10:50: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:10:52: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:10:54: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:10:57: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:10:59: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:11:01: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:11:03: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:11:05: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:11:08: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:11:10: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:11:12: Processing 10M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:11:12: Total: 10046712. 
+INFO  @ Wed, 03 Jun 2026 23:11:12: Mapped: 6667013. 
+INFO  @ Wed, 03 Jun 2026 23:11:12: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_UREA_R1_T1_UREA_1_3_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:11:12: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_UREA_R1_T1_UREA_1_3_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:11:12: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:11:12: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 23:11:12: Read length:20 
+INFO  @ Wed, 03 Jun 2026 23:11:12: Total tested reads: 100001, mapped: 67498(0.6749732502674973) 
+INFO  @ Wed, 03 Jun 2026 23:11:12: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 23:11:12: 0	67498	1.0 
+INFO  @ Wed, 03 Jun 2026 23:11:12: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 23:11:12: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:11:12: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:11:15: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:11:17: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:11:19: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:11:21: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:11:23: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:11:26: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:11:28: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:11:30: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:11:32: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:11:34: Processing 10M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:11:37: Processing 11M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:11:39: Processing 12M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:11:39: Total: 12194973. 
+INFO  @ Wed, 03 Jun 2026 23:11:39: Mapped: 8265225. 
+INFO  @ Wed, 03 Jun 2026 23:11:39: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_UREA_R1_T1_UREA_1_4_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:11:39: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_UREA_R1_T1_UREA_1_4_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:11:39: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:11:39: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 23:11:40: Read length:20 
+INFO  @ Wed, 03 Jun 2026 23:11:40: Total tested reads: 100001, mapped: 67275(0.6727432725672743) 
+INFO  @ Wed, 03 Jun 2026 23:11:40: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 23:11:40: 0	67275	1.0 
+INFO  @ Wed, 03 Jun 2026 23:11:40: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 23:11:40: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:11:40: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:11:42: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:11:44: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:11:46: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:11:48: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:11:51: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:11:53: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:11:55: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:11:57: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:11:59: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:12:01: Total: 9828799. 
+INFO  @ Wed, 03 Jun 2026 23:12:01: Mapped: 6671118. 
+INFO  @ Wed, 03 Jun 2026 23:12:01: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_UREA_R1_T1_UREA_1_5_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:12:01: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_UREA_R1_T1_UREA_1_5_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:12:01: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:12:01: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 23:12:01: Read length:20 
+INFO  @ Wed, 03 Jun 2026 23:12:01: Total tested reads: 100001, mapped: 67316(0.6731532684673154) 
+INFO  @ Wed, 03 Jun 2026 23:12:01: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 23:12:01: 0	67316	1.0 
+INFO  @ Wed, 03 Jun 2026 23:12:01: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 23:12:02: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:12:02: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:12:04: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:12:06: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:12:08: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:12:10: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:12:12: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:12:15: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:12:17: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:12:19: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:12:21: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:12:23: Processing 10M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:12:25: Total: 10900749. 
+INFO  @ Wed, 03 Jun 2026 23:12:25: Mapped: 7382593. 
+INFO  @ Wed, 03 Jun 2026 23:12:25: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_UREA_R1_T1_UREA_1_6_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:12:25: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_UREA_R1_T1_UREA_1_6_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:12:25: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:12:25: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 23:12:26: Read length:20 
+INFO  @ Wed, 03 Jun 2026 23:12:26: Total tested reads: 100001, mapped: 67607(0.6760632393676064) 
+INFO  @ Wed, 03 Jun 2026 23:12:26: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 23:12:26: 0	67607	1.0 
+INFO  @ Wed, 03 Jun 2026 23:12:26: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 23:12:26: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:12:26: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:12:28: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:12:30: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:12:32: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:12:34: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:12:37: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:12:39: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:12:41: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:12:43: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:12:45: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:12:48: Processing 10M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:12:48: Total: 10214343. 
+INFO  @ Wed, 03 Jun 2026 23:12:48: Mapped: 6935784. 
+INFO  @ Wed, 03 Jun 2026 23:12:48: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_UREA_R2_T1_UREA_2_1_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:12:48: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_UREA_R2_T1_UREA_2_1_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:12:48: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:12:48: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 23:12:49: Read length:20 
+INFO  @ Wed, 03 Jun 2026 23:12:49: Total tested reads: 100001, mapped: 67167(0.6716632833671663) 
+INFO  @ Wed, 03 Jun 2026 23:12:49: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 23:12:49: 0	67167	1.0 
+INFO  @ Wed, 03 Jun 2026 23:12:49: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 23:12:49: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:12:49: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:12:51: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:12:53: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:12:55: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:12:57: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:13:00: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:13:02: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:13:04: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:13:06: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:13:08: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:13:11: Processing 10M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:13:12: Total: 10691723. 
+INFO  @ Wed, 03 Jun 2026 23:13:12: Mapped: 7222761. 
+INFO  @ Wed, 03 Jun 2026 23:13:12: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_UREA_R2_T1_UREA_2_2_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:13:12: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_UREA_R2_T1_UREA_2_2_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:13:12: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:13:12: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 23:13:12: Read length:20 
+INFO  @ Wed, 03 Jun 2026 23:13:12: Total tested reads: 100001, mapped: 67117(0.6711632883671164) 
+INFO  @ Wed, 03 Jun 2026 23:13:12: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 23:13:12: 0	67117	1.0 
+INFO  @ Wed, 03 Jun 2026 23:13:12: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 23:13:12: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:13:12: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:13:15: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:13:17: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:13:19: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:13:21: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:13:23: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:13:26: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:13:28: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:13:30: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:13:32: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:13:34: Processing 10M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:13:36: Total: 10562476. 
+INFO  @ Wed, 03 Jun 2026 23:13:36: Mapped: 7129701. 
+INFO  @ Wed, 03 Jun 2026 23:13:36: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_UREA_R2_T1_UREA_2_3_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:13:36: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_UREA_R2_T1_UREA_2_3_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:13:36: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:13:36: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 23:13:36: Read length:20 
+INFO  @ Wed, 03 Jun 2026 23:13:36: Total tested reads: 100001, mapped: 66814(0.6681333186668134) 
+INFO  @ Wed, 03 Jun 2026 23:13:36: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 23:13:36: 0	66814	1.0 
+INFO  @ Wed, 03 Jun 2026 23:13:36: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 23:13:36: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:13:36: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:13:38: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:13:40: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:13:42: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:13:45: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:13:47: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:13:49: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:13:51: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:13:53: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:13:56: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:13:58: Processing 10M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:13:58: Total: 10194819. 
+INFO  @ Wed, 03 Jun 2026 23:13:58: Mapped: 6873710. 
+INFO  @ Wed, 03 Jun 2026 23:13:58: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_UREA_R2_T1_UREA_2_4_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:13:58: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_UREA_R2_T1_UREA_2_4_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:13:58: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:13:58: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 23:13:59: Read length:20 
+INFO  @ Wed, 03 Jun 2026 23:13:59: Total tested reads: 100001, mapped: 67295(0.6729432705672943) 
+INFO  @ Wed, 03 Jun 2026 23:13:59: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 23:13:59: 0	67295	1.0 
+INFO  @ Wed, 03 Jun 2026 23:13:59: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 23:13:59: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:13:59: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:14:01: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:14:03: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:14:05: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:14:07: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:14:10: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:14:12: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:14:14: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:14:16: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:14:18: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:14:21: Processing 10M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:14:22: Total: 10482610. 
+INFO  @ Wed, 03 Jun 2026 23:14:22: Mapped: 7073311. 
+INFO  @ Wed, 03 Jun 2026 23:14:22: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_UREA_R2_T1_UREA_2_5_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:14:22: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_UREA_R2_T1_UREA_2_5_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:14:22: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:14:22: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 23:14:22: Read length:20 
+INFO  @ Wed, 03 Jun 2026 23:14:22: Total tested reads: 100001, mapped: 66767(0.6676633233667664) 
+INFO  @ Wed, 03 Jun 2026 23:14:22: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 23:14:22: 0	66767	1.0 
+INFO  @ Wed, 03 Jun 2026 23:14:22: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 23:14:22: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:14:22: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:14:24: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:14:26: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:14:29: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:14:31: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:14:33: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:14:35: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:14:37: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:14:40: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:14:42: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:14:44: Processing 10M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:14:45: Total: 10286246. 
+INFO  @ Wed, 03 Jun 2026 23:14:45: Mapped: 6937643. 
+INFO  @ Wed, 03 Jun 2026 23:14:45: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_UREA_R2_T1_UREA_2_6_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:14:45: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_UREA_R2_T1_UREA_2_6_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:14:45: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:14:45: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 23:14:45: Read length:20 
+INFO  @ Wed, 03 Jun 2026 23:14:45: Total tested reads: 100001, mapped: 67324(0.6732332676673233) 
+INFO  @ Wed, 03 Jun 2026 23:14:45: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 23:14:45: 0	67324	1.0 
+INFO  @ Wed, 03 Jun 2026 23:14:45: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 23:14:45: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:14:45: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:14:47: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:14:49: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:14:51: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:14:54: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:14:56: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:14:58: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:15:00: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:15:02: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:15:05: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:15:07: Processing 10M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:15:08: Total: 10380621. 
+INFO  @ Wed, 03 Jun 2026 23:15:08: Mapped: 7035589. 
+INFO  @ Wed, 03 Jun 2026 23:15:08: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_t0_R1_T0_NH4NO3A1_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:15:08: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_t0_R1_T0_NH4NO3A1_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:15:08: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:15:08: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 23:15:08: Read length:20 
+INFO  @ Wed, 03 Jun 2026 23:15:08: Total tested reads: 100001, mapped: 67327(0.6732632673673263) 
+INFO  @ Wed, 03 Jun 2026 23:15:08: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 23:15:08: 0	67327	1.0 
+INFO  @ Wed, 03 Jun 2026 23:15:08: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 23:15:08: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:15:08: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:15:10: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:15:12: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:15:15: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:15:17: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:15:19: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:15:21: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:15:23: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:15:26: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:15:28: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:15:30: Processing 10M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:15:30: Total: 10006431. 
+INFO  @ Wed, 03 Jun 2026 23:15:30: Mapped: 6797615. 
+INFO  @ Wed, 03 Jun 2026 23:15:30: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_t0_R1_T0_NH4NO3A2_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:15:30: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_t0_R1_T0_NH4NO3A2_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:15:30: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:15:30: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 23:15:30: Read length:20 
+INFO  @ Wed, 03 Jun 2026 23:15:30: Total tested reads: 100001, mapped: 68087(0.6808631913680864) 
+INFO  @ Wed, 03 Jun 2026 23:15:30: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 23:15:30: 0	68087	1.0 
+INFO  @ Wed, 03 Jun 2026 23:15:30: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 23:15:30: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:15:30: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:15:33: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:15:35: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:15:37: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:15:39: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:15:41: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:15:44: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:15:46: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:15:48: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:15:50: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:15:51: Total: 9507844. 
+INFO  @ Wed, 03 Jun 2026 23:15:51: Mapped: 6487117. 
+INFO  @ Wed, 03 Jun 2026 23:15:51: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_t0_R1_T0_NH4NO3A3_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:15:51: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_t0_R1_T0_NH4NO3A3_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:15:51: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:15:51: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 23:15:52: Read length:20 
+INFO  @ Wed, 03 Jun 2026 23:15:52: Total tested reads: 100001, mapped: 67794(0.6779332206677933) 
+INFO  @ Wed, 03 Jun 2026 23:15:52: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 23:15:52: 0	67794	1.0 
+INFO  @ Wed, 03 Jun 2026 23:15:52: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 23:15:52: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:15:52: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:15:54: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:15:56: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:15:58: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:16:00: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:16:03: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:16:05: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:16:07: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:16:09: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:16:11: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:16:14: Processing 10M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:16:14: Total: 10395268. 
+INFO  @ Wed, 03 Jun 2026 23:16:14: Mapped: 7060883. 
+INFO  @ Wed, 03 Jun 2026 23:16:15: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_t0_R1_T0_NH4NO3A4_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:16:15: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_t0_R1_T0_NH4NO3A4_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:16:15: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:16:15: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 23:16:15: Read length:20 
+INFO  @ Wed, 03 Jun 2026 23:16:15: Total tested reads: 100001, mapped: 67598(0.6759732402675973) 
+INFO  @ Wed, 03 Jun 2026 23:16:15: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 23:16:15: 0	67598	1.0 
+INFO  @ Wed, 03 Jun 2026 23:16:15: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 23:16:15: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:16:15: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:16:17: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:16:19: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:16:21: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:16:24: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:16:26: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:16:28: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:16:30: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:16:32: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:16:35: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:16:36: Total: 9841785. 
+INFO  @ Wed, 03 Jun 2026 23:16:36: Mapped: 6685462. 
+INFO  @ Wed, 03 Jun 2026 23:16:37: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_t0_R1_T0_NH4NO3A5_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:16:37: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_t0_R1_T0_NH4NO3A5_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:16:37: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:16:37: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 23:16:37: Read length:20 
+INFO  @ Wed, 03 Jun 2026 23:16:37: Total tested reads: 100001, mapped: 67737(0.6773632263677363) 
+INFO  @ Wed, 03 Jun 2026 23:16:37: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 23:16:37: 0	67737	1.0 
+INFO  @ Wed, 03 Jun 2026 23:16:37: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 23:16:37: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:16:37: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:16:39: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:16:41: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:16:43: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:16:46: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:16:48: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:16:50: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:16:52: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:16:54: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:16:57: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:16:57: Total: 9225595. 
+INFO  @ Wed, 03 Jun 2026 23:16:57: Mapped: 6301638. 
+INFO  @ Wed, 03 Jun 2026 23:16:57: Parsing FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_t0_R1_T0_NH4NO3A6_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:16:57: Determining the trim-5 length of FASTQ file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_t0_R1_T0_NH4NO3A6_R1.fastq.gz... 
+INFO  @ Wed, 03 Jun 2026 23:16:57: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:16:57: Processing 0M reads ... 
+INFO  @ Wed, 03 Jun 2026 23:16:57: Read length:20 
+INFO  @ Wed, 03 Jun 2026 23:16:57: Total tested reads: 100001, mapped: 67599(0.6759832401675984) 
+INFO  @ Wed, 03 Jun 2026 23:16:57: --trim-5 test data: (trim_length reads fraction) 
+INFO  @ Wed, 03 Jun 2026 23:16:57: 0	67599	1.0 
+INFO  @ Wed, 03 Jun 2026 23:16:57: Auto determination of trim5 results: 0 
+INFO  @ Wed, 03 Jun 2026 23:16:57: Possible gRNA lengths:20 
+INFO  @ Wed, 03 Jun 2026 23:16:57: Processing 0M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:17:00: Processing 1M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:17:02: Processing 2M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:17:04: Processing 3M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:17:06: Processing 4M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:17:08: Processing 5M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:17:11: Processing 6M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:17:13: Processing 7M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:17:15: Processing 8M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:17:17: Processing 9M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:17:19: Processing 10M reads .. 
+INFO  @ Wed, 03 Jun 2026 23:17:20: Total: 10436827. 
+INFO  @ Wed, 03 Jun 2026 23:17:20: Mapped: 7089405. 
+DEBUG @ Wed, 03 Jun 2026 23:17:21: Initial (total) size factor: 0.9121896925308474 0.9757474996480835 0.9945882805005039 0.9969902434676694 1.0908790132785349 1.0665273761657346 1.0533822992320285 0.9527909072301581 0.9566313219712946 0.9920489611324941 1.0374666890306594 
+DEBUG @ Wed, 03 Jun 2026 23:17:23: Median factor: 0.8956707275164745 0.9621095051754567 0.9911385461904018 0.972389273041603 1.1314925492670094 1.1185727846419735 1.0608271853998195 0.926420497640683 0.9583603633383156 0.994998063708951 1.0362271592765564 
+INFO  @ Wed, 03 Jun 2026 23:17:23: Final size factor: 0.8956707275164745 0.9621095051754567 0.9911385461904018 0.972389273041603 1.1314925492670094 1.1185727846419735 1.0608271853998195 0.926420497640683 0.9583603633383156 0.994998063708951 1.0362271592765564 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NFREE_R1_T1_NFREE_1_1_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	NFREE_R1 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	9752670 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	6615743 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	29 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.06880553735263018 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NFREE_R1_T1_NFREE_1_2_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	NFREE_R1 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	9743757 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	6651512 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	25 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.06908193254502171 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NFREE_R1_T1_NFREE_1_3_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	NFREE_R1 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	11055438 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	7520323 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	30 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.06673921425973872 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NFREE_R1_T1_NFREE_1_4_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	NFREE_R1 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	14277417 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	9701795 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	25 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.06261065836587754 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NFREE_R1_T1_NFREE_1_5_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	NFREE_R1 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	11906765 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	8082728 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	33 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.06533840841635974 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NFREE_R1_T1_NFREE_1_6_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	NFREE_R1 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	10885134 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	7401454 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	29 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.06716131809455672 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NFREE_R2_T1_NFREE_2_1_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	NFREE_R2 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	10039667 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	6910709 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	32 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.06835058619673984 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NFREE_R2_T1_NFREE_2_2_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	NFREE_R2 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	10409954 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	7158579 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	34 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.06789507005152362 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NFREE_R2_T1_NFREE_2_3_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	NFREE_R2 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	9881956 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	6761383 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	31 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.06862092382368767 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NFREE_R2_T1_NFREE_2_4_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	NFREE_R2 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	10532964 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	7203310 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	27 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.06772561223909923 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NFREE_R2_T1_NFREE_2_5_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	NFREE_R2 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	10991763 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	7509473 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	30 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.06682045703116024 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NFREE_R2_T1_NFREE_2_6_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	NFREE_R2 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	10816537 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	7435496 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	30 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.06702861551289563 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4_R1_T1_NH4_1_1_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	NH4_R1 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	9999077 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	6671144 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	32 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.07443964731543629 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4_R1_T1_NH4_1_2_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	NH4_R1 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	10249334 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	6863573 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	33 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.07407188083629357 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4_R1_T1_NH4_1_3_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	NH4_R1 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	10555412 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	7062210 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	26 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.07321130694896016 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4_R1_T1_NH4_1_4_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	NH4_R1 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	10673295 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	7139887 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	29 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.07312157931009289 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4_R1_T1_NH4_1_5_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	NH4_R1 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	11550235 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	7762099 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	28 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.07159527871343518 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4_R1_T1_NH4_1_6_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	NH4_R1 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	10002322 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	6665874 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	33 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.0745761931500446 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4_R2_T1_NH4_2_1_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	NH4_R2 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	9913210 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	6638686 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	34 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.07001129094386249 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4_R2_T1_NH4_2_2_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	NH4_R2 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	9815004 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	6578569 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	31 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.07018041124588892 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4_R2_T1_NH4_2_3_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	NH4_R2 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	12434677 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	8357499 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	26 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.0652297730914877 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4_R2_T1_NH4_2_4_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	NH4_R2 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	10009165 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	6722609 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	30 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.06982510371062123 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4_R2_T1_NH4_2_5_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	NH4_R2 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	9995633 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	6698836 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	30 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.07002452267454529 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4_R2_T1_NH4_2_6_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	NH4_R2 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	10565317 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	7067004 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	26 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.06841134621327927 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4NO3_R1_T1_NH4NO3A1_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	NH4NO3_R1 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	9048520 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	5834929 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	32 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.0779921028368924 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4NO3_R1_T1_NH4NO3A2_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	NH4NO3_R1 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	9614706 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	6186239 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	27 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.07659329794907077 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4NO3_R1_T1_NH4NO3A3_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	NH4NO3_R1 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	10372633 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	6706297 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	29 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.07532860128410934 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4NO3_R1_T1_NH4NO3A4_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	NH4NO3_R1 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	9898009 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	6394699 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	35 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.07610624262906374 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4NO3_R1_T1_NH4NO3A5_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	NH4NO3_R1 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	10970128 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	7049937 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	33 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.07433941186762649 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4NO3_R1_T1_NH4NO3A6_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	NH4NO3_R1 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	9688829 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	6270845 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	39 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.07692618040511068 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4NO3_R2_T1_NH4NO3B1_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	NH4NO3_R2 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	10017058 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	6452805 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	36 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.08035082672995364 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4NO3_R2_T1_NH4NO3B2_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	NH4NO3_R2 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	10485125 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	6781217 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	29 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.07923002068398244 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4NO3_R2_T1_NH4NO3B3_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	NH4NO3_R2 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	10807196 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	6988458 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	33 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.07889268149403417 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4NO3_R2_T1_NH4NO3B4_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	NH4NO3_R2 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	9251037 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	5968032 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	45 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.08273227738901501 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4NO3_R2_T1_NH4NO3B5_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	NH4NO3_R2 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	10379547 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	6743433 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	37 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.0796729823897856 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NH4NO3_R2_T1_NH4NO3B6_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	NH4NO3_R2 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	9855621 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	6386755 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	38 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.08101274540388603 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NO3_R1_T1_NO3_1_1_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	NO3_R1 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	9781227 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	6480094 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	31 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.07095577580281054 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NO3_R1_T1_NO3_1_2_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	NO3_R1 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	10450962 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	6879749 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	27 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.06954271003905155 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NO3_R1_T1_NO3_1_3_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	NO3_R1 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	8810692 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	5786343 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	31 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.07332199691546881 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NO3_R1_T1_NO3_1_4_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	NO3_R1 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	10697858 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	7070483 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	26 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.06944715613840868 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NO3_R1_T1_NO3_1_5_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	NO3_R1 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	10326619 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	6784167 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	30 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.07016986137004622 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NO3_R1_T1_NO3_1_6_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	NO3_R1 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	10383265 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	6810544 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	34 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.069966418497176 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NO3_R2_T1_NO3_2_1_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	NO3_R2 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	11699135 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	7952126 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	28 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.06624227950900252 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NO3_R2_T1_NO3_2_2_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	NO3_R2 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	11599162 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	7855223 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	28 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.06671639553385156 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NO3_R2_T1_NO3_2_3_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	NO3_R2 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	11101396 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	7594712 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	27 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.067077230858547 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NO3_R2_T1_NO3_2_4_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	NO3_R2 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	9730299 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	6655295 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	33 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.06950163355249228 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NO3_R2_T1_NO3_2_5_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	NO3_R2 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	9851240 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	6703119 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	33 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.0697276989022183 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_NO3_R2_T1_NO3_2_6_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	NO3_R2 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	10691611 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	7254012 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	35 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.06788784760079969 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_UREA_R1_T1_UREA_1_1_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	UREA_R1 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	11700740 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	7916057 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	22 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.06914786639699422 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_UREA_R1_T1_UREA_1_2_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	UREA_R1 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	10046712 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	6667013 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	33 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.07251515149843146 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_UREA_R1_T1_UREA_1_3_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	UREA_R1 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	12194973 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	8265225 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	23 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.06835414586505972 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_UREA_R1_T1_UREA_1_4_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	UREA_R1 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	9828799 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	6671118 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	31 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.07247223107762635 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_UREA_R1_T1_UREA_1_5_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	UREA_R1 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	10900749 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	7382593 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	29 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.0703570534214919 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_UREA_R1_T1_UREA_1_6_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	UREA_R1 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	10214343 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	6935784 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	33 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.07164934978821658 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_UREA_R2_T1_UREA_2_1_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	UREA_R2 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	10691723 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	7222761 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	33 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.07210228479269132 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_UREA_R2_T1_UREA_2_2_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	UREA_R2 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	10562476 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	7129701 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	29 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.07229988473970472 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_UREA_R2_T1_UREA_2_3_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	UREA_R2 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	10194819 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	6873710 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	30 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.07323549609157254 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_UREA_R2_T1_UREA_2_4_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	UREA_R2 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	10482610 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	7073311 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	27 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.07269218619420159 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_UREA_R2_T1_UREA_2_5_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	UREA_R2 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	10286246 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	6937643 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	34 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.0726854695764052 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_UREA_R2_T1_UREA_2_6_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	UREA_R2 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	10380621 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	7035589 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	34 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.07272064522677302 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_t0_R1_T0_NH4NO3A1_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	t0_R1 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	10006431 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	6797615 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	34 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.07687902532577096 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_t0_R1_T0_NH4NO3A2_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	t0_R1 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	9507844 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	6487117 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	37 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.07761617316935698 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_t0_R1_T0_NH4NO3A3_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	t0_R1 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	10395268 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	7060883 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	29 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.07592253465587118 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_t0_R1_T0_NH4NO3A4_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	t0_R1 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	9841785 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	6685462 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	36 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.07714077509711736 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_t0_R1_T0_NH4NO3A5_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	t0_R1 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	9225595 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	6301638 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	33 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.07848618910515348 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Summary of file output/2026_02_CRISPR_Pool2/1_preprocess_reads/Nitrogen_t0_R1_T0_NH4NO3A6_R1.fastq.gz: 
+INFO  @ Wed, 03 Jun 2026 23:17:24: label	t0_R1 
+INFO  @ Wed, 03 Jun 2026 23:17:24: reads	10436827 
+INFO  @ Wed, 03 Jun 2026 23:17:24: mappedreads	7089405 
+INFO  @ Wed, 03 Jun 2026 23:17:24: totalsgrnas	90202 
+INFO  @ Wed, 03 Jun 2026 23:17:24: zerosgrnas	33 
+INFO  @ Wed, 03 Jun 2026 23:17:24: giniindex	0.07588749187022426 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Loading Rnw template file: /tscc/projects/ps-allenlab/projdata/common/programs/miniconda3/envs/mageckenv/lib/python3.6/site-packages/mageck/count_report.Rmd. 
+DEBUG @ Wed, 03 Jun 2026 23:17:24: Setting up the visualization module... 
+INFO  @ Wed, 03 Jun 2026 23:17:24: Loading Rnw template file: /tscc/projects/ps-allenlab/projdata/common/programs/miniconda3/envs/mageckenv/lib/python3.6/site-packages/mageck/fastq_template.Rnw. 
+DEBUG @ Wed, 03 Jun 2026 23:17:24: Setting up the visualization module... 

@@ -67,7 +67,7 @@ def main():
     # -----------------------------------------------------------------------
     if config.STEP_2_METADATA_TEMPLATE:
         print("--- [Step 2] Generating metadata template ---")
-        utils.generate_metadata_template(config.META_CSV, config.RAW_DATA_DIR)
+        utils.generate_metadata_template(config.META_CSV, config.RAW_DATA_DIR, auto_parse=config.AUTO_PARSE_METADATA)
         print()
 
     # -----------------------------------------------------------------------
@@ -78,6 +78,7 @@ def main():
         is_valid, msg = utils.validate_metadata(
             config.META_CSV,
             non_interactive=config.NON_INTERACTIVE,
+            single_end=config.SINGLE_END,
         )
         if not is_valid:
             print(f"❌ Metadata error: {msg}")

@@ -14,7 +14,6 @@ import re
 import os
 import sys
 import gzip
-import time
 import math
 import warnings
 import subprocess
@@ -113,7 +112,7 @@ def preflight_anchor_check(raw_dir, fwd_anchor, n_reads=10_000, min_hit_rate=0.1
                 seq = str(record.seq).upper()
                 if fwd_anchor in seq:
                     fwd_hits += 1
-                elif (not single_end) and rev_anchor and rev_anchor in seq:
+                elif rev_anchor and rev_anchor in seq:
                     rev_hits += 1
                 total += 1
     except Exception as e:
@@ -149,27 +148,73 @@ def preflight_anchor_check(raw_dir, fwd_anchor, n_reads=10_000, min_hit_rate=0.1
 # Step 2 — Metadata template generation
 # ---------------------------------------------------------------------------
 
-def generate_metadata_template(csv_path, raw_dir):
+def _auto_parse_filename(filename):
+    """
+    Extracts condition, bio_rep, tech_rep from a filename.
+    Handles two AllenLab CRISPR naming patterns:
+
+    Pattern A (letter bio rep): T0_NH4NO3A1  → condition=NH4NO3, bio_rep=1, tech_rep=1
+                                T1_NH4NO3B3  → condition=NH4NO3, bio_rep=2, tech_rep=3
+    Pattern B (number bio rep): T1_NH4_1_1   → condition=NH4,    bio_rep=1, tech_rep=1
+                                T1_NFREE_2_5 → condition=Nfree,  bio_rep=2, tech_rep=5
+
+    Returns dict or None if pattern not recognised (e.g. 12-cycle samples).
+    """
+    base = re.sub(r'_R[12]\.fastq\.gz$', '', filename, flags=re.IGNORECASE)
+    base = re.sub(r'\.fastq\.gz$', '', base)
+
+    # Skip irregular 12-cycle PCR samples — fill those manually
+    if re.search(r'12C', base, re.IGNORECASE):
+        return None
+
+    # Pattern A: timepoint_CONDITIONletter#  e.g. T0_NH4NO3A1
+    # Condition must end in a digit so we can split it from the bio letter
+    m = re.match(r'^(T\d+)_([A-Z][A-Z0-9]*\d)([A-Z])(\d+)$', base, re.IGNORECASE)
+    if m:
+        tp, cond, bio_letter, tech_num = m.groups()
+        bio_rep = ord(bio_letter.upper()) - ord('A') + 1  # A→1, B→2, C→3 ...
+        condition = 't0' if tp.upper() == 'T0' else cond.upper()
+        return dict(condition=condition, bio_rep=bio_rep, tech_rep=int(tech_num))
+
+    # Pattern B: timepoint_CONDITION_bio_tech  e.g. T1_NH4_2_3
+    m = re.match(r'^(T\d+)_([A-Z][A-Z0-9]*)_(\d+)_(\d+)$', base, re.IGNORECASE)
+    if m:
+        tp, cond, bio_num, tech_num = m.groups()
+        condition = 't0' if tp.upper() == 'T0' else cond.upper()
+        return dict(condition=condition, bio_rep=int(bio_num), tech_rep=int(tech_num))
+
+    return None
+
+def generate_metadata_template(csv_path, raw_dir, auto_parse=True):
     """
     Create a blank metadata CSV from .fastq.gz files in raw_dir.
     Handles both SE (SampleName_R1.fastq.gz) and old Illumina naming.
     Will NOT overwrite an existing file.
     """
     if os.path.exists(csv_path):
-        print(f"  ✅ Metadata file already exists: {csv_path}  (no overwrite)")
+        print(f"  ✅ Metadata file already exists — skipping generation (will never overwrite):")
+        print(f"     {csv_path}")
+        print(f"     Edit it directly if anything looks wrong.")
         return
+
 
     if not os.path.exists(raw_dir):
         print(f"  ❌ Error: raw_dir not found: {raw_dir}")
         return
 
-    files = sorted([
+    all_files = sorted([
         f for f in os.listdir(raw_dir)
         if f.endswith(".fastq.gz")
         and "Unassigned" not in f
         and "Undetermined" not in f
         and "PhiX" not in f
     ])
+    r2_excluded = [f for f in all_files if "_R2" in f]
+    files = [f for f in all_files if "_R2" not in f]
+    if r2_excluded:
+        print(f"  ℹ️  Excluded {len(r2_excluded)} R2 file(s) — R2 files are never added to metadata.")
+        print(f"     SE mode: both orientations are found within R1 reads.")
+        print(f"     PE mode: R1 only is processed to avoid double-counting.")
 
     if not files:
         print(f"  ⚠️  No usable .fastq.gz files found in {raw_dir}")
@@ -182,24 +227,48 @@ def generate_metadata_template(csv_path, raw_dir):
                 return fname[: -len(suffix)]
         return fname
 
-    df = pd.DataFrame({
-        "filename":         files,
-        "sample_label":     [_clean_label(f) for f in files],
-        "experiment_label": "",  # fill manually or use pre-built metadata CSV
-        "condition":        "",
-        "bio_rep":          "",
-    })
+    rows = []
+    unrecognised = []
+    for fname in files:
+        parsed = _auto_parse_filename(fname) if auto_parse else None
+        rows.append({
+            "filename":         fname,
+            "sample_label":     _clean_label(fname),
+            "experiment_label": "",   # always fill manually — groups samples into one MAGeCK run
+            "condition":        parsed["condition"] if parsed else "",
+            "bio_rep":          parsed["bio_rep"]   if parsed else "",
+            "tech_rep":         parsed["tech_rep"]  if parsed else "",
+        })
+        if auto_parse and parsed is None:
+            unrecognised.append(fname)
+
+    df = pd.DataFrame(rows)
     os.makedirs(os.path.dirname(csv_path), exist_ok=True)
     df.to_csv(csv_path, index=False)
     print(f"  🌟 Metadata template created: {csv_path}")
-    print(f"      {len(files)} files listed — fill experiment_label, condition, bio_rep.")
+
+    if auto_parse:
+        n_filled = len(files) - len(unrecognised)
+        print(f"  🤖 Auto-parsed {n_filled}/{len(files)} files → condition, bio_rep, tech_rep filled.")
+        if unrecognised:
+            print(f"  ⚠️  {len(unrecognised)} file(s) not recognised — fill manually:")
+            for f in unrecognised:
+                print(f"       • {f}")
+                
+    print(f"  ✏️  Required: fill 'experiment_label' for all rows (groups samples into experiments).")
+    print(f"\n  ⚠️  ACTION NEEDED before running Step 3:")
+    print(f"     1. Open and review: {csv_path}")
+    print(f"     2. Fill in 'experiment_label' for every row")
+    print(f"     3. Verify condition/bio_rep/tech_rep look correct")
+    print(f"     4. Fix anything that looks wrong — the file will never be overwritten once saved")
+    print(f"     Then set STEP_2_METADATA_TEMPLATE=False and STEP_3_VALIDATE_AND_SUMMARY=True and re-run.")
 
 
 # ---------------------------------------------------------------------------
 # Step 3 — Metadata validation
 # ---------------------------------------------------------------------------
 
-def validate_metadata(csv_path, non_interactive=False):
+def validate_metadata(csv_path, non_interactive=False, single_end=True):
     """
     Validate metadata CSV and print an experimental design summary.
     If non_interactive=True (SLURM), skip the y/n user prompt.
@@ -245,6 +314,14 @@ def validate_metadata(csv_path, non_interactive=False):
         if answer != "y":
             return False, "Cancelled by user — please correct the metadata CSV."
 
+    # --- R2 file warning ---
+    r2_files = df[df["filename"].str.contains("_R2", case=False, na=False)]
+    if not r2_files.empty:
+        if not single_end:
+            print(f"  ⚠️  PE mode: {len(r2_files)} R2 file(s) found in metadata — will be skipped during extraction.")
+        else:
+            print(f"  ⚠️  SE mode: {len(r2_files)} R2 filename(s) in metadata — double-check this is intentional.")
+
     return True, "Metadata OK."
 
 
@@ -267,10 +344,8 @@ def _check_files_exist(meta_df, raw_dir):
 
 def _extract_worker(row_tuple, raw_dir, out_dir, fwd, rev, length, single_end):
     """
-    Extract guides from a single FASTQ file.
+    Extract guides from a FASTQ file.
 
-    single_end=True  : only FWD anchor is used (SE150).
-    single_end=False : also checks REV anchor with reverse-complement (PE).
     """
     _, row = row_tuple
     in_p = os.path.join(raw_dir, row["filename"])
@@ -295,8 +370,8 @@ def _extract_worker(row_tuple, raw_dir, out_dir, fwd, rev, length, single_end):
                     if (len(seq_str) - start_idx) >= length:
                         extracted_record = record[start_idx: start_idx + length]
 
-                # --- Reverse anchor (only for paired-end mode) ---
-                elif (not single_end) and rev in seq_str:
+                # --- Reverse anchor (also check) ---
+                elif rev in seq_str:
                     start_idx = seq_str.find(rev) + len(rev)
                     if (len(seq_str) - start_idx) >= length:
                         raw_chunk = record[start_idx: start_idx + length]
@@ -338,10 +413,18 @@ def run_guide_extraction(meta_df, raw_dir, out_dir, fwd, rev, length, n_cores,
         if len(missing) > 20:
             print(f"   ... and {len(missing)-20} more.")
         sys.exit(1)
+
+    if not single_end:
+        r2_mask = meta_df["filename"].str.contains("_R2", case=False, na=False)
+        n_r2 = int(r2_mask.sum())
+        if n_r2 > 0:
+            print(f"  ⚠️  PE mode: skipping {n_r2} R2 file(s) — only R1 files processed to avoid double-counting.")
+            meta_df = meta_df[~r2_mask].reset_index(drop=True)
     print(f"  ✅ All {len(meta_df)} metadata files confirmed in {raw_dir}")
 
-    mode_str = "single-end (FWD anchor only)" if single_end else "paired-end (FWD + REV anchors)"
-    print(f"  🔬 Extraction mode: {mode_str}")
+
+    mode_str = "SE (one file per sample)" if single_end else "PE (R1 only, R2 skipped)"
+    print(f"  🔬 Extraction mode: {mode_str} — searching both FWD + REV anchors")
     print(f"  📐 Guide length: {length} bp")
     print(f"  🚀 Launching parallel extraction on {n_cores} cores...\n")
 
@@ -562,7 +645,7 @@ def _plot_specific_gene_trajectories(exp, count_dir, genes_dict):
                                   var_name="Sample", value_name="Count")
             melted["Log10_Count"] = np.log10(melted["Count"] + 1)
             sns.lineplot(data=melted, x="Sample", y="Log10_Count", ax=ax,
-                         color="royalblue", marker="o", errorbar="sd", linewidth=3)
+                         color="royalblue", marker="o", ci="sd", linewidth=3)
             ax.set_title(title, fontsize=18, fontweight="bold")
             ax.set_ylabel(ylabel, fontsize=14)
             ax.tick_params(axis="x", rotation=45)
@@ -636,10 +719,14 @@ def run_mageck_count(preprocess_dir, count_dir, library_csv, summary_csv,
         print(f"     Command: {' '.join(cmd[:8])} ...")
 
         try:
-            result = subprocess.run(cmd, check=True, capture_output=True, text=True)
+            result = subprocess.run(cmd, check=True,
+                                    stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                                    universal_newlines=True)
             if result.stdout:
-                print(result.stdout[-2000:])  # last 2000 chars
+                print(result.stdout[-2000:])
+                
             print(f"  ✅ Count table: {output_prefix}.count.txt")
+            
         except subprocess.CalledProcessError as e:
             print(f"  ❌ MAGeCK count failed for {exp}:")
             print(f"     STDERR: {e.stderr[-1000:]}")
@@ -709,7 +796,7 @@ def manage_all_design_matrices(summary_csv, design_base_dir):
                 all_ready = False
                 continue
             data_cols  = cols[2:]
-            is_binary  = user_df[data_cols].map(lambda x: str(x).strip() in ("0", "1")).all().all()
+            is_binary  = user_df[data_cols].applymap(lambda x: str(x).strip() in ("0", "1")).all().all()
             has_content = (user_df[data_cols] != "").all().all()
             if not (is_binary and has_content):
                 print(f"  ⚠️  {exp_name}: Matrix incomplete or invalid values.")
@@ -767,7 +854,9 @@ def run_all_mageck_mle(count_dir, mle_dir, design_base_dir, n_cores,
             ]
             print(f"\n  🚀 MAGeCK MLE — {exp} | {param_suffix}")
             try:
-                result = subprocess.run(cmd, check=True, capture_output=True, text=True)
+                result = subprocess.run(cmd, check=True,
+                                        stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                                        universal_newlines=True)
                 if result.stdout:
                     print(result.stdout[-2000:])
                 print(f"  ✅ MLE complete: {os.path.basename(output_prefix)}")
@@ -1113,7 +1202,7 @@ def prepare_koala_database(koala_paths, output_path):
             print(f"  ⚠️  Missing KOALA file: {os.path.basename(fpath)}")
             continue
         df = pd.read_csv(fpath, sep="\t", header=None,
-                         names=["Gene_ID", "KEGG_ID"], on_bad_lines="skip", low_memory=False)
+                         names=["Gene_ID", "KEGG_ID"], error_bad_lines=False, low_memory=False)
         df["Gene_ID"] = df["Gene_ID"].astype(str).str.split(".").str[0]
         df = df.dropna(subset=["KEGG_ID"])
         all_dfs.append(df)
@@ -1226,7 +1315,15 @@ def run_functional_plotting(norm_dir, plot_dir, cog_mapping):
                 plt.yticks(fontsize=16)
                 plt.legend(title="Significance Tier", title_fontsize=20, fontsize=18)
                 for container in ax.containers:
-                    ax.bar_label(container, padding=8, fontsize=14, fontweight="bold")
+                    for bar in container:
+                        width = bar.get_width()
+                        if width > 0:
+                            ax.text(width + 0.1,
+                                    bar.get_y() + bar.get_height() / 2,
+                                    str(int(width)),
+                                    va='center', ha='left',
+                                    fontsize=14, fontweight='bold')
+                            
                 plt.savefig(os.path.join(exp_root_dir, f"{comp}_Combined_COG.png"),
                             bbox_inches="tight", dpi=300)
                 plt.close()
@@ -1247,12 +1344,14 @@ def plot_top_hits_by_beta(norm_dir, plot_dir, cog_mapping):
             os.makedirs(exp_root_dir, exist_ok=True)
             for comp in df["Comparison"].unique():
                 comp_df  = df[df["Comparison"] == comp].copy()
-                hits_df  = comp_df[comp_df["Significance_Tier"].isin(
-                    ["Tier 1 (Hard)", "Tier 2 (Lenient)"]
-                )].copy()
+                # Try significant hits first (Tier 1+2+3), fall back to all genes by effect size
+                hits_df = comp_df[comp_df["Significance_Tier"] != "None"].copy()
                 if hits_df.empty:
+                    hits_df = comp_df.copy()
+                    print(f"  ℹ️  {comp}: no significant hits — showing top genes by effect size only.")
+                top_20 = hits_df.sort_values("Delta_Beta", ascending=True).head(10).copy()
+                if top_20.empty:
                     continue
-                top_20 = hits_df.sort_values("Delta_Beta", ascending=True).head(20).copy()
                 top_20["COG_Full"] = (
                     top_20["COG_category"].astype(str).str[0].str.upper()
                     .map(cog_mapping).fillna("Unclassified / No COG")
